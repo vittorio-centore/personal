@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Projects - Vittorio Centore</title>
+    <meta content="projects, portfolio, software development" name="keywords" />
+    <meta content="Browse my software development projects and portfolio." name="description" />
+    <link href="assets/images/PixelMe_50x50.jpg" rel="icon" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css" />
+</head>
+
+<body class="font-mono bg-white relative overflow-x-hidden flex flex-col min-h-screen">
+    <!-- HEADER -->
+    <header
+        class="h-16 sm:h-20 flex items-center z-[100] w-full border-b-2 border-gray-500 transition-transform duration-500 ease-in-out fixed top-0 left-0 bg-white"
+        id="topNav">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <div class="uppercase text-gray-800 font-black text-2xl sm:text-3xl flex items-center">
+                <a class="text-2xl sm:text-3xl ml-3 mt-1 bg-white transition transform ease-in-out duration-100 hover:bg-gray-500 hover:scale-105"
+                    href="index.html">
+                    [VITTORIO CENTORE]
+                </a>
+                <span class="text-xs sm:text-sm align-text-bottom ml-3 mt-1" id="navSectionIndicator">
+                    / PROJECTS
+                </span>
+            </div>
+            <div class="flex items-center">
+                <nav
+                    class="top-nav font-sen text-gray-800 uppercase text-sm sm:text-base lg:text-lg lg:flex items-center hidden">
+                    <a class="py-2 px-3 sm:px-4 top-nav-link" href="index.html">HOME</a>
+                    <a class="py-2 px-3 sm:px-4 top-nav-link active" href="projects.html">PROJECTS</a>
+                    <a class="py-2 px-3 sm:px-4 top-nav-link" href="university.html">UNIVERSITY</a>
+                    <a class="py-2 px-3 sm:px-4 top-nav-link" href="about.html">ABOUT</a>
+                    <a class="py-2 px-3 sm:px-4 top-nav-link" href="contact.html">CONTACT</a>
+                    <a class="py-2 px-3 sm:px-4 top-nav-link resume-nav-link"
+                        href="assets/files/vittorio_centore_resume.pdf" download="vittorio_centore_resume.pdf">
+                        RESUME ↓
+                    </a>
+                </nav>
+                <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+                    class="mobile-menu-toggle lg:hidden flex flex-col" id="menuToggle" type="button">
+                    <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+                    <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+                    <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-32 pb-10" id="projects">
+            <div class="container mx-auto flex flex-col items-center justify-center px-5 mb-10 text-center space-y-5">
+                <p class="text-xs uppercase tracking-[0.5em] text-gray-500">
+                    levels cleared
+                </p>
+                <p class="text-5xl font-bold text-black">
+                    Projects
+                </p>
+            </div>
+            <div class="container mx-auto px-5">
+                <div class="projects-grid" id="projectsGrid">
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-32 pb-10">
+            <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+                <div class="lg:w-1/2 w-full flex justify-center">
+                    <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="contact-card">
+                        <div class="text-center lg:text-left">
+                            <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                                LET'S CONNECT
+                            </p>
+                            <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                                Say hi
+                            </h1>
+                        </div>
+                        <div class="contact-links">
+                            <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/"
+                                rel="noopener noreferrer" target="_blank">
+                                <div class="contact-link-inner">
+                                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                                    <span>
+                                        LinkedIn
+                                        <small>/vittorio-centore</small>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
+                                target="_blank">
+                                <div class="contact-link-inner">
+                                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                                    <span>
+                                        GitHub
+                                        <small>/vittorio-centore</small>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer"
+                                target="_blank">
+                                <div class="contact-link-inner">
+                                    <img alt="Email" src="assets/images/email.png" />
+                                    <span>
+                                        Email
+                                        <small>vcentore@umich.edu</small>
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
+                                rel="noopener noreferrer" target="_blank">
+                                <div class="contact-link-inner">
+                                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                                    <span>
+                                        Instagram
+                                        <small>@vittorio.cen</small>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-gray-600 body-font font-mono bg-gray-800">
+        <div class="container px-5 py-12 mx-auto">
+            <div class="flex flex-wrap md:text-left text-center justify-center gap-8 lg:gap-12">
+                <!-- About Column -->
+                <div class="w-full md:w-auto max-w-xs px-4">
+                    <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">
+                        [VITTORIO CENTORE]
+                    </h2>
+                    <p class="text-gray-400 text-xs leading-relaxed">
+                        Computer Science Student at University of Michigan. Building innovative software solutions and
+                        exploring AI, web development, and distributed systems.
+                    </p>
+                </div>
+                <!-- Quick Links -->
+                <div class="w-full md:w-auto px-4">
+                    <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">
+                        QUICK LINKS
+                    </h2>
+                    <nav class="list-none mb-10 space-y-2">
+                        <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                                href="index.html">Home</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                                href="projects.html">Projects</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                                href="university.html">University</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                                href="about.html">About</a></li>
+                        <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                                href="contact.html">Contact</a></li>
+                    </nav>
+                </div>
+                <!-- Headshot Column -->
+                <div class="w-full md:w-auto px-4 flex justify-center items-center">
+                    <img class="rounded-2xl pixel-portrait" src="assets/images/PixelMe.jpg"
+                        style="width: 200px; height: 200px; object-fit: cover;" />
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-900">
+            <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+                <span class="text-white font-bold text-sm">[VC]</span>
+                <p class="text-xs text-gray-400 sm:ml-6 sm:mt-0 mt-4">
+                    © 2025 Vittorio Centore — All Rights Reserved
+                </p>
+                <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4">
+                    <a class="text-gray-400 hover:text-white transition-colors"
+                        href="https://www.linkedin.com/in/vittoriocentore/" target="_blank" rel="noopener noreferrer">
+                        <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path stroke="none"
+                                d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                            </path>
+                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-white transition-colors"
+                        href="https://github.com/vittorio-centore" target="_blank" rel="noopener noreferrer">
+                        <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a class="text-gray-400 hover:text-white transition-colors"
+                        href="https://www.instagram.com/vittorio.cen/" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                        </svg>
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script defer src="script.js"></script>
+</body>
+
+</html>

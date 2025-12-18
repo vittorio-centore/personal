@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>University - Vittorio Centore</title>
+  <meta content="Vittorio Centore portfolio" name="keywords" />
+  <meta content="Vittorio Centore - Computer Science at University of Michigan" name="description" />
+  <link href="assets/images/PixelMe_50x50.jpg" rel="icon" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css" />
+</head>
+
+<body class="font-mono bg-white relative overflow-x-hidden flex flex-col min-h-screen">
+  <!-- HEADER -->
+  <header
+    class="h-16 sm:h-20 flex items-center z-[100] w-full border-b-2 border-gray-500 transition-transform duration-500 ease-in-out fixed top-0 left-0 bg-white"
+    id="topNav">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <div class="uppercase text-gray-800 font-black text-2xl sm:text-3xl flex items-center"
+        >
+        <a class="text-2xl sm:text-3xl ml-3 mt-1 bg-white transition transform ease-in-out duration-100 hover:bg-gray-500 hover:scale-105"
+          href="index.html">
+          [VITTORIO CENTORE]
+        </a>
+        <span class="text-xs sm:text-sm align-text-bottom ml-3 mt-1" id="navSectionIndicator">
+          / UNIVERSITY
+        </span>
+      </div>
+      <div class="flex items-center" >
+        <nav
+          class="top-nav font-sen text-gray-800 uppercase text-sm sm:text-base lg:text-lg lg:flex items-center hidden">
+          <a class="py-2 px-3 sm:px-4 top-nav-link" href="index.html">HOME</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="projects.html">PROJECTS</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link active" href="university.html">UNIVERSITY</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="about.html">ABOUT</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="contact.html">CONTACT</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link resume-nav-link" href="assets/files/vittorio_centore_resume.pdf"
+            download="vittorio_centore_resume.pdf">
+            RESUME ↓
+          </a>
+        </nav>
+        <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+          class="mobile-menu-toggle lg:hidden flex flex-col" id="menuToggle" type="button">
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+
+      <!-- Michigan Spirit Hero Section (Refined) -->
+      <section
+        class="relative bg-[#00274C] overflow-hidden pt-28 pb-10 border-b-[12px] border-[#FFCB05] flex items-center">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10"
+          style="background-image: radial-gradient(#FFCB05 1.5px, transparent 1.5px); background-size: 30px 30px;">
+        </div>
+
+        <div class="container mx-auto px-5 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+
+          <!-- Left Side: Giant Button Only -->
+          <div class="flex flex-col items-center md:items-start">
+            <!-- Interactive "Go Blue" Button -->
+            <div
+              class="group relative inline-block cursor-pointer transition-transform hover:scale-105 active:scale-95">
+              <div
+                class="absolute inset-0 bg-[#FFCB05] blur-3xl opacity-20 group-hover:opacity-60 transition-opacity duration-500">
+              </div>
+              <div
+                class="relative bg-gradient-to-br from-[#FFCB05] to-[#E5B500] text-[#00274C] font-black text-3xl md:text-5xl px-12 py-5 rounded-2xl transform -rotate-2 group-hover:rotate-0 transition-all duration-300 shadow-[0_10px_40px_rgba(0,0,0,0.4)] border-b-8 border-[#B38600] flex items-center gap-4">
+                <span class="text-4xl">🏈</span> GO BLUE! <span class="text-4xl">🎓</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Single M -->
+          <div class="relative z-10 flex items-center opacity-90">
+            <img src="assets/images/michigan_logo.svg" alt="Michigan Block M"
+              class="h-24 md:h-32 drop-shadow-xl z-10 hover:scale-110 transition-transform duration-300">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Relevant Coursework Section -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-20 pb-20" id="coursework">
+        <div class="container mx-auto px-5">
+          <div class="flex flex-col gap-6 text-center mb-16">
+            <p class="text-xs uppercase tracking-[0.5em] text-gray-500">
+              knowledge base
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold text-black">
+              Relevant Coursework
+            </h2>
+            <p class="text-gray-400 text-sm">[CLICK A BOOK TO OPEN]</p>
+          </div>
+
+          <!-- Library Shelf Area -->
+          <div class="relative w-full max-w-[95%] md:max-w-screen-2xl mx-auto mt-16">
+
+            <!-- The Shelf -->
+            <div
+              class="flex items-end justify-center md:justify-around gap-8 md:gap-16 border-b-[24px] border-[#3E2723] px-8 md:px-20 pb-0 relative shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+
+              <!-- Stack 1: Basics (4 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- MAT 116 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-gray-700 to-gray-600 rounded-sm border-l-[6px] border-gray-800 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('mat116')">
+
+                  <span
+                    class="text-gray-200 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Calculus
+                    II</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+
+                <!-- SI 201 -->
+                <div
+                  class="book-spine w-[270px] h-12 bg-gradient-to-r from-teal-800 to-teal-700 rounded-sm border-l-[6px] border-teal-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('si201')">
+
+                  <span
+                    class="text-teal-100 font-bold tracking-wider text-[10px] uppercase group-hover:text-white transition-colors">Data-Oriented
+                    Prog</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- DATASCI 101 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-orange-800 to-orange-700 rounded-sm border-l-[6px] border-orange-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('datasci101')">
+
+                  <span
+                    class="text-orange-100 font-bold tracking-wider text-[10px] uppercase group-hover:text-white transition-colors">Intro
+                    to Data Science</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+              <!-- Stack 2: Core (3 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- EECS 280 -->
+                <div
+                  class="book-spine w-[300px] h-16 bg-gradient-to-r from-indigo-900 to-indigo-800 rounded-sm border-l-[6px] border-indigo-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs280')">
+
+                  <span
+                    class="text-indigo-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Object
+                    Oriented Programming</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 203 -->
+                <div
+                  class="book-spine w-[290px] h-14 bg-gradient-to-r from-slate-800 to-slate-700 rounded-sm border-l-[6px] border-slate-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs203')">
+
+                  <span
+                    class="text-slate-200 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Discrete
+                    Math</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 281 -->
+                <div
+                  class="book-spine w-[310px] h-16 bg-gradient-to-r from-red-900 to-red-800 rounded-sm border-l-[6px] border-red-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs281')">
+
+                  <span
+                    class="text-red-100 font-bold tracking-wider text-sm uppercase group-hover:text-white transition-colors">Data
+                    Structures & Algos</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+              <!-- Stack 3: Advanced (3 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- EECS 370 -->
+                <div
+                  class="book-spine w-[290px] h-14 bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-sm border-l-[6px] border-emerald-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs370')">
+
+                  <span
+                    class="text-emerald-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Computer
+                    Organization</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 376 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-purple-900 to-purple-800 rounded-sm border-l-[6px] border-purple-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs376')">
+
+                  <span
+                    class="text-purple-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Foundations
+                    of CS</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 485 -->
+                <div
+                  class="book-spine w-[300px] h-16 bg-gradient-to-r from-cyan-900 to-cyan-800 rounded-sm border-l-[6px] border-cyan-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs485')">
+
+                  <span
+                    class="text-cyan-100 font-bold tracking-wider text-sm uppercase group-hover:text-white transition-colors">Web
+                    Systems</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Shelf Shadow/Depth -->
+            <div class="w-full h-12 bg-gradient-to-b from-black/10 to-transparent mx-auto max-w-6xl"></div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Open Book Modal -->
+      <div id="book-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+        onclick="closeBook()">
+
+        <!-- The Book Container (Modal Content) -->
+        <div class="relative max-w-5xl w-full mx-4 transform scale-95 transition-transform duration-300"
+          id="modal-content" onclick="event.stopPropagation()">
+
+          <!-- Close Button (Inside Book) -->
+          <button
+            class="absolute top-4 right-4 md:top-6 md:right-8 text-gray-400 hover:text-gray-600 z-[110] transition-colors"
+            onclick="closeBook()">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <div
+            class="bg-[#fdfbf7] rounded-r-2xl rounded-l-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden min-h-[550px] relative border border-gray-200">
+
+            <!-- Left Page (Course Info) -->
+            <div
+              class="w-full md:w-1/2 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-200 relative flex flex-col justify-center items-center text-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+              <div class="absolute top-6 left-6 w-full h-full border-2 border-gray-800/5 m-[-24px] pointer-events-none">
+              </div>
+
+              <div id="left-page-content" class="transition-opacity duration-300">
+                <div class="flex flex-col items-center justify-center mb-6">
+                  <span class="text-4xl font-serif font-bold text-gray-500 tracking-wider" id="course-dept">EECS</span>
+                  <h1 class="text-8xl font-serif font-black text-gray-900 tracking-tighter leading-none"
+                    id="course-number">281</h1>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-gray-800 leading-tight mb-8"
+                  id="course-title">Data Structures & Algorithms</h3>
+                <div class="w-16 h-1.5 mx-auto rounded-full opacity-80" id="course-accent"></div>
+              </div>
+
+              <span class="absolute bottom-6 left-6 text-gray-400 font-serif text-xs italic">Page <span
+                  id="page-num-left">1</span></span>
+            </div>
+
+            <!-- Center Spine Visual (Desktop only) -->
+            <div
+              class="hidden md:block absolute left-1/2 top-0 bottom-0 w-16 -ml-8 bg-gradient-to-r from-transparent via-black/5 to-transparent pointer-events-none z-10">
+            </div>
+
+            <!-- Right Page (Description) -->
+            <div
+              class="w-full md:w-1/2 p-8 md:p-12 relative flex flex-col justify-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+
+              <div id="right-page-content" class="transition-opacity duration-300">
+                <h4 class="font-serif font-bold text-gray-900 text-lg mb-4 border-b border-gray-300 pb-2 inline-block">
+                  Course Overview</h4>
+                <p class="font-serif text-gray-700 leading-relaxed text-lg mb-8" id="course-desc">
+                  The foundation of efficient software. Mastering memory management, pointers, and algorithmic
+                  complexity (Big O). Implemented complex data structures like AVL trees and graph algorithms in C++.
+                </p>
+
+                <h4 class="font-serif font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">Key Concepts</h4>
+                <ul class="grid grid-cols-2 gap-2" id="course-tags">
+                  <!-- Tags injected here -->
+                </ul>
+              </div>
+
+              <span class="absolute bottom-6 right-6 text-gray-400 font-serif text-xs italic">Page <span
+                  id="page-num-right">2</span></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const courses = [
+
+          {
+            id: 'eecs280',
+            number: '280',
+            title: 'Object Oriented Programming',
+            dept: 'EECS',
+            desc: 'Algorithm development and object-oriented design. Topics included pointers, memory management, recursion, linked lists, and polymorphism in C++.',
+            tags: ['C++', 'Recursion', 'Pointers', 'OOP'],
+            color: 'bg-indigo-800'
+          },
+          {
+            id: 'eecs203',
+            number: '203',
+            title: 'Discrete Mathematics',
+            dept: 'EECS',
+            desc: 'The mathematical foundation of computer science. Logic, set theory, functions, induction, combinatorics, graph theory, and probability.',
+            tags: ['Logic', 'Proofs', 'Graph Theory', 'Probability'],
+            color: 'bg-slate-800'
+          },
+          {
+            id: 'eecs281',
+            number: '281',
+            title: 'Data Structures & Algorithms',
+            dept: 'EECS',
+            desc: 'Advanced data structures and algorithm analysis. Covered heaps, hash tables, trees, graphs, sorting, and dynamic programming. Focus on time/space complexity.',
+            tags: ['C++', 'Big O', 'Algorithms', 'Data Structures'],
+            color: 'bg-red-800'
+          },
+          {
+            id: 'eecs370',
+            number: '370',
+            title: 'Computer Organization',
+            dept: 'EECS',
+            desc: 'Low-level computer architecture. Assembly language (ARM), machine code, pipelining, caching, virtual memory, and digital logic design.',
+            tags: ['Assembly', 'Architecture', 'Caching', 'Logic'],
+            color: 'bg-emerald-800'
+          },
+          {
+            id: 'eecs376',
+            number: '376',
+            title: 'Foundations of CS',
+            dept: 'EECS',
+            desc: 'Theory of computation. Turing machines, undecidability, P vs NP, cryptography, and quantum computing basics. Analyzing what computers can and cannot do.',
+            tags: ['Theory', 'Cryptography', 'P vs NP', 'Turing Machines'],
+            color: 'bg-purple-800'
+          },
+          {
+            id: 'eecs485',
+            number: '485',
+            title: 'Web Systems',
+            dept: 'EECS',
+            desc: 'Full-stack web systems. Client-side (React), server-side (Python/Flask), databases (SQL), and distributed systems concepts like MapReduce.',
+            tags: ['React', 'Flask', 'SQL', 'Distributed Systems'],
+            color: 'bg-cyan-800'
+          },
+          {
+            id: 'si201',
+            number: '201',
+            title: 'Data-Oriented Programming',
+            dept: 'SI',
+            desc: 'Introduction to data manipulation and analysis using Python. Working with APIs, JSON, and data visualization libraries.',
+            tags: ['Python', 'Data Analysis', 'APIs', 'Visualization'],
+            color: 'bg-teal-800'
+          },
+          {
+            id: 'datasci101',
+            number: '101',
+            title: 'Intro to Data Science',
+            dept: 'DATASCI',
+            desc: 'Overview of the data science lifecycle. Data collection, cleaning, analysis, and visualization. Statistical inference and machine learning basics.',
+            tags: ['Python', 'Pandas', 'Statistics', 'Visualization'],
+            color: 'bg-orange-800'
+          },
+          {
+            id: 'mat116',
+            number: '116',
+            title: 'Calculus II',
+            dept: 'MAT',
+            desc: 'Integral calculus. Techniques of integration, infinite sequences and series, Taylor series, and applications to geometry and physics.',
+            tags: ['Calculus', 'Integration', 'Series', 'Math'],
+            color: 'bg-gray-700'
+          }
+        ];
+
+        let currentIndex = 0;
+
+        function renderBook() {
+          const course = courses[currentIndex];
+          const leftContent = document.getElementById('left-page-content');
+          const rightContent = document.getElementById('right-page-content');
+
+          // Fade out
+          leftContent.style.opacity = '0';
+          rightContent.style.opacity = '0';
+
+          setTimeout(() => {
+            // Update Content
+            document.getElementById('course-number').innerText = course.number;
+            document.getElementById('course-title').innerText = course.title;
+            document.getElementById('course-dept').innerText = course.dept;
+            document.getElementById('course-desc').innerText = course.desc;
+            document.getElementById('course-accent').className = `w-16 h-1.5 mx-auto rounded-full opacity-80 ${course.color}`;
+
+            // Update Tags
+            const tagsContainer = document.getElementById('course-tags');
+            tagsContainer.innerHTML = '';
+            course.tags.forEach(tag => {
+              const li = document.createElement('li');
+              li.className = 'flex items-center gap-2 text-sm font-serif text-gray-600';
+              li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${course.color}"></span>${tag}`;
+              tagsContainer.appendChild(li);
+            });
+
+            // Update Page Numbers
+            document.getElementById('page-num-left').innerText = (currentIndex * 2) + 1;
+            document.getElementById('page-num-right').innerText = (currentIndex * 2) + 2;
+
+            // Fade in
+            leftContent.style.opacity = '1';
+            rightContent.style.opacity = '1';
+          }, 300);
+        }
+
+        function openBook(id) {
+          // Find index of clicked book
+          const index = courses.findIndex(c => c.id === id);
+          if (index !== -1) {
+            currentIndex = index;
+            renderBook();
+
+            const modal = document.getElementById('book-modal');
+            const content = document.getElementById('modal-content');
+
+            modal.classList.remove('hidden');
+            // Small delay for transition
+            setTimeout(() => {
+              modal.classList.remove('opacity-0');
+              content.classList.remove('scale-95');
+              content.classList.add('scale-100');
+            }, 10);
+          }
+        }
+
+        function closeBook() {
+          const modal = document.getElementById('book-modal');
+          const content = document.getElementById('modal-content');
+
+          modal.classList.add('opacity-0');
+          content.classList.remove('scale-100');
+          content.classList.add('scale-95');
+
+          setTimeout(() => {
+            modal.classList.add('hidden');
+          }, 300);
+        }
+      </script>
+
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-10"
+        id="awards-affiliations">
+        <div class="container mx-auto px-5 space-y-12">
+          <div class="flex flex-col gap-6 text-center">
+
+            <div class="affiliation-panel w-full">
+
+              <!-- Mobile View (Vertical List) -->
+              <div class="md:hidden flex flex-col gap-4 text-center mb-8">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500">campus life</p>
+                <h3 class="text-3xl font-bold text-gray-900">Involvements</h3>
+              </div>
+              <div class="md:hidden flex flex-col gap-6 px-4 pb-12">
+                <!-- Atlas -->
+                <a href="https://atlasdigital.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/atlas_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Atlas Digital</h3>
+                      <span class="text-xs font-bold text-teal-400 uppercase">Software Analyst</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">1st and Largest Tech Consulting Group at the
+                    University of Michigan</p>
+                </a>
+                <!-- Reach -->
+                <a href="https://www.michiganrcg.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/reach_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Reach</h3>
+                      <span class="text-xs font-bold text-blue-400 uppercase">Tech Consultant</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Student-led technology consulting club providing
+                    real-world experiences</p>
+                </a>
+                <!-- Rover -->
+                <a href="https://mrover.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/rover_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">MI Rover</h3>
+                      <span class="text-xs font-bold text-orange-400 uppercase">Engineer</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Building Mars rovers for URC.</p>
+                </a>
+                <!-- ISA -->
+                <a href="#" target="_blank" class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/italian_sa_pixel.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Italian SA</h3>
+                      <span class="text-xs font-bold text-red-400 uppercase">Member</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Promoting Italian culture.</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Magazine Editorial Grid - Involvements (Light Theme) -->
+      <div class="hidden md:block bg-[#fafafa] w-full overflow-hidden relative" id="involvements-section">
+
+        <!-- Editorial Header -->
+        <div class="max-w-7xl mx-auto px-8 pt-20 pb-12">
+          <div class="flex items-end justify-between border-b border-gray-200 pb-6">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.5em] text-gray-400 mb-2 font-mono">Issue No. 2024</p>
+              <h2 class="text-8xl font-black text-gray-900 tracking-tighter leading-none"
+                style="font-family: 'Inter', system-ui, sans-serif;">
+                CAMPUS<br />LIFE
+              </h2>
+            </div>
+            <div class="text-right">
+              <p class="text-gray-600 text-sm font-mono">University of Michigan</p>
+              <p class="text-gray-400 text-xs font-mono mt-1">Ann Arbor, MI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Grid -->
+        <div class="max-w-7xl mx-auto px-8 pb-24">
+          <div class="grid grid-cols-12 gap-4 relative">
+
+            <!-- FEATURED: Atlas Digital (Large Card - spans 7 columns) -->
+            <a href="https://atlasdigital.org/" target="_blank"
+              class="col-span-7 row-span-2 relative group cursor-pointer overflow-hidden bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 opacity-30"
+                style="background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px);">
+              </div>
+
+              <!-- Accent Bar -->
+              <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-teal-500 via-teal-600 to-teal-700">
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-10 p-10 h-full flex flex-col justify-between min-h-[520px]">
+                <!-- Top Section -->
+                <div>
+                  <div class="flex items-center gap-3 mb-8">
+                    <span
+                      class="text-[10px] uppercase tracking-[0.3em] text-teal-600 font-bold border border-teal-200 bg-teal-50 px-3 py-1">Featured</span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono">01</span>
+                  </div>
+
+                  <h3
+                    class="text-6xl font-black text-gray-900 tracking-tight leading-[0.9] mb-4 group-hover:text-teal-600 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    ATLAS<br />DIGITAL
+                  </h3>
+
+                  <div class="w-24 h-[2px] bg-gradient-to-r from-teal-500 to-transparent mb-6"></div>
+
+                  <p class="text-gray-500 text-sm leading-relaxed max-w-md font-mono">
+                    The 1st and largest tech consulting organization at the University of Michigan.
+                    Delivering innovative solutions for real clients.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="flex items-end justify-between">
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-1">Position</p>
+                    <p class="text-xl font-bold text-teal-600 tracking-wide">SOFTWARE ANALYST</p>
+                  </div>
+                  <div
+                    class="w-32 h-32 bg-gray-50 rounded-full flex items-center justify-center p-5 border border-gray-100 group-hover:border-teal-300 transition-colors duration-300">
+                    <img src="assets/images/atlas_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-teal-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+            </a>
+
+            <!-- Reach Consulting (Top Right) -->
+            <a href="https://www.michiganrcg.org/" target="_blank"
+              class="col-span-5 relative group cursor-pointer overflow-hidden bg-white rounded-sm border-l-2 border-blue-500 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <div class="absolute inset-0 opacity-20"
+                style="background-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(59,130,246,0.05) 1px, rgba(59,130,246,0.05) 2px);">
+              </div>
+
+              <div class="relative z-10 p-8 h-full flex flex-col justify-between min-h-[250px]">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-3 block">02</span>
+                    <h3
+                      class="text-3xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300"
+                      style="font-family: 'Inter', system-ui, sans-serif;">
+                      REACH
+                    </h3>
+                    <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mt-2">Tech Consultant</p>
+                  </div>
+                  <div
+                    class="w-28 h-28 bg-gray-50 rounded-full flex items-center justify-center p-4 border border-gray-100">
+                    <img src="assets/images/reach_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+
+                <p class="text-gray-500 text-xs font-mono leading-relaxed">
+                  Student-led technology consulting providing real-world client experiences.
+                </p>
+              </div>
+            </a>
+
+            <!-- MI Rover (Bottom Right - Top) -->
+            <a href="https://mrover.org/" target="_blank"
+              class="col-span-3 relative group cursor-pointer overflow-hidden bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <div
+                class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600">
+              </div>
+
+              <div class="relative z-10 p-6 h-full flex flex-col justify-between min-h-[250px]">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-2 block">03</span>
+                  <h3
+                    class="text-2xl font-black text-gray-900 tracking-tight group-hover:text-orange-500 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    MROVER
+                  </h3>
+                </div>
+
+                <div class="space-y-3">
+                  <p class="text-orange-500 text-[10px] font-bold uppercase tracking-wider">Engineer</p>
+                  <div
+                    class="w-20 h-20 bg-gray-50 rounded-lg flex items-center justify-center p-3 border border-gray-100">
+                    <img src="assets/images/rover_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Italian SA (Bottom Right - Bottom) -->
+            <a href="#"
+              class="col-span-2 relative group cursor-pointer overflow-hidden bg-white rounded-sm border border-gray-100 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+
+              <div class="relative z-10 p-5 h-full flex flex-col justify-between min-h-[250px]">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-2 block">04</span>
+                  <div
+                    class="w-24 h-24 bg-gray-50 rounded-lg flex items-center justify-center p-3 border border-gray-100 mb-3">
+                    <img src="assets/images/italian_sa_pixel.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+
+                <div>
+                  <h3
+                    class="text-base font-black text-gray-900 tracking-tight leading-tight group-hover:text-red-500 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    ITSA
+                  </h3>
+                  <p class="text-red-500 text-[9px] font-bold uppercase tracking-wider mt-2">Member</p>
+                </div>
+              </div>
+
+              <!-- Italian flag accent -->
+              <div class="absolute bottom-0 left-0 right-0 h-1 flex">
+                <div class="flex-1 bg-green-600"></div>
+                <div class="flex-1 bg-gray-100"></div>
+                <div class="flex-1 bg-red-600"></div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Editorial Footer -->
+          <div class="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono">Building Tomorrow's Leaders</p>
+            <div class="flex items-center gap-6">
+              <span class="text-[10px] text-gray-300 font-mono">→ Hover to explore</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Say Hi Section (University Tab Footer) -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-48 pb-32">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio.cen
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="text-gray-600 body-font font-mono bg-gray-800">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center justify-center gap-8 lg:gap-12">
+        <div class="w-full md:w-auto max-w-xs px-4">
+          <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">[VITTORIO CENTORE]</h2>
+          <p class="text-gray-400 text-xs leading-relaxed">Computer Science Student at University of Michigan.</p>
+        </div>
+        <div class="w-full md:w-auto px-4">
+          <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">QUICK LINKS</h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="index.html">Home</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="projects.html">Projects</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="university.html">University</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="about.html">About</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="contact.html">Contact</a></li>
+          </nav>
+        </div>
+        <div class="w-full md:w-auto px-4 flex justify-center items-center">
+          <img class="rounded-2xl pixel-portrait" src="assets/images/PixelMe.jpg" style="width: 200px; height: 200px; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-900">
+      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <span class="text-white font-bold text-sm">[VC]</span>
+        <p class="text-xs text-gray-400 sm:ml-6 sm:mt-0 mt-4">© 2025 Vittorio Centore — All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+</html>

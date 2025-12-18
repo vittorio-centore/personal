@@ -14,7 +14,7 @@
     name="description" />
   <meta content="https://via.placeholder.com/150" name="image" property="og:image" />
   <link href="assets/images/PixelMe_50x50.jpg" rel="icon" />
-  <link href="/assets/css/styles.css" rel="stylesheet" />
+  <link href="assets/css/main.css" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css" />
 </head>
@@ -164,470 +164,6 @@
             </div>
 
             <!-- Right Column: Gamified Experience Panel -->
-            <style>
-              /* World Map / Level Select CSS */
-              .experience-container {
-                width: 100%;
-                background: #ffffff;
-                border-radius: 24px;
-                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-                overflow: hidden;
-                border: 4px solid #1f2937;
-                /* Dark border for retro feel */
-                font-family: 'Courier New', Courier, monospace;
-                /* Monospace for pixel vibe */
-                margin-top: 0.25rem;
-              }
-
-              .world-map-wrapper {
-                display: flex;
-                height: 500px;
-              }
-
-              /* Left Column: The Map Path */
-              .map-path-column {
-                width: 30%;
-                background-color: #f8fafc;
-                background-image:
-                  linear-gradient(#e2e8f0 1px, transparent 1px),
-                  linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
-                background-size: 24px 24px;
-                image-rendering: auto;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-right: 4px solid #1f2937;
-              }
-
-              .map-svg {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                pointer-events: none;
-                z-index: 1;
-              }
-
-              .path-line {
-                fill: none;
-                stroke: #9ca3af;
-                stroke-width: 6;
-                stroke-dasharray: 12 8;
-                stroke-linecap: round;
-              }
-
-              .level-node {
-                position: absolute;
-                width: 60px;
-                height: 60px;
-                background: #ffffff;
-                border: 3px solid #1f2937;
-                border-radius: 50%;
-                z-index: 10;
-                cursor: pointer;
-                transition: transform 0.2s, border-color 0.2s;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
-                overflow: hidden;
-              }
-
-              .node-logo {
-                width: 100%;
-                height: 100%;
-                object-fit: contain;
-                padding: 4px;
-              }
-
-              .level-node:hover,
-              .level-node.active {
-                transform: scale(1.2);
-                border-color: #14b8a6;
-              }
-
-              .level-node.active {
-                box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px #14b8a6;
-              }
-
-              /* Player Avatar Marker */
-              .player-marker {
-                position: absolute;
-                width: 60px;
-                height: 60px;
-                background-image: url('assets/images/PixelMe_50x50.jpg');
-                /* Using your pixel avatar */
-                background-size: cover;
-                border-radius: 8px;
-                border: 3px solid #1f2937;
-                z-index: 20;
-                pointer-events: none;
-                transition: top 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-                transform: translate(-50%, -100%);
-                /* Sit ON TOP of the node */
-                margin-top: -10px;
-                box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
-              }
-
-              /* Right Column: Details Panel */
-              .map-details-column {
-                width: 70%;
-                background: #ffffff;
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                position: relative;
-              }
-
-              .level-header {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                margin-bottom: 1.5rem;
-                border-bottom: 4px solid #f3f4f6;
-                padding-bottom: 1rem;
-              }
-
-              .level-logo {
-                width: 64px;
-                height: 64px;
-                object-fit: contain;
-                filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.1));
-              }
-
-              .level-title h3 {
-                font-size: 1.5rem;
-                font-weight: 900;
-                color: #111827;
-                margin: 0;
-                line-height: 1.2;
-              }
-
-              .level-title span {
-                font-size: 0.9rem;
-                color: #14b8a6;
-                /* Teal */
-                font-weight: bold;
-                text-transform: uppercase;
-              }
-
-              .level-stats {
-                display: grid;
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                gap: 1rem;
-                margin-bottom: 1.5rem;
-                background: #f9fafb;
-                padding: 1rem;
-                border-radius: 12px;
-                border: 2px dashed #e5e7eb;
-              }
-
-              .stat-box {
-                display: flex;
-                flex-direction: column;
-              }
-
-              .stat-label {
-                font-size: 0.7rem;
-                text-transform: uppercase;
-                color: #6b7280;
-                font-weight: bold;
-              }
-
-              .stat-value {
-                font-size: 0.9rem;
-                font-weight: bold;
-                color: #374151;
-              }
-
-              .level-desc {
-                background: #1f2937;
-                color: #10b981;
-                /* Terminal green text */
-                padding: 1.5rem;
-                border-radius: 12px;
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 0.9rem;
-                line-height: 1.6;
-                position: relative;
-                box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
-              }
-
-              .level-desc::before {
-                content: "> MISSION LOG";
-                position: absolute;
-                top: -10px;
-                left: 20px;
-                background: #14b8a6;
-                color: #ffffff;
-                padding: 2px 10px;
-                font-size: 0.7rem;
-                font-weight: bold;
-                border-radius: 4px;
-              }
-
-              /* Mobile */
-              @media (max-width: 768px) {
-                .world-map-wrapper {
-                  flex-direction: column;
-                  height: auto;
-                }
-
-                .map-path-column {
-                  width: 100%;
-                  height: 200px;
-                  border-right: none;
-                  border-bottom: 4px solid #1f2937;
-                }
-
-                .map-details-column {
-                  width: 100%;
-                }
-              }
-
-              /* =========================================
-                 RETRO MONITOR PROJECT SHOWCASE
-                 ========================================= */
-              .projects-showcase {
-                display: flex;
-                gap: 2rem;
-                align-items: flex-start;
-              }
-
-              @media (max-width: 1024px) {
-                .projects-showcase {
-                  flex-direction: column;
-                }
-              }
-
-              /* --- Selector Column --- */
-              .project-selector {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                width: 250px;
-                flex-shrink: 0;
-              }
-
-              @media (max-width: 1024px) {
-                .project-selector {
-                  width: 100%;
-                  flex-direction: row;
-                  overflow-x: auto;
-                  padding-bottom: 1rem;
-                }
-              }
-
-              .project-select-btn {
-                display: flex;
-                align-items: center;
-                gap: 1rem;
-                background: #ffffff;
-                border: 2px solid #e5e7eb;
-                padding: 0.75rem;
-                border-radius: 12px;
-                cursor: pointer;
-                transition: all 0.2s;
-                text-align: left;
-                font-family: 'Courier New', monospace;
-              }
-
-              .project-select-btn:hover {
-                transform: translateX(5px);
-                border-color: #d1d5db;
-                background: #f9fafb;
-              }
-
-              .project-select-btn.active {
-                border-color: #1f2937;
-                background: #1f2937;
-                color: #ffffff;
-                box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-                transform: translateX(5px);
-              }
-
-              .project-select-btn .pixel-icon {
-                width: 40px;
-                height: 40px;
-                object-fit: contain;
-                image-rendering: pixelated;
-                border-radius: 4px;
-                background: #f3f4f6;
-                padding: 4px;
-              }
-
-              /* --- Display Column (Monitor) --- */
-              .project-display {
-                flex-grow: 1;
-                width: 100%;
-              }
-
-              .retro-monitor {
-                background: #2d3748;
-                padding: 1.5rem;
-                border-radius: 20px;
-                box-shadow:
-                  0 20px 50px rgba(0, 0, 0, 0.2),
-                  inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-                position: relative;
-              }
-
-              .retro-monitor::after {
-                content: '';
-                position: absolute;
-                bottom: -10px;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 40%;
-                height: 10px;
-                background: #1a202c;
-                border-radius: 0 0 20px 20px;
-              }
-
-              .monitor-screen {
-                background: #000000;
-                border-radius: 4px;
-                overflow: hidden;
-                position: relative;
-                width: 100%;
-                min-width: 800px;
-                height: 650px;
-                border: 2px solid #4a5568;
-                box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-              }
-
-              .monitor-content {
-                padding: 2.5rem;
-                color: #e2e8f0;
-                font-family: 'Courier New', monospace;
-                transition: opacity 0.2s ease-in-out;
-                height: 100%;
-                overflow-y: auto;
-              }
-
-              /* CRT Scanline Effect */
-              .monitor-screen::before {
-                content: " ";
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                bottom: 0;
-                right: 0;
-                background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-                z-index: 10;
-                background-size: 100% 2px, 3px 100%;
-                pointer-events: none;
-              }
-
-
-
-              .monitor-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                border-bottom: 1px solid #4a5568;
-                padding-bottom: 1rem;
-                margin-bottom: 1.5rem;
-              }
-
-              .monitor-title {
-                font-size: 1.75rem;
-                color: #4fd1c5;
-                /* Teal glow */
-                text-shadow: 0 0 10px rgba(79, 209, 197, 0.5);
-                margin: 0;
-              }
-
-              .monitor-controls {
-                display: flex;
-                gap: 0.5rem;
-              }
-
-              .dot {
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-              }
-
-              .dot.red {
-                background: #fc8181;
-              }
-
-              .dot.yellow {
-                background: #f6e05e;
-              }
-
-              .dot.green {
-                background: #68d391;
-              }
-
-              .monitor-body {
-                display: flex;
-                gap: 2rem;
-              }
-
-              @media (max-width: 768px) {
-                .monitor-body {
-                  flex-direction: column;
-                }
-              }
-
-              .project-visual {
-                width: 350px;
-                height: 350px;
-                flex-shrink: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #1a202c;
-                border-radius: 8px;
-                padding: 1rem;
-                border: 1px solid #2d3748;
-                overflow: hidden;
-              }
-
-              .project-main-img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                image-rendering: pixelated;
-                border-radius: 4px;
-              }
-
-              .project-info {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-              }
-
-              .project-info p {
-                font-size: 1.05rem;
-                line-height: 1.7;
-                color: #cbd5e0;
-                margin-bottom: 1.5rem;
-              }
-
-              .monitor-link {
-                display: inline-block;
-                color: #63b3ed;
-                text-decoration: none;
-                font-weight: bold;
-                margin-right: 1rem;
-                transition: color 0.2s;
-              }
-
-              .monitor-link:hover {
-                color: #90cdf4;
-                text-shadow: 0 0 8px rgba(99, 179, 237, 0.6);
-              }
-            </style>
 
             <div class="experience-container">
               <div class="world-map-wrapper">
@@ -902,19 +438,19 @@
                     <span>
                       LinkedIn
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
                   target="_blank">
                   <div class="contact-link-inner">
                     <img alt="GitHub" src="assets/images/github_logo.png" />
                     <span>
                       GitHub
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
@@ -930,14 +466,14 @@
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
                   rel="noopener noreferrer" target="_blank">
                   <div class="contact-link-inner">
                     <img alt="Instagram" src="assets/images/instagram_logo.png" />
                     <span>
                       Instagram
                       <small>
-                        @vittorio-centore
+                        @vittorio.cen
                       </small>
                     </span>
                   </div>
@@ -989,19 +525,19 @@
                     <span>
                       LinkedIn
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
                   target="_blank">
                   <div class="contact-link-inner">
                     <img alt="GitHub" src="assets/images/github_logo.png" />
                     <span>
                       GitHub
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
@@ -1017,14 +553,14 @@
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
                   rel="noopener noreferrer" target="_blank">
                   <div class="contact-link-inner">
                     <img alt="Instagram" src="assets/images/instagram_logo.png" />
                     <span>
                       Instagram
                       <small>
-                        @vittorio-centore
+                        @vittorio.cen
                       </small>
                     </span>
                   </div>
@@ -1717,19 +1253,19 @@
                     <span>
                       LinkedIn
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
                   target="_blank">
                   <div class="contact-link-inner">
                     <img alt="GitHub" src="assets/images/github_logo.png" />
                     <span>
                       GitHub
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
@@ -1745,14 +1281,14 @@
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
                   rel="noopener noreferrer" target="_blank">
                   <div class="contact-link-inner">
                     <img alt="Instagram" src="assets/images/instagram_logo.png" />
                     <span>
                       Instagram
                       <small>
-                        @vittorio-centore
+                        @vittorio.cen
                       </small>
                     </span>
                   </div>
@@ -1932,7 +1468,7 @@
               <div class="flex flex-wrap justify-center gap-6 md:gap-8 relative z-10">
 
                 <!-- Frame 1 - Tilted left -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(0)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-4deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -1956,7 +1492,7 @@
                 </div>
 
                 <!-- Frame 2 - Tilted right -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(1)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(3deg); margin-top: 20px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
@@ -1980,7 +1516,7 @@
                 </div>
 
                 <!-- Frame 3 - Straight -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(2)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-2deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -2003,7 +1539,7 @@
                 </div>
 
                 <!-- Frame 4 - Tilted left -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(3)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(5deg); margin-top: 15px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2026,7 +1562,7 @@
                 </div>
 
                 <!-- Frame 5 - Ornate gold -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(4)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-6deg); margin-top: 10px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
@@ -2050,7 +1586,7 @@
                 </div>
 
                 <!-- Frame 6 - Team on Stairs -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(5)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(3deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2073,7 +1609,7 @@
                 </div>
 
                 <!-- Frame 7 - Friends Party -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(6)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-4deg); margin-top: 20px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
@@ -2097,7 +1633,7 @@
                 </div>
 
                 <!-- Frame 8 - Michigan Stadium -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(7)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(2deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -2121,7 +1657,7 @@
 
 
                 <!-- Frame 10 - Friends Fun -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(9)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(4deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2144,7 +1680,7 @@
                 </div>
 
                 <!-- Frame 11 - NYC Disney -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(10)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-3deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
@@ -2168,7 +1704,7 @@
                 </div>
 
                 <!-- Frame 12 - Times Square Night -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(11)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(4deg); margin-top: 18px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2191,7 +1727,7 @@
                 </div>
 
                 <!-- Frame 13 - Red Stairs -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(12)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-5deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -2214,7 +1750,7 @@
                 </div>
 
                 <!-- Frame 14 - Dinner -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(13)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(3deg); margin-top: 12px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
@@ -2238,7 +1774,7 @@
                 </div>
 
                 <!-- Frame 15 - Formal Event -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(14)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-4deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2261,7 +1797,7 @@
                 </div>
 
                 <!-- Frame 16 - Golf Event -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(15)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(5deg); margin-top: 10px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
@@ -2285,7 +1821,7 @@
                 </div>
 
                 <!-- Frame 17 - Smoothie Run -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(16)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-3deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
@@ -2308,7 +1844,7 @@
                 </div>
 
                 <!-- Frame 18 - Polaroid Squad -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(17)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(4deg); margin-top: 15px;">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
@@ -2331,7 +1867,7 @@
                 </div>
 
                 <!-- Frame 19 - Roatan Beach -->
-                <div class="picture-frame group cursor-pointer" onclick="openLightbox(18)"
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
                   style="transform: rotate(-5deg);">
                   <div class="frame-outer" style="
                   background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
@@ -2405,9 +1941,21 @@
         const memoryImages = document.querySelectorAll('.picture-frame img');
         let currentImageIndex = 0;
 
-        function openLightbox(index) {
-          currentImageIndex = index;
-          const img = memoryImages[index];
+        function openLightbox(indexOrElement) {
+          // If called with an element (from onclick with 'this'), find its index
+          if (typeof indexOrElement === 'object') {
+            const img = indexOrElement.querySelector('img');
+            currentImageIndex = Array.from(memoryImages).indexOf(img);
+          } else {
+            currentImageIndex = indexOrElement;
+          }
+
+          if (currentImageIndex < 0 || currentImageIndex >= memoryImages.length) {
+            console.error('Image index out of bounds:', currentImageIndex);
+            return;
+          }
+
+          const img = memoryImages[currentImageIndex];
           const lightbox = document.getElementById('memoryLightbox');
           const lightboxImg = document.getElementById('lightboxImage');
           const lightboxCaption = document.getElementById('lightboxCaption');
@@ -2487,19 +2035,19 @@
                     <span>
                       LinkedIn
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
                   target="_blank">
                   <div class="contact-link-inner">
                     <img alt="GitHub" src="assets/images/github_logo.png" />
                     <span>
                       GitHub
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
@@ -2515,14 +2063,14 @@
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
                   rel="noopener noreferrer" target="_blank">
                   <div class="contact-link-inner">
                     <img alt="Instagram" src="assets/images/instagram_logo.png" />
                     <span>
                       Instagram
                       <small>
-                        @vittorio-centore
+                        @vittorio.cen
                       </small>
                     </span>
                   </div>
@@ -2559,19 +2107,19 @@
                     <span>
                       LinkedIn
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
                   target="_blank">
                   <div class="contact-link-inner">
                     <img alt="GitHub" src="assets/images/github_logo.png" />
                     <span>
                       GitHub
                       <small>
-                        /vittoriocentore
+                        /vittorio-centore
                       </small>
                     </span>
                   </div>
@@ -2587,14 +2135,14 @@
                     </span>
                   </div>
                 </a>
-                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                <a class="contact-link" href="https://www.instagram.com/vittorio.cen/"
                   rel="noopener noreferrer" target="_blank">
                   <div class="contact-link-inner">
                     <img alt="Instagram" src="assets/images/instagram_logo.png" />
                     <span>
                       Instagram
                       <small>
-                        @vittorio-centore
+                        @vittorio.cen
                       </small>
                     </span>
                   </div>
@@ -2682,7 +2230,7 @@
               </svg>
             </a>
             <a class="text-gray-400 hover:text-white transition-colors"
-              href="https://www.instagram.com/vittorio-centore/?hl=en" target="_blank" rel="noopener noreferrer">
+              href="https://www.instagram.com/vittorio.cen/" target="_blank" rel="noopener noreferrer">
               <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 class="w-5 h-5" viewBox="0 0 24 24">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>

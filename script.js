@@ -682,9 +682,70 @@ function buildProjectsGrid() {
     const container = document.createElement('div');
     container.className = 'projects-showcase';
 
-    // 1. Selector Column
-    const selector = document.createElement('div');
-    selector.className = 'project-selector';
+    // 1. Sidebar Column (VS Code Style)
+    const sidebar = document.createElement('div');
+    sidebar.className = 'project-sidebar';
+
+    const sidebarHeader = document.createElement('div');
+    sidebarHeader.className = 'sidebar-header';
+    sidebarHeader.innerHTML = '<span>Explorer</span><span>...</span>';
+    sidebar.appendChild(sidebarHeader);
+
+    const sidebarContent = document.createElement('div');
+    sidebarContent.className = 'sidebar-content';
+
+    // Group projects by category
+    const categories = {
+        'AI & ML': {
+            icon: 'icon-python',
+            projects: [projectEntries[0], projectEntries[3]] // Stock Predictor, Habit Trader
+        },
+        'Systems': {
+            icon: 'icon-cpp',
+            projects: [projectEntries[2]] // MapReduce
+        },
+        'Web': {
+            icon: 'icon-react',
+            projects: [projectEntries[1]] // LeetCode Tracker
+        }
+    };
+
+    // Root Folder
+    const rootFolder = document.createElement('div');
+    rootFolder.className = 'sidebar-item folder icon-folder';
+    rootFolder.textContent = 'PROJECTS';
+    sidebarContent.appendChild(rootFolder);
+
+    Object.entries(categories).forEach(([catName, catData]) => {
+        const catFolder = document.createElement('div');
+        catFolder.className = 'sidebar-item folder icon-folder';
+        catFolder.style.paddingLeft = '24px';
+        catFolder.textContent = catName;
+        sidebarContent.appendChild(catFolder);
+
+        catData.projects.forEach(project => {
+            if (!project) return;
+            const item = document.createElement('div');
+            item.className = `sidebar-item file ${catData.icon}`;
+            item.style.paddingLeft = '40px';
+            item.textContent = project.title + (catData.icon === 'icon-python' ? '.py' : catData.icon === 'icon-react' ? '.jsx' : '.cpp');
+
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.sidebar-item').forEach(el => el.classList.remove('active'));
+                item.classList.add('active');
+                updateProjectMonitor(project);
+            });
+
+            // Set first project as active
+            if (project === projectEntries[0]) {
+                item.classList.add('active');
+            }
+
+            sidebarContent.appendChild(item);
+        });
+    });
+
+    sidebar.appendChild(sidebarContent);
 
     // 2. Display Column
     const display = document.createElement('div');
@@ -704,32 +765,7 @@ function buildProjectsGrid() {
     monitor.appendChild(screen);
     display.appendChild(monitor);
 
-    // Populate Selector
-    projectEntries.forEach((project, index) => {
-        const btn = document.createElement('button');
-        btn.className = 'project-select-btn';
-        if (index === 0) btn.classList.add('active');
-
-        const img = document.createElement('img');
-        img.src = project.image;
-        img.className = 'pixel-icon';
-
-        const label = document.createElement('span');
-        label.textContent = project.title;
-
-        btn.appendChild(img);
-        btn.appendChild(label);
-
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.project-select-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            updateProjectMonitor(project);
-        });
-
-        selector.appendChild(btn);
-    });
-
-    container.appendChild(selector);
+    container.appendChild(sidebar);
     container.appendChild(display);
     projectsGrid.appendChild(container);
 

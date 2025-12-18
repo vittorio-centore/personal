@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About - Vittorio Centore</title>
+  <meta content="Vittorio Centore portfolio" name="keywords" />
+  <meta content="Vittorio Centore - Computer Science at University of Michigan" name="description" />
+  <link href="assets/images/PixelMe_50x50.jpg" rel="icon" />
+  <link href="assets/css/main.css" rel="stylesheet" />
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css" />
+</head>
+
+<body class="font-mono bg-white relative overflow-x-hidden flex flex-col min-h-screen">
+  <!-- HEADER -->
+  <header
+    class="h-16 sm:h-20 flex items-center z-[100] w-full border-b-2 border-gray-500 transition-transform duration-500 ease-in-out fixed top-0 left-0 bg-white"
+    id="topNav">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <div class="uppercase text-gray-800 font-black text-2xl sm:text-3xl flex items-center">
+        <a class="text-2xl sm:text-3xl ml-3 mt-1 bg-white transition transform ease-in-out duration-100 hover:bg-gray-500 hover:scale-105"
+          href="index.html">
+          [VITTORIO CENTORE]
+        </a>
+        <span class="text-xs sm:text-sm align-text-bottom ml-3 mt-1" id="navSectionIndicator">
+          / ABOUT
+        </span>
+      </div>
+      <div class="flex items-center">
+        <nav
+          class="top-nav font-sen text-gray-800 uppercase text-sm sm:text-base lg:text-lg lg:flex items-center hidden">
+          <a class="py-2 px-3 sm:px-4 top-nav-link" href="index.html">HOME</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="projects.html">PROJECTS</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="university.html">UNIVERSITY</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link active" href="about.html">ABOUT</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link " href="contact.html">CONTACT</a>
+          <a class="py-2 px-3 sm:px-4 top-nav-link resume-nav-link" href="assets/files/vittorio_centore_resume.pdf"
+            download="vittorio_centore_resume.pdf">
+            RESUME ↓
+          </a>
+        </nav>
+        <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+          class="mobile-menu-toggle lg:hidden flex flex-col" id="menuToggle" type="button">
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+          <span class="w-6 h-1 bg-gray-800 mb-1"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-20 pt-32" id="about">
+      <div class="container mx-auto px-5 max-w-6xl">
+
+        <!-- Header - Centered -->
+        <div class="text-center mb-12">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">Get To Know Me</p>
+          <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+            About Me
+          </h1>
+          <!-- Italian flag accent - thin bar below -->
+          <div class="flex justify-center gap-0">
+            <div class="w-8 h-1 bg-green-600 rounded-l-full"></div>
+            <div class="w-8 h-1 bg-white border-y border-gray-200"></div>
+            <div class="w-8 h-1 bg-red-600 rounded-r-full"></div>
+          </div>
+        </div>
+
+        <!-- Two Column Layout - Centered -->
+        <div class="flex flex-col lg:flex-row gap-16 items-center justify-center">
+
+          <!-- Text - Left -->
+          <div class="lg:w-1/2 text-left">
+            <div class="space-y-5 text-gray-600 leading-relaxed">
+              <p class="text-lg">
+                <span class="text-2xl font-bold text-teal-600">Hi, I'm Vittorio!</span> I'm a Computer Science student
+                at the University of Michigan, where I spend most of my time building things and then figuring out how
+                to make them better.
+              </p>
+              <p class="text-lg">
+                What I love about coding is that it turns ideas into real systems people can actually use. I'm
+                especially interested in <span class="font-semibold text-teal-600">full-stack development, AI, and
+                  machine learning</span>, particularly when it comes to optimizing backend systems.
+              </p>
+              <p class="text-lg">
+                Right now, I'm working at <span class="font-semibold text-teal-600">AgentMail</span>, a YC-backed
+                startup, where I help build user-facing demos that clearly explain what's happening behind the scenes
+                while heavy backend processes are running.
+              </p>
+              <p class="text-lg">
+                I moved from Italy to Miami, Florida when I was 10, and the U.S. gave me access to a world of
+                technology and opportunity that I didn't have before. Since then, I've been obsessed with building and
+                learning through code.
+              </p>
+              <p class="text-lg text-gray-500 italic">
+                If I'm not coding, I'm probably watching soccer or out and about with friends, but I'm always happy to
+                talk about tech or ideas that sound a little ridiculous but might actually work.
+              </p>
+            </div>
+          </div>
+
+          <!-- Images - Right (Cascading diagonal overlap) -->
+          <div class="lg:w-1/2 relative min-h-[650px] hidden lg:block">
+            <!-- Image 1 - Top, starting position -->
+            <div
+              class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform -rotate-2 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-10">
+              <img src="assets/images/snowboard.png" alt="Snowboarding" class="w-full h-full object-cover" />
+            </div>
+            <!-- Image 2 - Overlaps bottom-right of pic 1 -->
+            <div
+              class="absolute top-40 left-[50%] w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-20">
+              <img src="assets/images/monkey.png" alt="With a monkey" class="w-full h-full object-cover" />
+            </div>
+            <!-- Image 3 - Overlaps bottom-left of pic 2 -->
+            <div
+              class="absolute top-80 left-[10%] w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform -rotate-3 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-30">
+              <img src="assets/images/brother.png" alt="With my little brother" class="w-full h-full object-cover" />
+            </div>
+            <!-- Image 4 - Overlaps bottom-right of pic 3 -->
+            <div
+              class="absolute top-[480px] left-[45%] w-60 h-60 rounded-2xl overflow-hidden shadow-xl transform rotate-2 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-40">
+              <img src="assets/images/friends.png" alt="With friends" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Mobile Images - Simple stack -->
+          <div class="lg:hidden flex flex-wrap gap-4 justify-center">
+            <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/snowboard.png" alt="Snowboarding" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/monkey.png" alt="With a monkey" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/brother.png" alt="With my little brother" class="w-full h-full object-cover" />
+            </div>
+            <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+              <img src="assets/images/friends.png" alt="With friends" class="w-full h-full object-cover" />
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Memories Table Section - 3D -->
+    <section class="py-20 pb-64 bg-gradient-to-b from-white to-gray-200 overflow-hidden">
+      <div class="container mx-auto px-5 max-w-7xl">
+        <!-- Header -->
+        <div class="text-center mb-16">
+          <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">A Few Snapshots</p>
+          <h2 class="title-font text-3xl sm:text-4xl font-bold text-gray-900">Memories</h2>
+        </div>
+
+        <!-- 3D Scene Container -->
+        <div class="scene-3d" style="perspective: 1200px; perspective-origin: 50% 35%; padding-bottom: 100px;">
+          <!-- The Table Surface - 3D Tilted -->
+          <div class="memories-table" style="
+              transform: rotateX(25deg);
+              transform-style: preserve-3d;
+              background: linear-gradient(135deg, #8B7355 0%, #6B5344 50%, #5D4037 100%);
+              border-radius: 16px;
+              padding: 120px 60px 200px;
+              position: relative;
+              box-shadow: 
+                0 80px 100px -40px rgba(0,0,0,0.5),
+                0 40px 60px -30px rgba(0,0,0,0.3),
+                inset 0 2px 4px rgba(255,255,255,0.1);
+            ">
+            <!-- Wood grain texture overlay -->
+            <div style="
+              position: absolute;
+              inset: 0;
+              background-image: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.03) 2px,
+                rgba(0,0,0,0.03) 4px
+              );
+              pointer-events: none;
+              border-radius: 16px;
+            "></div>
+
+            <!-- Table Legs (Front only) -->
+            <!-- Front Left Leg -->
+            <div class="table-leg" style="
+                position: absolute;
+                bottom: -150px;
+                left: 40px;
+                width: 24px;
+                height: 150px;
+                background: linear-gradient(90deg, #5D4037 0%, #4E342E 50%, #3E2723 100%);
+                transform: rotateX(-65deg);
+                transform-origin: top center;
+                border-radius: 0 0 4px 4px;
+                box-shadow: 4px 0 10px rgba(0,0,0,0.4);
+              "></div>
+            <!-- Front Right Leg -->
+            <div class="table-leg" style="
+                position: absolute;
+                bottom: -150px;
+                right: 40px;
+                width: 24px;
+                height: 150px;
+                background: linear-gradient(90deg, #4E342E 0%, #5D4037 50%, #4E342E 100%);
+                transform: rotateX(-65deg);
+                transform-origin: top center;
+                border-radius: 0 0 4px 4px;
+                box-shadow: -4px 0 10px rgba(0,0,0,0.4);
+              "></div>
+
+            <!-- Picture Frames Container -->
+            <div class="flex flex-wrap justify-center gap-6 md:gap-8 relative z-10">
+
+              <!-- Frame 1 - Tilted left -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-4deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 6px;
+                    border: 1px solid #e0e0e0;
+                  ">
+                    <img src="assets/images/memory_3.jpg" alt="Farm fun"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="down on the farm" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 2 - Tilted right -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(3deg); margin-top: 20px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 6px;
+                    border: 2px solid #d4af37;
+                  ">
+                    <img src="assets/images/memory_2.jpg" alt="Friends at the farm"
+                      class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="lin picture" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 3 - Straight -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-2deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/formal_event.jpg" alt="Formal event"
+                      class="w-36 h-36 md:w-44 md:h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="suited up" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 4 - Tilted left -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(5deg); margin-top: 15px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 6px;
+                  border-radius: 2px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/memory_4.jpg" alt="Friends outdoor"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="golden hour" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 5 - Ornate gold -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-6deg); margin-top: 10px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 14px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/memory_5.jpg" alt="Halloween party"
+                      class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="halloween" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 6 - Team on Stairs -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(3deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/team_stairs.png" alt="Team photo"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="reach new member class" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 7 - Friends Party -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-4deg); margin-top: 20px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                    <img src="assets/images/friends_party.png" alt="Friends at party"
+                      class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="vibes" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 8 - Michigan Stadium -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(2deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/michigan_stadium.png" alt="Michigan Stadium"
+                      class="w-36 h-28 md:w-44 md:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="big house" />
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Frame 10 - Friends Fun -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(4deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/friends_fun.jpg" alt="Friends having fun"
+                      class="w-32 h-28 md:w-40 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="roomates -1" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 11 - NYC Disney -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-3deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                    <img src="assets/images/nyc_disney.jpg" alt="NYC Disney Store"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="atlas f25 newbies" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 12 - Times Square Night -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(4deg); margin-top: 18px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/nyc_times_square.jpg" alt="Times Square at night"
+                      class="w-36 h-32 md:w-44 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="atlas f25 newbies pt. 2" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 13 - Red Stairs -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-5deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/nyc_red_stairs.jpg" alt="Red stairs NYC"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="saga apt 511" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 14 - Dinner -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(3deg); margin-top: 12px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/dinner_friends.jpg" alt="Dinner with friends"
+                      class="w-36 h-28 md:w-44 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="good food, better company" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 15 - Formal Event -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-4deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/memory_1.jpg" alt="At the orchard"
+                      class="w-28 h-32 md:w-36 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="aura" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 16 - Golf Event -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(5deg); margin-top: 10px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/golf_event.jpg" alt="Golf simulator"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="chilling" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 17 - Smoothie Run -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-3deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/smoothie_friends.jpg" alt="Smoothie run"
+                      class="w-36 h-32 md:w-44 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="smoothie run" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 18 - Polaroid Squad -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(4deg); margin-top: 15px;">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                    <img src="assets/images/polaroid_squad.jpg" alt="Polaroid style"
+                      class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="throwback" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Frame 19 - Roatan Beach -->
+              <div class="picture-frame group cursor-pointer" onclick="openLightbox(this)"
+                style="transform: rotate(-5deg);">
+                <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                  <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                    <img src="assets/images/roatan_beach.jpg" alt="Roatan beach"
+                      class="w-40 h-28 md:w-48 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                      data-caption="honduras trip" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="memoryLightbox" class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center p-4"
+      onclick="closeLightbox(event)">
+      <button onclick="closeLightbox(event)"
+        class="absolute top-6 right-6 text-white/70 hover:text-white text-4xl font-light transition-colors z-10">&times;</button>
+      <button onclick="prevImage(event)"
+        class="absolute left-4 md:left-8 text-white/70 hover:text-white text-5xl font-light transition-colors z-10">&#8249;</button>
+      <button onclick="nextImage(event)"
+        class="absolute right-4 md:right-8 text-white/70 hover:text-white text-5xl font-light transition-colors z-10">&#8250;</button>
+      <div class="max-w-4xl max-h-[85vh] relative" onclick="event.stopPropagation()">
+        <img id="lightboxImage" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl" />
+        <p id="lightboxCaption" class="text-white text-center mt-4 text-lg font-medium"></p>
+      </div>
+    </div>
+
+    <style>
+      /* Make frames stand upright on the tilted table */
+      .picture-frame {
+        transform-style: preserve-3d;
+        transform: rotateX(-25deg);
+      }
+
+      .picture-frame .frame-outer {
+        transform-style: preserve-3d;
+        box-shadow:
+          0 30px 40px -10px rgba(0, 0, 0, 0.5),
+          8px 8px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .picture-frame:hover {
+        transform: rotateX(-25deg) translateZ(20px) scale(1.05);
+      }
+
+      .picture-frame:hover .frame-outer {
+        box-shadow:
+          0 40px 60px -10px rgba(0, 0, 0, 0.6),
+          10px 10px 30px rgba(0, 0, 0, 0.4);
+      }
+    </style>
+
+    <script>
+      // Memory Gallery Lightbox
+      const memoryImages = document.querySelectorAll('.picture-frame img');
+      let currentImageIndex = 0;
+
+      function openLightbox(indexOrElement) {
+        // If called with an element (from onclick with 'this'), find its index
+        if (typeof indexOrElement === 'object') {
+          const img = indexOrElement.querySelector('img');
+          currentImageIndex = Array.from(memoryImages).indexOf(img);
+        } else {
+          currentImageIndex = indexOrElement;
+        }
+
+        if (currentImageIndex < 0 || currentImageIndex >= memoryImages.length) {
+          console.error('Image index out of bounds:', currentImageIndex);
+          return;
+        }
+
+        const img = memoryImages[currentImageIndex];
+        const lightbox = document.getElementById('memoryLightbox');
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.dataset.caption || img.alt;
+
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox(event) {
+        if (event) event.stopPropagation();
+        const lightbox = document.getElementById('memoryLightbox');
+        lightbox.classList.add('hidden');
+        lightbox.classList.remove('flex');
+        document.body.style.overflow = '';
+      }
+
+      function nextImage(event) {
+        event.stopPropagation();
+        currentImageIndex = (currentImageIndex + 1) % memoryImages.length;
+        updateLightboxImage();
+      }
+
+      function prevImage(event) {
+        event.stopPropagation();
+        currentImageIndex = (currentImageIndex - 1 + memoryImages.length) % memoryImages.length;
+        updateLightboxImage();
+      }
+
+      function updateLightboxImage() {
+        const img = memoryImages[currentImageIndex];
+        const lightboxImg = document.getElementById('lightboxImage');
+        const lightboxCaption = document.getElementById('lightboxCaption');
+
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = img.dataset.caption || img.alt;
+      }
+
+      // Keyboard navigation for memories
+      document.addEventListener('keydown', function (e) {
+        const lightbox = document.getElementById('memoryLightbox');
+        if (!lightbox.classList.contains('hidden')) {
+          if (e.key === 'Escape') closeLightbox();
+          if (e.key === 'ArrowRight') nextImage(e);
+          if (e.key === 'ArrowLeft') prevImage(e);
+        }
+      });
+    </script>
+
+
+    <!-- Say Hi Section (About Tab Footer) -->
+    <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-48 pb-32">
+      <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+        <div class="lg:w-1/2 w-full flex justify-center">
+          <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+        </div>
+        <div class="lg:w-1/2 w-full">
+          <div class="contact-card">
+            <div class="text-center lg:text-left">
+              <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                LET'S CONNECT
+              </p>
+              <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                Say hi
+              </h1>
+            </div>
+            <div class="contact-links">
+              <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                target="_blank">
+                <div class="contact-link-inner">
+                  <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                  <span>
+                    LinkedIn
+                    <small>
+                      /vittorio-centore
+                    </small>
+                  </span>
+                </div>
+              </a>
+              <a class="contact-link" href="https://github.com/vittorio-centore" rel="noopener noreferrer"
+                target="_blank">
+                <div class="contact-link-inner">
+                  <img alt="GitHub" src="assets/images/github_logo.png" />
+                  <span>
+                    GitHub
+                    <small>
+                      /vittorio-centore
+                    </small>
+                  </span>
+                </div>
+              </a>
+              <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                <div class="contact-link-inner">
+                  <img alt="Email" src="assets/images/email.png" />
+                  <span>
+                    Email
+                    <small>
+                      vcentore@umich.edu
+                    </small>
+                  </span>
+                </div>
+              </a>
+              <a class="contact-link" href="https://www.instagram.com/vittorio.cen/" rel="noopener noreferrer"
+                target="_blank">
+                <div class="contact-link-inner">
+                  <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                  <span>
+                    Instagram
+                    <small>
+                      @vittorio.cen
+                    </small>
+                  </span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <footer class="text-gray-600 body-font font-mono bg-gray-800">
+    <div class="container px-5 py-12 mx-auto">
+      <div class="flex flex-wrap md:text-left text-center justify-center gap-8 lg:gap-12">
+        <div class="w-full md:w-auto max-w-xs px-4">
+          <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">[VITTORIO CENTORE]</h2>
+          <p class="text-gray-400 text-xs leading-relaxed">Computer Science Student at University of Michigan.</p>
+        </div>
+        <div class="w-full md:w-auto px-4">
+          <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">QUICK LINKS</h2>
+          <nav class="list-none mb-10 space-y-2">
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="index.html">Home</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="projects.html">Projects</a>
+            </li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs"
+                href="university.html">University</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="about.html">About</a></li>
+            <li><a class="text-gray-400 hover:text-white transition-colors text-xs" href="contact.html">Contact</a></li>
+          </nav>
+        </div>
+        <div class="w-full md:w-auto px-4 flex justify-center items-center">
+          <img class="rounded-2xl pixel-portrait" src="assets/images/PixelMe.jpg"
+            style="width: 200px; height: 200px; object-fit: cover;" />
+        </div>
+      </div>
+    </div>
+    <div class="bg-gray-900">
+      <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+        <span class="text-white font-bold text-sm">[VC]</span>
+        <p class="text-xs text-gray-400 sm:ml-6 sm:mt-0 mt-4">© 2025 Vittorio Centore — All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+
+</html>
