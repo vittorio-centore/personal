@@ -1,0 +1,5050 @@
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>
+    [VC]
+  </title>
+  <meta content="example, placeholder, template" name="keywords" />
+  <meta
+    content="Welcome to my personal portfolio website, where I showcase my latest projects, professional skills, and creative ventures."
+    name="description" />
+  <meta content="https://via.placeholder.com/150" name="image" property="og:image" />
+  <link href="assets/images/PixelMe_50x50.jpg" rel="icon" />
+  <link href="/assets/css/styles.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/atropos@2.0.2/atropos.min.css" />
+</head>
+
+<body class="font-mono bg-white relative overflow-x-hidden flex flex-col min-h-screen">
+  <!-- HEADER -->
+  <header
+    class="h-16 sm:h-20 flex items-center z-[100] w-full border-b-2 border-gray-500 transition-transform duration-500 ease-in-out fixed top-0 left-0 bg-white"
+    id="topNav">
+    <div class="container mx-auto px-6 flex items-center justify-between">
+      <div class="uppercase text-gray-800 font-black text-2xl sm:text-3xl flex items-center"
+        style="margin-left: -16rem;">
+        <a class="text-2xl sm:text-3xl ml-3 mt-1 bg-white transition transform ease-in-out duration-100 hover:bg-gray-500 hover:scale-105"
+          href="#">
+          [VITTORIO CENTORE]
+        </a>
+        <span class="text-xs sm:text-sm align-text-bottom ml-3 mt-1" id="navSectionIndicator">
+          / HOME
+        </span>
+      </div>
+      <div class="flex items-center" style="margin-right: -12rem;">
+        <nav
+          class="top-nav font-sen text-gray-800 uppercase text-sm sm:text-base lg:text-lg lg:flex items-center hidden">
+          <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger active" data-tab="home">
+            HOME
+          </button>
+          <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger" data-tab="projects">
+            PROJECTS
+          </button>
+          <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger" data-tab="university">
+            UNIVERSITY
+          </button>
+          <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger" data-tab="about">
+            ABOUT
+          </button>
+          <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger" data-tab="contact">
+            CONTACT
+          </button>
+          <a class="py-2 px-3 sm:px-4 top-nav-link resume-nav-link" href="assets/files/vittorio_centore_resume.pdf"
+            download="vittorio_centore_resume.pdf">
+            RESUME ↓
+          </a>
+        </nav>
+        <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
+          class="mobile-menu-toggle lg:hidden flex flex-col" id="menuToggle" type="button">
+          <span class="w-6 h-1 bg-gray-800 mb-1">
+          </span>
+          <span class="w-6 h-1 bg-gray-800 mb-1">
+          </span>
+          <span class="w-6 h-1 bg-gray-800 mb-1">
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- MOBILE MENU -->
+  <section aria-hidden="true" class="mobile-menu-panel lg:hidden" id="mobileMenu">
+    <div class="mobile-menu-backdrop" id="mobileMenuBackdrop">
+    </div>
+    <div aria-labelledby="mobileMenuTitle" aria-modal="true" class="mobile-menu-card" role="dialog">
+      <div class="mobile-menu-header">
+        <div>
+          <p class="mobile-menu-kicker">
+            Quick Jump
+          </p>
+          <h3 class="mobile-menu-title" id="mobileMenuTitle">
+            Tap to go to a section
+          </h3>
+        </div>
+        <button aria-label="Close navigation" class="mobile-menu-close resume-popover__close" id="mobileMenuClose"
+          type="button">
+        </button>
+      </div>
+      <p class="mobile-menu-subcopy">
+        Tap a section to glide to that part of the site.
+      </p>
+      <div class="mobile-swipe-track" id="mobileSwipeTrack">
+        <button class="mobile-swipe-chip is-active" data-target="about" type="button">
+          About
+        </button>
+        <button class="mobile-swipe-chip" data-target="skills" type="button">
+          Skills
+        </button>
+        <button class="mobile-swipe-chip" data-target="education-experience" type="button">
+          Education &amp; Experience
+        </button>
+        <button class="mobile-swipe-chip" data-target="projects" type="button">
+          Projects
+        </button>
+        <button class="mobile-swipe-chip" data-target="awards-affiliations" type="button">
+          Awards &amp; Affiliations
+        </button>
+      </div>
+      <div class="mobile-menu-actions">
+        <a class="mobile-menu-action mobile-menu-action--resume" download="vittorio-centore_cv.pdf"
+          href="assets/files/resume_7_vittorio-centore.pdf">
+          Download Resume
+        </a>
+        <button class="mobile-menu-action mobile-menu-action--outline" data-mobile-contact-action="" type="button">
+          Say hello
+        </button>
+      </div>
+    </div>
+  </section>
+  <main class="flex-grow">
+
+    <!-- HOME TAB (default visible) -->
+    <div class="tab-page active" id="home-tab">
+      <div class="hero-panel flex relative z-20 items-center min-h-screen pt-16 pb-12 sm:py-0"
+        style="background:linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.6) 15%, rgba(255, 255, 255, 0.6) 85%, rgba(255, 255, 255, 1) 100%), url('assets/images/pixel-background.jpg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+        <div class="container mx-auto px-12">
+          <!-- Two Column Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-[35%_65%] gap-4 items-start">
+
+            <!-- Left Column: Profile -->
+            <div class="flex flex-col items-start text-left mt-12" style="margin-left: -12rem;">
+              <div class="relative mb-1" style="margin-left: -4rem;">
+                <img class="rounded-2xl w-80 aspect-square object-cover object-center pixel-portrait"
+                  src="assets/images/professional_headshot.jpg" />
+              </div>
+              <div style="margin-left: -4rem;">
+                <p class="sm:text-3xl text-lg mt-6 mb-1 text-black font-bold">
+                  <span class="">
+                    Hi, I'm Vittorio.
+                    <span class="waving-hand">
+                      👋
+                    </span>
+                  </span>
+                </p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-black py-0 whitespace-nowrap">
+                  Studying Computer Science
+                </h2>
+                <a href="https://umich.edu" rel="noopener noreferrer" target="_blank">
+                  <p class="text-4xl sm:text-5xl font-extrabold text-black mb-4 whitespace-nowrap">
+                    @ University of Michigan 〽️
+                  </p>
+                </a>
+
+                <!-- Typed.js Effect -->
+                <div class="text-lg sm:text-xl text-gray-900 mt-2 font-mono h-8 font-bold">
+                  I'm interested in <span id="typed-output" class="text-teal-700 font-bold"></span>
+                </div>
+              </div>
+
+              <!-- Load Typed.js -->
+              <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+            </div>
+
+            <!-- Right Column: Gamified Experience Panel -->
+            <style>
+              /* World Map / Level Select CSS */
+              .experience-container {
+                width: 100%;
+                background: #ffffff;
+                border-radius: 24px;
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+                overflow: hidden;
+                border: 4px solid #1f2937;
+                /* Dark border for retro feel */
+                font-family: 'Courier New', Courier, monospace;
+                /* Monospace for pixel vibe */
+                margin-top: 0.25rem;
+              }
+
+              .world-map-wrapper {
+                display: flex;
+                height: 500px;
+              }
+
+              /* Left Column: The Map Path */
+              .map-path-column {
+                width: 30%;
+                background-color: #f8fafc;
+                background-image:
+                  linear-gradient(#e2e8f0 1px, transparent 1px),
+                  linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+                background-size: 24px 24px;
+                image-rendering: auto;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 4px solid #1f2937;
+              }
+
+              .map-svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                z-index: 1;
+              }
+
+              .path-line {
+                fill: none;
+                stroke: #9ca3af;
+                stroke-width: 6;
+                stroke-dasharray: 12 8;
+                stroke-linecap: round;
+              }
+
+              .level-node {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background: #ffffff;
+                border: 3px solid #1f2937;
+                border-radius: 50%;
+                z-index: 10;
+                cursor: pointer;
+                transition: transform 0.2s, border-color 0.2s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+              }
+
+              .node-logo {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 4px;
+              }
+
+              .level-node:hover,
+              .level-node.active {
+                transform: scale(1.2);
+                border-color: #14b8a6;
+              }
+
+              .level-node.active {
+                box-shadow: 0 0 0 4px #ffffff, 0 0 0 8px #14b8a6;
+              }
+
+              /* Player Avatar Marker */
+              .player-marker {
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                background-image: url('assets/images/PixelMe_50x50.jpg');
+                /* Using your pixel avatar */
+                background-size: cover;
+                border-radius: 8px;
+                border: 3px solid #1f2937;
+                z-index: 20;
+                pointer-events: none;
+                transition: top 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+                transform: translate(-50%, -100%);
+                /* Sit ON TOP of the node */
+                margin-top: -10px;
+                box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+              }
+
+              /* Right Column: Details Panel */
+              .map-details-column {
+                width: 70%;
+                background: #ffffff;
+                padding: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+              }
+
+              .level-header {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 4px solid #f3f4f6;
+                padding-bottom: 1rem;
+              }
+
+              .level-logo {
+                width: 64px;
+                height: 64px;
+                object-fit: contain;
+                filter: drop-shadow(2px 2px 0 rgba(0, 0, 0, 0.1));
+              }
+
+              .level-title h3 {
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: #111827;
+                margin: 0;
+                line-height: 1.2;
+              }
+
+              .level-title span {
+                font-size: 0.9rem;
+                color: #14b8a6;
+                /* Teal */
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+
+              .level-stats {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 1rem;
+                margin-bottom: 1.5rem;
+                background: #f9fafb;
+                padding: 1rem;
+                border-radius: 12px;
+                border: 2px dashed #e5e7eb;
+              }
+
+              .stat-box {
+                display: flex;
+                flex-direction: column;
+              }
+
+              .stat-label {
+                font-size: 0.7rem;
+                text-transform: uppercase;
+                color: #6b7280;
+                font-weight: bold;
+              }
+
+              .stat-value {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: #374151;
+              }
+
+              .level-desc {
+                background: #1f2937;
+                color: #10b981;
+                /* Terminal green text */
+                padding: 1.5rem;
+                border-radius: 12px;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 0.9rem;
+                line-height: 1.6;
+                position: relative;
+                box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.5);
+              }
+
+              .level-desc::before {
+                content: "> MISSION LOG";
+                position: absolute;
+                top: -10px;
+                left: 20px;
+                background: #14b8a6;
+                color: #ffffff;
+                padding: 2px 10px;
+                font-size: 0.7rem;
+                font-weight: bold;
+                border-radius: 4px;
+              }
+
+              /* Mobile */
+              @media (max-width: 768px) {
+                .world-map-wrapper {
+                  flex-direction: column;
+                  height: auto;
+                }
+
+                .map-path-column {
+                  width: 100%;
+                  height: 200px;
+                  border-right: none;
+                  border-bottom: 4px solid #1f2937;
+                }
+
+                .map-details-column {
+                  width: 100%;
+                }
+              }
+
+              /* =========================================
+                 RETRO MONITOR PROJECT SHOWCASE
+                 ========================================= */
+              .projects-showcase {
+                display: flex;
+                gap: 2rem;
+                align-items: flex-start;
+              }
+
+              @media (max-width: 1024px) {
+                .projects-showcase {
+                  flex-direction: column;
+                }
+              }
+
+              /* --- Selector Column --- */
+              .project-selector {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 250px;
+                flex-shrink: 0;
+              }
+
+              @media (max-width: 1024px) {
+                .project-selector {
+                  width: 100%;
+                  flex-direction: row;
+                  overflow-x: auto;
+                  padding-bottom: 1rem;
+                }
+              }
+
+              .project-select-btn {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+                background: #ffffff;
+                border: 2px solid #e5e7eb;
+                padding: 0.75rem;
+                border-radius: 12px;
+                cursor: pointer;
+                transition: all 0.2s;
+                text-align: left;
+                font-family: 'Courier New', monospace;
+              }
+
+              .project-select-btn:hover {
+                transform: translateX(5px);
+                border-color: #d1d5db;
+                background: #f9fafb;
+              }
+
+              .project-select-btn.active {
+                border-color: #1f2937;
+                background: #1f2937;
+                color: #ffffff;
+                box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+                transform: translateX(5px);
+              }
+
+              .project-select-btn .pixel-icon {
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                image-rendering: pixelated;
+                border-radius: 4px;
+                background: #f3f4f6;
+                padding: 4px;
+              }
+
+              /* --- Display Column (Monitor) --- */
+              .project-display {
+                flex-grow: 1;
+                width: 100%;
+              }
+
+              .retro-monitor {
+                background: #2d3748;
+                padding: 1.5rem;
+                border-radius: 20px;
+                box-shadow:
+                  0 20px 50px rgba(0, 0, 0, 0.2),
+                  inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+                position: relative;
+              }
+
+              .retro-monitor::after {
+                content: '';
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 40%;
+                height: 10px;
+                background: #1a202c;
+                border-radius: 0 0 20px 20px;
+              }
+
+              .monitor-screen {
+                background: #000000;
+                border-radius: 4px;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+                min-width: 800px;
+                height: 650px;
+                border: 2px solid #4a5568;
+                box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+              }
+
+              .monitor-content {
+                padding: 2.5rem;
+                color: #e2e8f0;
+                font-family: 'Courier New', monospace;
+                transition: opacity 0.2s ease-in-out;
+                height: 100%;
+                overflow-y: auto;
+              }
+
+              /* CRT Scanline Effect */
+              .monitor-screen::before {
+                content: " ";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+                z-index: 10;
+                background-size: 100% 2px, 3px 100%;
+                pointer-events: none;
+              }
+
+
+
+              .monitor-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid #4a5568;
+                padding-bottom: 1rem;
+                margin-bottom: 1.5rem;
+              }
+
+              .monitor-title {
+                font-size: 1.75rem;
+                color: #4fd1c5;
+                /* Teal glow */
+                text-shadow: 0 0 10px rgba(79, 209, 197, 0.5);
+                margin: 0;
+              }
+
+              .monitor-controls {
+                display: flex;
+                gap: 0.5rem;
+              }
+
+              .dot {
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+              }
+
+              .dot.red {
+                background: #fc8181;
+              }
+
+              .dot.yellow {
+                background: #f6e05e;
+              }
+
+              .dot.green {
+                background: #68d391;
+              }
+
+              .monitor-body {
+                display: flex;
+                gap: 2rem;
+              }
+
+              @media (max-width: 768px) {
+                .monitor-body {
+                  flex-direction: column;
+                }
+              }
+
+              .project-visual {
+                width: 350px;
+                height: 350px;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #1a202c;
+                border-radius: 8px;
+                padding: 1rem;
+                border: 1px solid #2d3748;
+                overflow: hidden;
+              }
+
+              .project-main-img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                image-rendering: pixelated;
+                border-radius: 4px;
+              }
+
+              .project-info {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+              }
+
+              .project-info p {
+                font-size: 1.05rem;
+                line-height: 1.7;
+                color: #cbd5e0;
+                margin-bottom: 1.5rem;
+              }
+
+              .monitor-link {
+                display: inline-block;
+                color: #63b3ed;
+                text-decoration: none;
+                font-weight: bold;
+                margin-right: 1rem;
+                transition: color 0.2s;
+              }
+
+              .monitor-link:hover {
+                color: #90cdf4;
+                text-shadow: 0 0 8px rgba(99, 179, 237, 0.6);
+              }
+            </style>
+
+            <div class="experience-container">
+              <div class="world-map-wrapper">
+
+                <!-- Left: The Map Path -->
+                <div class="map-path-column">
+                  <svg class="map-svg" viewBox="0 0 100 400" preserveAspectRatio="none">
+                    <!-- Winding Path -->
+                    <path class="path-line"
+                      d="M50,400 L50,380 C50,330 20,310 20,260 C20,210 80,210 80,160 C80,110 50,110 50,60" />
+                  </svg>
+
+                  <!-- Nodes (Positioned % based on path approximation) -->
+                  <!-- Level 1: Rover -->
+                  <div class="level-node" style="bottom: 5%; left: 50%; transform: translateX(-50%);" data-id="rover"
+                    onclick="selectLevel('rover')">
+                    <img src="assets/images/rover_logo_new.png" class="node-logo" alt="Rover">
+                  </div>
+
+                  <!-- Level 2: UMSI -->
+                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);" data-id="umsi"
+                    onclick="selectLevel('umsi')">
+                    <img src="assets/images/umsi_logo_new.png" class="node-logo" alt="UMSI"
+                      style="padding: 0; transform: scale(1.1);">
+                  </div>
+
+                  <!-- Level 3: Sup -->
+                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);" data-id="sup"
+                    onclick="selectLevel('sup')">
+                    <img src="assets/images/sup_logo_v3.png" class="node-logo" alt="Sup">
+                  </div>
+
+                  <!-- Level 4: AgentMail -->
+                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                    data-id="agentmail" onclick="selectLevel('agentmail')">
+                    <img src="assets/images/agentmail_logo_new.png" class="node-logo" alt="AgentMail">
+                  </div>
+
+                  <!-- Player Avatar (Starts at top) -->
+                  <div class="player-marker" id="playerAvatar" style="top: 15%; left: 50%;"></div>
+                </div>
+
+                <!-- Right: Details Panel -->
+                <div class="map-details-column" id="levelDetails">
+
+                  <div class="level-header">
+                    <img src="assets/images/agentmail_logo_new.png" class="level-logo" id="detailLogo">
+                    <div class="level-title">
+                      <h3 id="detailCompany">AgentMail (YC S25)</h3>
+                      <span id="detailRole">Software Eng. Analyst</span>
+                    </div>
+                  </div>
+
+                  <div class="level-stats">
+                    <div class="stat-box">
+                      <span class="stat-label">Timeline</span>
+                      <span class="stat-value" id="detailDate">Sep 2025 - Present</span>
+                    </div>
+                    <div class="stat-box">
+                      <span class="stat-label">Location</span>
+                      <span class="stat-value" id="detailLoc">Ann Arbor, MI</span>
+                    </div>
+                  </div>
+
+                  <div class="level-desc" id="detailDesc">
+                    Engineered an AI sales agent using OpenAI’s SDK to automate client outreach, reducing manual
+                    workload by 70%. Architected an interactive full-stack demo visualizing real API calls, boosting
+                    developer engagement by 35%.
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+            <script>
+              // Inline script for Map Logic
+              const levels = {
+                agentmail: {
+                  company: "AgentMail (YC S25)",
+                  role: "Software Engineering Analyst",
+                  date: "Sep 2025 - Present",
+                  location: "Ann Arbor, MI",
+                  logo: "assets/images/agentmail_logo_new.png",
+                  desc: "Engineered an AI sales agent using OpenAI’s SDK to automate client outreach, reducing manual workload by 70%. Architected an interactive full-stack demo visualizing real API calls, boosting developer engagement by 35%.",
+                  pos: { top: '15%', left: '50%' }
+                },
+                sup: {
+                  company: "'Sup",
+                  role: "Software Engineering Intern",
+                  date: "June 2025 - Sep 2025",
+                  location: "Miami, FL",
+                  logo: "assets/images/sup_logo_v3.png",
+                  desc: "Built an AI mock interview tool with Gemini’s multimodal models for real-time feedback. Deployed facial tracking to boost LLM accuracy by 60% and optimized media storage by 80% using FFmpeg.",
+                  pos: { top: '40%', left: '80%' }
+                },
+                umsi: {
+                  company: "U-M School of Information",
+                  role: "Software Engineer",
+                  date: "Feb 2025 - May 2025",
+                  location: "Ann Arbor, MI",
+                  logo: "assets/images/umsi_logo_new.png",
+                  desc: "Developed a React & TinyLlama LLM assistant to match faculty awards, processing 8,000 profiles in ~13s. Optimized performance with PyTorch float16 and asynchronous loading, cutting processing time by 30%.",
+                  pos: { top: '65%', left: '20%' }
+                },
+                rover: {
+                  company: "Michigan Rover Team",
+                  role: "Fullstack Developer",
+                  date: "Sep 2024 - May 2025",
+                  location: "Ann Arbor, MI",
+                  logo: "assets/images/rover_logo_new.png",
+                  desc: "Refactored camera dashboard with Vue.js & TypeScript, aiding a top 10% national finish. Implemented inverse kinematics for the robotic arm, speeding up mission completion by 20%.",
+                  pos: { top: '95%', left: '50%' }
+                }
+              };
+
+              function selectLevel(id) {
+                const data = levels[id];
+                if (!data) return;
+
+                // Update Text
+                document.getElementById('detailCompany').textContent = data.company;
+                document.getElementById('detailRole').textContent = data.role;
+                document.getElementById('detailDate').textContent = data.date;
+                document.getElementById('detailLoc').textContent = data.location;
+                document.getElementById('detailDesc').textContent = data.desc;
+                document.getElementById('detailLogo').src = data.logo;
+
+                // Move Avatar
+                const avatar = document.getElementById('playerAvatar');
+                avatar.style.top = data.pos.top;
+                avatar.style.left = data.pos.left;
+
+                // Update Active State
+                document.querySelectorAll('.level-node').forEach(node => {
+                  node.classList.toggle('active', node.dataset.id === id);
+                });
+              }
+            </script>
+
+          </div>
+        </div>
+      </div>
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-28" id="skills">
+        <div class="container mx-auto px-5">
+          <h2 class="text-4xl font-bold text-black mb-4 text-center">
+            Skills
+          </h2>
+          <p class="text-center text-gray-500 mb-10 text-sm">
+            Click any card to explore skills in that category
+          </p>
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-3xl">
+            <div id="skillsGrid" class="skills-bento-grid">
+              <!-- Grid items will be generated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project Spotlight Section -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-28" id="project-spotlight">
+        <!-- Animated 3D Waves Background -->
+        <div id="vanta-bg" class="absolute inset-0 overflow-hidden pointer-events-none"></div>
+
+        <div class="container mx-auto px-5 relative z-10">
+          <h2 class="text-4xl font-bold text-black mb-4 text-center">
+            Project Spotlight
+          </h2>
+          <p class="text-center text-gray-500 mb-10 text-sm">
+            Featured work showcasing my latest development
+          </p>
+
+          <!-- Project Card -->
+          <div
+            class="max-w-5xl mx-auto bg-white rounded-3xl overflow-hidden border-2 border-teal-500/20 shadow-2xl hover:shadow-teal-500/30 transition-all duration-500 hover:scale-[1.02]">
+            <div class="grid lg:grid-cols-2 gap-0">
+              <!-- Left: Image -->
+              <div
+                class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-8">
+                <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-yellow-400/5"></div>
+                <img src="assets/images/stock_chart_pixel.png" alt="Stock Predictor"
+                  class="relative z-10 rounded-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500 shadow-lg" />
+              </div>
+
+              <!-- Right: Content -->
+              <div class="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                  Stock Predictor Model
+                </h3>
+                <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
+                  Advanced ML model leveraging <span class="text-teal-600 font-semibold">PyTorch Transformer
+                    architecture</span> to forecast stock market prices.
+                </p>
+
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-3 gap-4 mb-6">
+                  <div class="bg-white rounded-xl p-4 border-2 border-teal-500/30 text-center shadow-sm">
+                    <div class="text-2xl font-bold text-teal-600">62%</div>
+                    <div class="text-xs text-gray-500 mt-1">Accuracy</div>
+                  </div>
+                  <div class="bg-white rounded-xl p-4 border-2 border-yellow-400/30 text-center shadow-sm">
+                    <div class="text-2xl font-bold text-yellow-600">25.2</div>
+                    <div class="text-xs text-gray-500 mt-1">Years Data</div>
+                  </div>
+                  <div class="bg-white rounded-xl p-4 border-2 border-gray-300 text-center shadow-sm">
+                    <div class="text-2xl font-bold text-gray-900">21</div>
+                    <div class="text-xs text-gray-500 mt-1">Indicators</div>
+                  </div>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="mb-6">
+                  <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Tech Stack</p>
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">PyTorch</span>
+                    <span
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Python</span>
+                    <span
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">scikit-learn</span>
+                    <span
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Transformers</span>
+                  </div>
+                </div>
+
+                <!-- CTA Button -->
+                <a href="https://github.com/vittorio-centore" target="_blank" rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-teal-500/50 group w-fit">
+                  <span>View on GitHub</span>
+                  <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View More Projects Button -->
+        <div class="text-center mt-12 relative z-20">
+          <a href="#" data-goto-tab="projects"
+            class="inline-flex items-center gap-3 bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-900 hover:to-black text-white font-bold py-5 px-12 rounded-2xl text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-gray-500/40 hover:scale-105 group">
+            <span>More Projects</span>
+            <svg class="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-28" id="contact-home">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-16">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- PROJECTS TAB -->
+    <div class="tab-page" id="projects-tab" style="display:none;">
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-32 pb-10" id="projects">
+        <div class="container mx-auto flex flex-col items-center justify-center px-5 mb-10 text-center space-y-5">
+          <p class="text-xs uppercase tracking-[0.5em] text-gray-500">
+            levels cleared
+          </p>
+          <p class="text-5xl font-bold text-black">
+            Projects
+          </p>
+        </div>
+        <div class="container mx-auto px-5">
+          <div class="projects-grid" id="projectsGrid">
+          </div>
+        </div>
+      </section>
+      <!-- Contact Section -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-32 pb-10">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- UNIVERSITY TAB -->
+    <div class="tab-page" id="university-tab" style="display:none;">
+
+      <!-- Michigan Spirit Hero Section (Refined) -->
+      <section
+        class="relative bg-[#00274C] overflow-hidden pt-28 pb-10 border-b-[12px] border-[#FFCB05] flex items-center">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10"
+          style="background-image: radial-gradient(#FFCB05 1.5px, transparent 1.5px); background-size: 30px 30px;">
+        </div>
+
+        <div class="container mx-auto px-5 relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+
+          <!-- Left Side: Giant Button Only -->
+          <div class="flex flex-col items-center md:items-start">
+            <!-- Interactive "Go Blue" Button -->
+            <div
+              class="group relative inline-block cursor-pointer transition-transform hover:scale-105 active:scale-95">
+              <div
+                class="absolute inset-0 bg-[#FFCB05] blur-3xl opacity-20 group-hover:opacity-60 transition-opacity duration-500">
+              </div>
+              <div
+                class="relative bg-gradient-to-br from-[#FFCB05] to-[#E5B500] text-[#00274C] font-black text-3xl md:text-5xl px-12 py-5 rounded-2xl transform -rotate-2 group-hover:rotate-0 transition-all duration-300 shadow-[0_10px_40px_rgba(0,0,0,0.4)] border-b-8 border-[#B38600] flex items-center gap-4">
+                <span class="text-4xl">🏈</span> GO BLUE! <span class="text-4xl">🎓</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Single M -->
+          <div class="relative z-10 flex items-center opacity-90">
+            <img src="assets/images/michigan_logo.svg" alt="Michigan Block M"
+              class="h-24 md:h-32 drop-shadow-xl z-10 hover:scale-110 transition-transform duration-300">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Relevant Coursework Section -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-20 pb-20" id="coursework">
+        <div class="container mx-auto px-5">
+          <div class="flex flex-col gap-6 text-center mb-16">
+            <p class="text-xs uppercase tracking-[0.5em] text-gray-500">
+              knowledge base
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold text-black">
+              Relevant Coursework
+            </h2>
+            <p class="text-gray-400 text-sm">[CLICK A BOOK TO OPEN]</p>
+          </div>
+
+          <!-- Library Shelf Area -->
+          <div class="relative w-full max-w-[95%] md:max-w-screen-2xl mx-auto mt-16">
+
+            <!-- The Shelf -->
+            <div
+              class="flex items-end justify-center md:justify-around gap-8 md:gap-16 border-b-[24px] border-[#3E2723] px-8 md:px-20 pb-0 relative shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+
+              <!-- Stack 1: Basics (4 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- MAT 116 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-gray-700 to-gray-600 rounded-sm border-l-[6px] border-gray-800 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('mat116')">
+
+                  <span
+                    class="text-gray-200 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Calculus
+                    II</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+
+                <!-- SI 201 -->
+                <div
+                  class="book-spine w-[270px] h-12 bg-gradient-to-r from-teal-800 to-teal-700 rounded-sm border-l-[6px] border-teal-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('si201')">
+
+                  <span
+                    class="text-teal-100 font-bold tracking-wider text-[10px] uppercase group-hover:text-white transition-colors">Data-Oriented
+                    Prog</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- DATASCI 101 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-orange-800 to-orange-700 rounded-sm border-l-[6px] border-orange-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('datasci101')">
+
+                  <span
+                    class="text-orange-100 font-bold tracking-wider text-[10px] uppercase group-hover:text-white transition-colors">Intro
+                    to Data Science</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+              <!-- Stack 2: Core (3 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- EECS 280 -->
+                <div
+                  class="book-spine w-[300px] h-16 bg-gradient-to-r from-indigo-900 to-indigo-800 rounded-sm border-l-[6px] border-indigo-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs280')">
+
+                  <span
+                    class="text-indigo-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Object
+                    Oriented Programming</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 203 -->
+                <div
+                  class="book-spine w-[290px] h-14 bg-gradient-to-r from-slate-800 to-slate-700 rounded-sm border-l-[6px] border-slate-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs203')">
+
+                  <span
+                    class="text-slate-200 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Discrete
+                    Math</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 281 -->
+                <div
+                  class="book-spine w-[310px] h-16 bg-gradient-to-r from-red-900 to-red-800 rounded-sm border-l-[6px] border-red-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs281')">
+
+                  <span
+                    class="text-red-100 font-bold tracking-wider text-sm uppercase group-hover:text-white transition-colors">Data
+                    Structures & Algos</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+              <!-- Stack 3: Advanced (3 Books) -->
+              <div
+                class="flex flex-col-reverse items-center gap-[2px] transform transition-transform hover:scale-[1.02]">
+                <!-- EECS 370 -->
+                <div
+                  class="book-spine w-[290px] h-14 bg-gradient-to-r from-emerald-900 to-emerald-800 rounded-sm border-l-[6px] border-emerald-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs370')">
+
+                  <span
+                    class="text-emerald-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Computer
+                    Organization</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 376 -->
+                <div
+                  class="book-spine w-[280px] h-14 bg-gradient-to-r from-purple-900 to-purple-800 rounded-sm border-l-[6px] border-purple-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs376')">
+
+                  <span
+                    class="text-purple-100 font-bold tracking-wider text-xs uppercase group-hover:text-white transition-colors">Foundations
+                    of CS</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+                <!-- EECS 485 -->
+                <div
+                  class="book-spine w-[300px] h-16 bg-gradient-to-r from-cyan-900 to-cyan-800 rounded-sm border-l-[6px] border-cyan-950 shadow-lg cursor-pointer hover:-translate-x-4 transition-transform duration-300 relative flex items-center justify-center group"
+                  onclick="openBook('eecs485')">
+
+                  <span
+                    class="text-cyan-100 font-bold tracking-wider text-sm uppercase group-hover:text-white transition-colors">Web
+                    Systems</span>
+                  <div class="absolute right-0 top-0 bottom-0 w-3 bg-[#F5F5F5] border-l border-gray-300"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Shelf Shadow/Depth -->
+            <div class="w-full h-12 bg-gradient-to-b from-black/10 to-transparent mx-auto max-w-6xl"></div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Open Book Modal -->
+      <div id="book-modal"
+        class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-black/80 backdrop-blur-sm transition-opacity duration-300 opacity-0"
+        onclick="closeBook()">
+
+        <!-- The Book Container (Modal Content) -->
+        <div class="relative max-w-5xl w-full mx-4 transform scale-95 transition-transform duration-300"
+          id="modal-content" onclick="event.stopPropagation()">
+
+          <!-- Close Button (Inside Book) -->
+          <button
+            class="absolute top-4 right-4 md:top-6 md:right-8 text-gray-400 hover:text-gray-600 z-[110] transition-colors"
+            onclick="closeBook()">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+
+          <div
+            class="bg-[#fdfbf7] rounded-r-2xl rounded-l-2xl shadow-2xl flex flex-col md:flex-row overflow-hidden min-h-[550px] relative border border-gray-200">
+
+            <!-- Left Page (Course Info) -->
+            <div
+              class="w-full md:w-1/2 p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-200 relative flex flex-col justify-center items-center text-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+              <div class="absolute top-6 left-6 w-full h-full border-2 border-gray-800/5 m-[-24px] pointer-events-none">
+              </div>
+
+              <div id="left-page-content" class="transition-opacity duration-300">
+                <div class="flex flex-col items-center justify-center mb-6">
+                  <span class="text-4xl font-serif font-bold text-gray-500 tracking-wider" id="course-dept">EECS</span>
+                  <h1 class="text-8xl font-serif font-black text-gray-900 tracking-tighter leading-none"
+                    id="course-number">281</h1>
+                </div>
+                <h3 class="text-2xl md:text-3xl font-serif font-bold text-gray-800 leading-tight mb-8"
+                  id="course-title">Data Structures & Algorithms</h3>
+                <div class="w-16 h-1.5 mx-auto rounded-full opacity-80" id="course-accent"></div>
+              </div>
+
+              <span class="absolute bottom-6 left-6 text-gray-400 font-serif text-xs italic">Page <span
+                  id="page-num-left">1</span></span>
+            </div>
+
+            <!-- Center Spine Visual (Desktop only) -->
+            <div
+              class="hidden md:block absolute left-1/2 top-0 bottom-0 w-16 -ml-8 bg-gradient-to-r from-transparent via-black/5 to-transparent pointer-events-none z-10">
+            </div>
+
+            <!-- Right Page (Description) -->
+            <div
+              class="w-full md:w-1/2 p-8 md:p-12 relative flex flex-col justify-center bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+
+              <div id="right-page-content" class="transition-opacity duration-300">
+                <h4 class="font-serif font-bold text-gray-900 text-lg mb-4 border-b border-gray-300 pb-2 inline-block">
+                  Course Overview</h4>
+                <p class="font-serif text-gray-700 leading-relaxed text-lg mb-8" id="course-desc">
+                  The foundation of efficient software. Mastering memory management, pointers, and algorithmic
+                  complexity (Big O). Implemented complex data structures like AVL trees and graph algorithms in C++.
+                </p>
+
+                <h4 class="font-serif font-bold text-gray-900 text-sm mb-3 uppercase tracking-wider">Key Concepts</h4>
+                <ul class="grid grid-cols-2 gap-2" id="course-tags">
+                  <!-- Tags injected here -->
+                </ul>
+              </div>
+
+              <span class="absolute bottom-6 right-6 text-gray-400 font-serif text-xs italic">Page <span
+                  id="page-num-right">2</span></span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <script>
+        const courses = [
+
+          {
+            id: 'eecs280',
+            number: '280',
+            title: 'Object Oriented Programming',
+            dept: 'EECS',
+            desc: 'Algorithm development and object-oriented design. Topics included pointers, memory management, recursion, linked lists, and polymorphism in C++.',
+            tags: ['C++', 'Recursion', 'Pointers', 'OOP'],
+            color: 'bg-indigo-800'
+          },
+          {
+            id: 'eecs203',
+            number: '203',
+            title: 'Discrete Mathematics',
+            dept: 'EECS',
+            desc: 'The mathematical foundation of computer science. Logic, set theory, functions, induction, combinatorics, graph theory, and probability.',
+            tags: ['Logic', 'Proofs', 'Graph Theory', 'Probability'],
+            color: 'bg-slate-800'
+          },
+          {
+            id: 'eecs281',
+            number: '281',
+            title: 'Data Structures & Algorithms',
+            dept: 'EECS',
+            desc: 'Advanced data structures and algorithm analysis. Covered heaps, hash tables, trees, graphs, sorting, and dynamic programming. Focus on time/space complexity.',
+            tags: ['C++', 'Big O', 'Algorithms', 'Data Structures'],
+            color: 'bg-red-800'
+          },
+          {
+            id: 'eecs370',
+            number: '370',
+            title: 'Computer Organization',
+            dept: 'EECS',
+            desc: 'Low-level computer architecture. Assembly language (ARM), machine code, pipelining, caching, virtual memory, and digital logic design.',
+            tags: ['Assembly', 'Architecture', 'Caching', 'Logic'],
+            color: 'bg-emerald-800'
+          },
+          {
+            id: 'eecs376',
+            number: '376',
+            title: 'Foundations of CS',
+            dept: 'EECS',
+            desc: 'Theory of computation. Turing machines, undecidability, P vs NP, cryptography, and quantum computing basics. Analyzing what computers can and cannot do.',
+            tags: ['Theory', 'Cryptography', 'P vs NP', 'Turing Machines'],
+            color: 'bg-purple-800'
+          },
+          {
+            id: 'eecs485',
+            number: '485',
+            title: 'Web Systems',
+            dept: 'EECS',
+            desc: 'Full-stack web systems. Client-side (React), server-side (Python/Flask), databases (SQL), and distributed systems concepts like MapReduce.',
+            tags: ['React', 'Flask', 'SQL', 'Distributed Systems'],
+            color: 'bg-cyan-800'
+          },
+          {
+            id: 'si201',
+            number: '201',
+            title: 'Data-Oriented Programming',
+            dept: 'SI',
+            desc: 'Introduction to data manipulation and analysis using Python. Working with APIs, JSON, and data visualization libraries.',
+            tags: ['Python', 'Data Analysis', 'APIs', 'Visualization'],
+            color: 'bg-teal-800'
+          },
+          {
+            id: 'datasci101',
+            number: '101',
+            title: 'Intro to Data Science',
+            dept: 'DATASCI',
+            desc: 'Overview of the data science lifecycle. Data collection, cleaning, analysis, and visualization. Statistical inference and machine learning basics.',
+            tags: ['Python', 'Pandas', 'Statistics', 'Visualization'],
+            color: 'bg-orange-800'
+          },
+          {
+            id: 'mat116',
+            number: '116',
+            title: 'Calculus II',
+            dept: 'MAT',
+            desc: 'Integral calculus. Techniques of integration, infinite sequences and series, Taylor series, and applications to geometry and physics.',
+            tags: ['Calculus', 'Integration', 'Series', 'Math'],
+            color: 'bg-gray-700'
+          }
+        ];
+
+        let currentIndex = 0;
+
+        function renderBook() {
+          const course = courses[currentIndex];
+          const leftContent = document.getElementById('left-page-content');
+          const rightContent = document.getElementById('right-page-content');
+
+          // Fade out
+          leftContent.style.opacity = '0';
+          rightContent.style.opacity = '0';
+
+          setTimeout(() => {
+            // Update Content
+            document.getElementById('course-number').innerText = course.number;
+            document.getElementById('course-title').innerText = course.title;
+            document.getElementById('course-dept').innerText = course.dept;
+            document.getElementById('course-desc').innerText = course.desc;
+            document.getElementById('course-accent').className = `w-16 h-1.5 mx-auto rounded-full opacity-80 ${course.color}`;
+
+            // Update Tags
+            const tagsContainer = document.getElementById('course-tags');
+            tagsContainer.innerHTML = '';
+            course.tags.forEach(tag => {
+              const li = document.createElement('li');
+              li.className = 'flex items-center gap-2 text-sm font-serif text-gray-600';
+              li.innerHTML = `<span class="w-1.5 h-1.5 rounded-full ${course.color}"></span>${tag}`;
+              tagsContainer.appendChild(li);
+            });
+
+            // Update Page Numbers
+            document.getElementById('page-num-left').innerText = (currentIndex * 2) + 1;
+            document.getElementById('page-num-right').innerText = (currentIndex * 2) + 2;
+
+            // Fade in
+            leftContent.style.opacity = '1';
+            rightContent.style.opacity = '1';
+          }, 300);
+        }
+
+        function openBook(id) {
+          // Find index of clicked book
+          const index = courses.findIndex(c => c.id === id);
+          if (index !== -1) {
+            currentIndex = index;
+            renderBook();
+
+            const modal = document.getElementById('book-modal');
+            const content = document.getElementById('modal-content');
+
+            modal.classList.remove('hidden');
+            // Small delay for transition
+            setTimeout(() => {
+              modal.classList.remove('opacity-0');
+              content.classList.remove('scale-95');
+              content.classList.add('scale-100');
+            }, 10);
+          }
+        }
+
+        function closeBook() {
+          const modal = document.getElementById('book-modal');
+          const content = document.getElementById('modal-content');
+
+          modal.classList.add('opacity-0');
+          content.classList.remove('scale-100');
+          content.classList.add('scale-95');
+
+          setTimeout(() => {
+            modal.classList.add('hidden');
+          }, 300);
+        }
+      </script>
+
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-10"
+        id="awards-affiliations">
+        <div class="container mx-auto px-5 space-y-12">
+          <div class="flex flex-col gap-6 text-center">
+
+            <div class="affiliation-panel w-full">
+
+              <!-- Mobile View (Vertical List) -->
+              <div class="md:hidden flex flex-col gap-4 text-center mb-8">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500">campus life</p>
+                <h3 class="text-3xl font-bold text-gray-900">Involvements</h3>
+              </div>
+              <div class="md:hidden flex flex-col gap-6 px-4 pb-12">
+                <!-- Atlas -->
+                <a href="https://atlasdigital.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/atlas_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Atlas Digital</h3>
+                      <span class="text-xs font-bold text-teal-400 uppercase">Software Analyst</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">1st and Largest Tech Consulting Group at the
+                    University of Michigan</p>
+                </a>
+                <!-- Reach -->
+                <a href="https://www.michiganrcg.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/reach_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Reach</h3>
+                      <span class="text-xs font-bold text-blue-400 uppercase">Tech Consultant</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Student-led technology consulting club providing
+                    real-world experiences</p>
+                </a>
+                <!-- Rover -->
+                <a href="https://mrover.org/" target="_blank"
+                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/rover_logo_new.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">MI Rover</h3>
+                      <span class="text-xs font-bold text-orange-400 uppercase">Engineer</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Building Mars rovers for URC.</p>
+                </a>
+                <!-- ISA -->
+                <a href="#" target="_blank" class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
+                  <div class="flex items-center gap-4 mb-4">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
+                        src="assets/images/italian_sa_pixel.png" class="w-full h-full object-contain"></div>
+                    <div class="text-left">
+                      <h3 class="text-xl font-bold text-white font-mono">Italian SA</h3>
+                      <span class="text-xs font-bold text-red-400 uppercase">Member</span>
+                    </div>
+                  </div>
+                  <p class="text-gray-400 text-xs font-mono text-left">Promoting Italian culture.</p>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Magazine Editorial Grid - Involvements (Light Theme) -->
+      <div class="hidden md:block bg-[#fafafa] w-full overflow-hidden relative" id="involvements-section">
+
+        <!-- Editorial Header -->
+        <div class="max-w-7xl mx-auto px-8 pt-20 pb-12">
+          <div class="flex items-end justify-between border-b border-gray-200 pb-6">
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.5em] text-gray-400 mb-2 font-mono">Issue No. 2024</p>
+              <h2 class="text-8xl font-black text-gray-900 tracking-tighter leading-none"
+                style="font-family: 'Inter', system-ui, sans-serif;">
+                CAMPUS<br />LIFE
+              </h2>
+            </div>
+            <div class="text-right">
+              <p class="text-gray-600 text-sm font-mono">University of Michigan</p>
+              <p class="text-gray-400 text-xs font-mono mt-1">Ann Arbor, MI</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editorial Grid -->
+        <div class="max-w-7xl mx-auto px-8 pb-24">
+          <div class="grid grid-cols-12 gap-4 relative">
+
+            <!-- FEATURED: Atlas Digital (Large Card - spans 7 columns) -->
+            <a href="https://atlasdigital.org/" target="_blank"
+              class="col-span-7 row-span-2 relative group cursor-pointer overflow-hidden bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <!-- Background Pattern -->
+              <div class="absolute inset-0 opacity-30"
+                style="background-image: repeating-linear-gradient(45deg, transparent, transparent 2px, rgba(0,0,0,0.01) 2px, rgba(0,0,0,0.01) 4px);">
+              </div>
+
+              <!-- Accent Bar -->
+              <div class="absolute top-0 left-0 w-2 h-full bg-gradient-to-b from-teal-500 via-teal-600 to-teal-700">
+              </div>
+
+              <!-- Content -->
+              <div class="relative z-10 p-10 h-full flex flex-col justify-between min-h-[520px]">
+                <!-- Top Section -->
+                <div>
+                  <div class="flex items-center gap-3 mb-8">
+                    <span
+                      class="text-[10px] uppercase tracking-[0.3em] text-teal-600 font-bold border border-teal-200 bg-teal-50 px-3 py-1">Featured</span>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono">01</span>
+                  </div>
+
+                  <h3
+                    class="text-6xl font-black text-gray-900 tracking-tight leading-[0.9] mb-4 group-hover:text-teal-600 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    ATLAS<br />DIGITAL
+                  </h3>
+
+                  <div class="w-24 h-[2px] bg-gradient-to-r from-teal-500 to-transparent mb-6"></div>
+
+                  <p class="text-gray-500 text-sm leading-relaxed max-w-md font-mono">
+                    The 1st and largest tech consulting organization at the University of Michigan.
+                    Delivering innovative solutions for real clients.
+                  </p>
+                </div>
+
+                <!-- Bottom Section -->
+                <div class="flex items-end justify-between">
+                  <div>
+                    <p class="text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-1">Position</p>
+                    <p class="text-xl font-bold text-teal-600 tracking-wide">SOFTWARE ANALYST</p>
+                  </div>
+                  <div
+                    class="w-32 h-32 bg-gray-50 rounded-full flex items-center justify-center p-5 border border-gray-100 group-hover:border-teal-300 transition-colors duration-300">
+                    <img src="assets/images/atlas_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Hover Overlay -->
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-teal-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+              </div>
+            </a>
+
+            <!-- Reach Consulting (Top Right) -->
+            <a href="https://www.michiganrcg.org/" target="_blank"
+              class="col-span-5 relative group cursor-pointer overflow-hidden bg-white rounded-sm border-l-2 border-blue-500 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <div class="absolute inset-0 opacity-20"
+                style="background-image: repeating-linear-gradient(-45deg, transparent, transparent 1px, rgba(59,130,246,0.05) 1px, rgba(59,130,246,0.05) 2px);">
+              </div>
+
+              <div class="relative z-10 p-8 h-full flex flex-col justify-between min-h-[250px]">
+                <div class="flex items-start justify-between">
+                  <div>
+                    <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-3 block">02</span>
+                    <h3
+                      class="text-3xl font-black text-gray-900 tracking-tight group-hover:text-blue-600 transition-colors duration-300"
+                      style="font-family: 'Inter', system-ui, sans-serif;">
+                      REACH
+                    </h3>
+                    <p class="text-blue-600 text-xs font-bold uppercase tracking-wider mt-2">Tech Consultant</p>
+                  </div>
+                  <div
+                    class="w-28 h-28 bg-gray-50 rounded-full flex items-center justify-center p-4 border border-gray-100">
+                    <img src="assets/images/reach_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+
+                <p class="text-gray-500 text-xs font-mono leading-relaxed">
+                  Student-led technology consulting providing real-world client experiences.
+                </p>
+              </div>
+            </a>
+
+            <!-- MI Rover (Bottom Right - Top) -->
+            <a href="https://mrover.org/" target="_blank"
+              class="col-span-3 relative group cursor-pointer overflow-hidden bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+              <div
+                class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600">
+              </div>
+
+              <div class="relative z-10 p-6 h-full flex flex-col justify-between min-h-[250px]">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-2 block">03</span>
+                  <h3
+                    class="text-2xl font-black text-gray-900 tracking-tight group-hover:text-orange-500 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    MROVER
+                  </h3>
+                </div>
+
+                <div class="space-y-3">
+                  <p class="text-orange-500 text-[10px] font-bold uppercase tracking-wider">Engineer</p>
+                  <div
+                    class="w-20 h-20 bg-gray-50 rounded-lg flex items-center justify-center p-3 border border-gray-100">
+                    <img src="assets/images/rover_logo_new.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <!-- Italian SA (Bottom Right - Bottom) -->
+            <a href="#"
+              class="col-span-2 relative group cursor-pointer overflow-hidden bg-white rounded-sm border border-gray-100 shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
+
+              <div class="relative z-10 p-5 h-full flex flex-col justify-between min-h-[250px]">
+                <div>
+                  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-2 block">04</span>
+                  <div
+                    class="w-24 h-24 bg-gray-50 rounded-lg flex items-center justify-center p-3 border border-gray-100 mb-3">
+                    <img src="assets/images/italian_sa_pixel.png" class="w-full h-full object-contain">
+                  </div>
+                </div>
+
+                <div>
+                  <h3
+                    class="text-base font-black text-gray-900 tracking-tight leading-tight group-hover:text-red-500 transition-colors duration-300"
+                    style="font-family: 'Inter', system-ui, sans-serif;">
+                    ITSA
+                  </h3>
+                  <p class="text-red-500 text-[9px] font-bold uppercase tracking-wider mt-2">Member</p>
+                </div>
+              </div>
+
+              <!-- Italian flag accent -->
+              <div class="absolute bottom-0 left-0 right-0 h-1 flex">
+                <div class="flex-1 bg-green-600"></div>
+                <div class="flex-1 bg-gray-100"></div>
+                <div class="flex-1 bg-red-600"></div>
+              </div>
+            </a>
+
+          </div>
+
+          <!-- Editorial Footer -->
+          <div class="mt-12 pt-6 border-t border-gray-200 flex items-center justify-between">
+            <p class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono">Building Tomorrow's Leaders</p>
+            <div class="flex items-center gap-6">
+              <span class="text-[10px] text-gray-300 font-mono">→ Hover to explore</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Say Hi Section (University Tab Footer) -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-48 pb-32">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ABOUT TAB -->
+    <div class="tab-page" id="about-tab" style="display:none;">
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden py-20 pt-32" id="about">
+        <div class="container mx-auto px-5 max-w-6xl">
+
+          <!-- Header - Centered -->
+          <div class="text-center mb-12">
+            <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">Get To Know Me</p>
+            <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-3">
+              About Me
+            </h1>
+            <!-- Italian flag accent - thin bar below -->
+            <div class="flex justify-center gap-0">
+              <div class="w-8 h-1 bg-green-600 rounded-l-full"></div>
+              <div class="w-8 h-1 bg-white border-y border-gray-200"></div>
+              <div class="w-8 h-1 bg-red-600 rounded-r-full"></div>
+            </div>
+          </div>
+
+          <!-- Two Column Layout - Centered -->
+          <div class="flex flex-col lg:flex-row gap-16 items-center justify-center">
+
+            <!-- Text - Left -->
+            <div class="lg:w-1/2 text-left">
+              <div class="space-y-5 text-gray-600 leading-relaxed">
+                <p class="text-lg">
+                  <span class="text-2xl font-bold text-teal-600">Hi, I'm Vittorio!</span> I'm a Computer Science student
+                  at the University of Michigan, where I spend most of my time building things and then figuring out how
+                  to make them better.
+                </p>
+                <p class="text-lg">
+                  What I love about coding is that it turns ideas into real systems people can actually use. I'm
+                  especially interested in <span class="font-semibold text-teal-600">full-stack development, AI, and
+                    machine learning</span>, particularly when it comes to optimizing backend systems.
+                </p>
+                <p class="text-lg">
+                  Right now, I'm working at <span class="font-semibold text-teal-600">AgentMail</span>, a YC-backed
+                  startup, where I help build user-facing demos that clearly explain what's happening behind the scenes
+                  while heavy backend processes are running.
+                </p>
+                <p class="text-lg">
+                  I moved from Italy to Miami, Florida when I was 10, and the U.S. gave me access to a world of
+                  technology and opportunity that I didn't have before. Since then, I've been obsessed with building and
+                  learning through code.
+                </p>
+                <p class="text-lg text-gray-500 italic">
+                  If I'm not coding, I'm probably watching soccer or out and about with friends, but I'm always happy to
+                  talk about tech or ideas that sound a little ridiculous but might actually work.
+                </p>
+              </div>
+            </div>
+
+            <!-- Images - Right (Cascading diagonal overlap) -->
+            <div class="lg:w-1/2 relative min-h-[650px] hidden lg:block">
+              <!-- Image 1 - Top, starting position -->
+              <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform -rotate-2 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-10">
+                <img src="assets/images/snowboard.png" alt="Snowboarding" class="w-full h-full object-cover" />
+              </div>
+              <!-- Image 2 - Overlaps bottom-right of pic 1 -->
+              <div
+                class="absolute top-40 left-[50%] w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform rotate-3 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-20">
+                <img src="assets/images/monkey.png" alt="With a monkey" class="w-full h-full object-cover" />
+              </div>
+              <!-- Image 3 - Overlaps bottom-left of pic 2 -->
+              <div
+                class="absolute top-80 left-[10%] w-56 h-56 rounded-2xl overflow-hidden shadow-xl transform -rotate-3 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-30">
+                <img src="assets/images/brother.png" alt="With my little brother" class="w-full h-full object-cover" />
+              </div>
+              <!-- Image 4 - Overlaps bottom-right of pic 3 -->
+              <div
+                class="absolute top-[480px] left-[45%] w-60 h-60 rounded-2xl overflow-hidden shadow-xl transform rotate-2 hover:rotate-0 hover:scale-105 hover:z-50 transition-all duration-300 z-40">
+                <img src="assets/images/friends.png" alt="With friends" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+            <!-- Mobile Images - Simple stack -->
+            <div class="lg:hidden flex flex-wrap gap-4 justify-center">
+              <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+                <img src="assets/images/snowboard.png" alt="Snowboarding" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+                <img src="assets/images/monkey.png" alt="With a monkey" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+                <img src="assets/images/brother.png" alt="With my little brother" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-28 h-28 rounded-xl overflow-hidden shadow-md">
+                <img src="assets/images/friends.png" alt="With friends" class="w-full h-full object-cover" />
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Memories Table Section - 3D -->
+      <section class="py-20 pb-64 bg-gradient-to-b from-white to-gray-200 overflow-hidden">
+        <div class="container mx-auto px-5 max-w-7xl">
+          <!-- Header -->
+          <div class="text-center mb-16">
+            <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">A Few Snapshots</p>
+            <h2 class="title-font text-3xl sm:text-4xl font-bold text-gray-900">Memories</h2>
+          </div>
+
+          <!-- 3D Scene Container -->
+          <div class="scene-3d" style="perspective: 1200px; perspective-origin: 50% 35%; padding-bottom: 100px;">
+            <!-- The Table Surface - 3D Tilted -->
+            <div class="memories-table" style="
+              transform: rotateX(25deg);
+              transform-style: preserve-3d;
+              background: linear-gradient(135deg, #8B7355 0%, #6B5344 50%, #5D4037 100%);
+              border-radius: 16px;
+              padding: 120px 60px 200px;
+              position: relative;
+              box-shadow: 
+                0 80px 100px -40px rgba(0,0,0,0.5),
+                0 40px 60px -30px rgba(0,0,0,0.3),
+                inset 0 2px 4px rgba(255,255,255,0.1);
+            ">
+              <!-- Wood grain texture overlay -->
+              <div style="
+              position: absolute;
+              inset: 0;
+              background-image: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 2px,
+                rgba(0,0,0,0.03) 2px,
+                rgba(0,0,0,0.03) 4px
+              );
+              pointer-events: none;
+              border-radius: 16px;
+            "></div>
+
+              <!-- Table Legs (Front only) -->
+              <!-- Front Left Leg -->
+              <div class="table-leg" style="
+                position: absolute;
+                bottom: -150px;
+                left: 40px;
+                width: 24px;
+                height: 150px;
+                background: linear-gradient(90deg, #5D4037 0%, #4E342E 50%, #3E2723 100%);
+                transform: rotateX(-65deg);
+                transform-origin: top center;
+                border-radius: 0 0 4px 4px;
+                box-shadow: 4px 0 10px rgba(0,0,0,0.4);
+              "></div>
+              <!-- Front Right Leg -->
+              <div class="table-leg" style="
+                position: absolute;
+                bottom: -150px;
+                right: 40px;
+                width: 24px;
+                height: 150px;
+                background: linear-gradient(90deg, #4E342E 0%, #5D4037 50%, #4E342E 100%);
+                transform: rotateX(-65deg);
+                transform-origin: top center;
+                border-radius: 0 0 4px 4px;
+                box-shadow: -4px 0 10px rgba(0,0,0,0.4);
+              "></div>
+
+              <!-- Picture Frames Container -->
+              <div class="flex flex-wrap justify-center gap-6 md:gap-8 relative z-10">
+
+                <!-- Frame 1 - Tilted left -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(0)"
+                  style="transform: rotate(-4deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 6px;
+                    border: 1px solid #e0e0e0;
+                  ">
+                      <img src="assets/images/memory_3.jpg" alt="Farm fun"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="down on the farm" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 2 - Tilted right -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(1)"
+                  style="transform: rotate(3deg); margin-top: 20px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 6px;
+                    border: 2px solid #d4af37;
+                  ">
+                      <img src="assets/images/memory_2.jpg" alt="Friends at the farm"
+                        class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="lin picture" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 3 - Straight -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(2)"
+                  style="transform: rotate(-2deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/formal_event.jpg" alt="Formal event"
+                        class="w-36 h-36 md:w-44 md:h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="suited up" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 4 - Tilted left -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(3)"
+                  style="transform: rotate(5deg); margin-top: 15px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 6px;
+                  border-radius: 2px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/memory_4.jpg" alt="Friends outdoor"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="golden hour" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 5 - Ornate gold -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(4)"
+                  style="transform: rotate(-6deg); margin-top: 10px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 14px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/memory_5.jpg" alt="Halloween party"
+                        class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="halloween" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 6 - Team on Stairs -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(5)"
+                  style="transform: rotate(3deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/team_stairs.png" alt="Team photo"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="reach new member class" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 7 - Friends Party -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(6)"
+                  style="transform: rotate(-4deg); margin-top: 20px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                      <img src="assets/images/friends_party.png" alt="Friends at party"
+                        class="w-28 h-28 md:w-36 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="vibes" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 8 - Michigan Stadium -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(7)"
+                  style="transform: rotate(2deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/michigan_stadium.png" alt="Michigan Stadium"
+                        class="w-36 h-28 md:w-44 md:h-32 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="big house" />
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- Frame 10 - Friends Fun -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(9)"
+                  style="transform: rotate(4deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/friends_fun.jpg" alt="Friends having fun"
+                        class="w-32 h-28 md:w-40 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="roomates -1" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 11 - NYC Disney -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(10)"
+                  style="transform: rotate(-3deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                      <img src="assets/images/nyc_disney.jpg" alt="NYC Disney Store"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="atlas f25 newbies" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 12 - Times Square Night -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(11)"
+                  style="transform: rotate(4deg); margin-top: 18px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/nyc_times_square.jpg" alt="Times Square at night"
+                        class="w-36 h-32 md:w-44 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="atlas f25 newbies pt. 2" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 13 - Red Stairs -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(12)"
+                  style="transform: rotate(-5deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/nyc_red_stairs.jpg" alt="Red stairs NYC"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="saga apt 511" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 14 - Dinner -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(13)"
+                  style="transform: rotate(3deg); margin-top: 12px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/dinner_friends.jpg" alt="Dinner with friends"
+                        class="w-36 h-28 md:w-44 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="good food, better company" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 15 - Formal Event -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(14)"
+                  style="transform: rotate(-4deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/memory_1.jpg" alt="At the orchard"
+                        class="w-28 h-32 md:w-36 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="aura" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 16 - Golf Event -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(15)"
+                  style="transform: rotate(5deg); margin-top: 10px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #d4af37 0%, #b8960c 50%, #d4af37 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3),
+                    inset 0 1px 2px rgba(255,255,255,0.4);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #1a1a1a;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/golf_event.jpg" alt="Golf simulator"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="chilling" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 17 - Smoothie Run -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(16)"
+                  style="transform: rotate(-3deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #f5f5f5 0%, #e0e0e0 100%);
+                  padding: 10px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/smoothie_friends.jpg" alt="Smoothie run"
+                        class="w-36 h-32 md:w-44 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="smoothie run" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 18 - Polaroid Squad -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(17)"
+                  style="transform: rotate(4deg); margin-top: 15px;">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #2c2c2c 0%, #1a1a1a 100%);
+                  padding: 8px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: white;
+                    padding: 4px;
+                  ">
+                      <img src="assets/images/polaroid_squad.jpg" alt="Polaroid style"
+                        class="w-32 h-32 md:w-40 md:h-40 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="throwback" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Frame 19 - Roatan Beach -->
+                <div class="picture-frame group cursor-pointer" onclick="openLightbox(18)"
+                  style="transform: rotate(-5deg);">
+                  <div class="frame-outer" style="
+                  background: linear-gradient(145deg, #8B4513 0%, #654321 100%);
+                  padding: 12px;
+                  border-radius: 4px;
+                  box-shadow: 
+                    8px 12px 20px rgba(0,0,0,0.4),
+                    2px 2px 4px rgba(0,0,0,0.3);
+                  transition: transform 0.3s ease, box-shadow 0.3s ease;
+                ">
+                    <div class="frame-inner" style="
+                    background: #f5f5dc;
+                    padding: 4px;
+                    border: 2px solid #d4af37;
+                  ">
+                      <img src="assets/images/roatan_beach.jpg" alt="Roatan beach"
+                        class="w-40 h-28 md:w-48 md:h-36 object-cover group-hover:scale-105 transition-transform duration-300"
+                        data-caption="honduras trip" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lightbox Modal -->
+      <div id="memoryLightbox" class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center p-4"
+        onclick="closeLightbox(event)">
+        <button onclick="closeLightbox(event)"
+          class="absolute top-6 right-6 text-white/70 hover:text-white text-4xl font-light transition-colors z-10">&times;</button>
+        <button onclick="prevImage(event)"
+          class="absolute left-4 md:left-8 text-white/70 hover:text-white text-5xl font-light transition-colors z-10">&#8249;</button>
+        <button onclick="nextImage(event)"
+          class="absolute right-4 md:right-8 text-white/70 hover:text-white text-5xl font-light transition-colors z-10">&#8250;</button>
+        <div class="max-w-4xl max-h-[85vh] relative" onclick="event.stopPropagation()">
+          <img id="lightboxImage" src="" alt="" class="max-w-full max-h-[80vh] object-contain rounded-lg shadow-2xl" />
+          <p id="lightboxCaption" class="text-white text-center mt-4 text-lg font-medium"></p>
+        </div>
+      </div>
+
+      <style>
+        /* Make frames stand upright on the tilted table */
+        .picture-frame {
+          transform-style: preserve-3d;
+          transform: rotateX(-25deg);
+        }
+
+        .picture-frame .frame-outer {
+          transform-style: preserve-3d;
+          box-shadow:
+            0 30px 40px -10px rgba(0, 0, 0, 0.5),
+            8px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .picture-frame:hover {
+          transform: rotateX(-25deg) translateZ(20px) scale(1.05);
+        }
+
+        .picture-frame:hover .frame-outer {
+          box-shadow:
+            0 40px 60px -10px rgba(0, 0, 0, 0.6),
+            10px 10px 30px rgba(0, 0, 0, 0.4);
+        }
+      </style>
+
+      <script>
+        // Memory Gallery Lightbox
+        const memoryImages = document.querySelectorAll('.picture-frame img');
+        let currentImageIndex = 0;
+
+        function openLightbox(index) {
+          currentImageIndex = index;
+          const img = memoryImages[index];
+          const lightbox = document.getElementById('memoryLightbox');
+          const lightboxImg = document.getElementById('lightboxImage');
+          const lightboxCaption = document.getElementById('lightboxCaption');
+
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightboxCaption.textContent = img.dataset.caption || img.alt;
+
+          lightbox.classList.remove('hidden');
+          lightbox.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+          if (event) event.stopPropagation();
+          const lightbox = document.getElementById('memoryLightbox');
+          lightbox.classList.add('hidden');
+          lightbox.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+
+        function nextImage(event) {
+          event.stopPropagation();
+          currentImageIndex = (currentImageIndex + 1) % memoryImages.length;
+          updateLightboxImage();
+        }
+
+        function prevImage(event) {
+          event.stopPropagation();
+          currentImageIndex = (currentImageIndex - 1 + memoryImages.length) % memoryImages.length;
+          updateLightboxImage();
+        }
+
+        function updateLightboxImage() {
+          const img = memoryImages[currentImageIndex];
+          const lightboxImg = document.getElementById('lightboxImage');
+          const lightboxCaption = document.getElementById('lightboxCaption');
+
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightboxCaption.textContent = img.dataset.caption || img.alt;
+        }
+
+        // Keyboard navigation for memories
+        document.addEventListener('keydown', function (e) {
+          const lightbox = document.getElementById('memoryLightbox');
+          if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextImage(e);
+            if (e.key === 'ArrowLeft') prevImage(e);
+          }
+        });
+      </script>
+
+
+      <!-- Say Hi Section (About Tab Footer) -->
+      <section class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-48 pb-32">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/landscape_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Tab -->
+    <div class="tab-page" id="contact-tab" style="display:none;">
+      <section id="contact" class="text-gray-600 body-font font-mono bg-white relative overflow-hidden pt-48 pb-32">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-5 gap-10">
+          <div class="lg:w-1/2 w-full flex justify-center">
+            <img class="rounded-2xl w-full pixel-portrait" src="assets/images/miami_pixel.jpg" />
+          </div>
+          <div class="lg:w-1/2 w-full">
+            <div class="contact-card">
+              <div class="text-center lg:text-left">
+                <p class="text-xs uppercase tracking-[0.4em] text-gray-500 mb-2">
+                  LET'S CONNECT
+                </p>
+                <h1 class="title-font text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+                  Say hi
+                </h1>
+              </div>
+              <div class="contact-links">
+                <a class="contact-link" href="https://www.linkedin.com/in/vittoriocentore/" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="LinkedIn" src="assets/images/linkedin_logo.png" />
+                    <span>
+                      LinkedIn
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://github.com/vittoriocentore" rel="noopener noreferrer"
+                  target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="GitHub" src="assets/images/github_logo.png" />
+                    <span>
+                      GitHub
+                      <small>
+                        /vittoriocentore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="mailto:vcentore@umich.edu" rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Email" src="assets/images/email.png" />
+                    <span>
+                      Email
+                      <small>
+                        vcentore@umich.edu
+                      </small>
+                    </span>
+                  </div>
+                </a>
+                <a class="contact-link" href="https://www.instagram.com/vittoriocentore/?hl=en"
+                  rel="noopener noreferrer" target="_blank">
+                  <div class="contact-link-inner">
+                    <img alt="Instagram" src="assets/images/instagram_logo.png" />
+                    <span>
+                      Instagram
+                      <small>
+                        @vittorio-centore
+                      </small>
+                    </span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer class="text-gray-600 body-font font-mono bg-gray-800">
+      <div class="container px-5 py-12 mx-auto">
+        <div class="flex flex-wrap md:text-left text-center justify-center gap-8 lg:gap-12">
+          <!-- About Column -->
+          <div class="w-full md:w-auto max-w-xs px-4">
+            <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">
+              [VITTORIO CENTORE]
+            </h2>
+            <p class="text-gray-400 text-xs leading-relaxed">
+              Computer Science Student at University of Michigan. Building innovative software solutions and
+              exploring AI,
+              web development, and distributed systems.
+            </p>
+          </div>
+          <!-- Quick Links -->
+          <div class="w-full md:w-auto px-4">
+            <h2 class="title-font font-bold text-white tracking-widest text-sm mb-3">
+              QUICK LINKS
+            </h2>
+            <nav class="list-none mb-10 space-y-2">
+              <li>
+                <button class="text-gray-400 hover:text-white transition-colors text-xs tab-trigger"
+                  data-tab="home">Home</button>
+              </li>
+              <li>
+                <button class="text-gray-400 hover:text-white transition-colors text-xs tab-trigger"
+                  data-tab="projects">Projects</button>
+              </li>
+              <li>
+                <button class="text-gray-400 hover:text-white transition-colors text-xs tab-trigger"
+                  data-tab="university">University</button>
+              </li>
+              <li>
+                <button class="text-gray-400 hover:text-white transition-colors text-xs tab-trigger"
+                  data-tab="about">About</button>
+              </li>
+              <li>
+                <button class="text-gray-400 hover:text-white transition-colors text-xs tab-trigger"
+                  data-tab="contact">Contact</button>
+              </li>
+            </nav>
+          </div>
+          <!-- Headshot Column -->
+          <div class="w-full md:w-auto px-4 flex justify-center items-center">
+            <img class="rounded-2xl pixel-portrait" src="assets/images/PixelMe.jpg"
+              style="width: 200px; height: 200px; object-fit: cover;" />
+          </div>
+        </div>
+      </div>
+      <div class="bg-gray-900">
+        <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+          <span class="text-white font-bold text-sm">
+            [VC]
+          </span>
+          <p class="text-xs text-gray-400 sm:ml-6 sm:mt-0 mt-4">
+            © 2025 Vittorio Centore — All Rights Reserved
+          </p>
+          <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start gap-4">
+            <a class="text-gray-400 hover:text-white transition-colors"
+              href="https://www.linkedin.com/in/vittoriocentore/" target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                <path stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                </path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+            <a class="text-gray-400 hover:text-white transition-colors" href="https://github.com/vittorio-centore"
+              target="_blank" rel="noopener noreferrer">
+              <svg fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+            <a class="text-gray-400 hover:text-white transition-colors"
+              href="https://www.instagram.com/vittorio-centore/?hl=en" target="_blank" rel="noopener noreferrer">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-5 h-5" viewBox="0 0 24 24">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+              </svg>
+            </a>
+          </span>
+        </div>
+      </div>
+    </footer>
+    <style>
+      :root {
+        --timeline-dot-size: 1.15rem;
+        --timeline-line-color-start: rgba(0, 77, 64, 0.85);
+        --timeline-line-color-end: rgba(0, 121, 107, 0.85);
+        --timeline-dot-fill: #fac123;
+        --timeline-dot-border: #00796b;
+      }
+
+      .resume-cta {
+        margin-top: 3.5rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .resume-button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.75rem 1.7rem;
+        border-radius: 0.85rem;
+        border: 2px solid #053b36;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        background-color: #053b36;
+        color: #0f172a;
+        box-shadow: 0 18px 30px rgba(15, 23, 42, 0.25);
+        transition: color 200ms ease, transform 200ms ease;
+        overflow: hidden;
+      }
+
+      .resume-button img {
+        filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.25));
+      }
+
+      .resume-button:hover {
+        color: #ffffff;
+        transform: translateY(-4px);
+      }
+
+      .resume-button--hero {
+        --hero-fill: 0;
+        color: transparent;
+        background: none;
+        border-color: #053b36;
+        box-shadow: 0 18px 30px rgba(15, 23, 42, 0.25);
+      }
+
+      .resume-button--hero:hover {
+        color: transparent;
+        --hero-fill: 1;
+      }
+
+      .resume-button--hero::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 2px;
+        background: #053b36;
+        transition: width 0.25s ease;
+      }
+
+      .resume-button--hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: #053b36;
+        transform-origin: bottom;
+        transform: scaleY(var(--hero-fill));
+        transition: transform 0.4s 0.25s ease;
+        z-index: -1;
+      }
+
+      .resume-button--hero span {
+        color: transparent;
+        background-image:
+          linear-gradient(#ffffff 0 0),
+          linear-gradient(#0f172a 0 0);
+        background-repeat: no-repeat;
+        background-size:
+          100% calc(var(--hero-fill) * 100%),
+          100% 100%;
+        background-position:
+          center bottom,
+          center bottom;
+        -webkit-background-clip: text, text;
+        background-clip: text, text;
+        transition: background-size 0.4s 0.25s ease;
+      }
+
+      .resume-button--hero:hover {
+        --hero-fill: 1;
+      }
+
+      .resume-button--hero:hover::after {
+        width: 100%;
+      }
+
+      .waving-hand {
+        animation-name: wave-animation;
+        animation-duration: 2.5s;
+        animation-iteration-count: 3;
+        transform-origin: 70% 70%;
+        display: inline-block;
+      }
+
+      .pixel-portrait {
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.45);
+        transition: transform 200ms ease, box-shadow 200ms ease;
+      }
+
+      .pixel-portrait:hover {
+        transform: scale(1.05);
+        box-shadow: 0 22px 55px rgba(15, 23, 42, 0.5);
+      }
+
+      .top-nav {
+        gap: 0.35rem;
+      }
+
+      .top-nav-link {
+        position: relative;
+        color: #1f2937;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        transition: color 250ms ease, transform 250ms ease, opacity 250ms ease;
+        border-radius: 999px;
+      }
+
+      .top-nav-link::after {
+        content: '';
+        position: absolute;
+        inset: 25% 14%;
+        border-radius: 999px;
+        background: linear-gradient(120deg, rgba(0, 77, 64, 0.16), rgba(0, 121, 107, 0.2));
+        box-shadow: 0 10px 20px rgba(0, 77, 64, 0.15);
+        opacity: 0;
+        transform: scale(0.65);
+        transition: opacity 260ms ease, transform 260ms ease;
+        z-index: -1;
+      }
+
+      .top-nav-link::before {
+        content: '';
+        position: absolute;
+        left: 20%;
+        right: 20%;
+        bottom: 0.35rem;
+        height: 2px;
+        background: linear-gradient(90deg, #00796b, #fac123);
+        opacity: 0;
+        transform: scaleX(0.4);
+        transform-origin: center;
+        transition: opacity 260ms ease, transform 260ms ease;
+      }
+
+      .top-nav:hover .top-nav-link {
+        opacity: 0.7;
+      }
+
+      .top-nav-link:hover {
+        color: #004d40;
+        opacity: 1;
+        transform: translateY(-1px);
+      }
+
+      .top-nav-link:hover::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      .top-nav-link:hover::before {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
+      /* Resume Nav Link - Special styling */
+      .resume-nav-link {
+        color: #0d9488 !important;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 200ms ease;
+      }
+
+      .resume-nav-link:hover {
+        color: #0f766e !important;
+        transform: translateY(-1px);
+      }
+
+      /* Experience Container - Aligns to right */
+      .experience-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-left: auto;
+        margin-right: -12rem;
+        margin-top: 3rem;
+        max-width: 100%;
+      }
+
+      /* Gamified Experience Panel Styles */
+      .experience-title-card {
+        background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
+        border-radius: 1.2rem;
+        padding: 1rem 1.75rem;
+        box-shadow: 0 8px 30px rgba(0, 121, 107, 0.4),
+          0 0 0 3px rgba(250, 193, 35, 0.3),
+          inset 0 2px 10px rgba(255, 255, 255, 0.15);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 1.25rem;
+        animation: slideInRight 0.8s ease-out, titlePulse 3s ease-in-out infinite;
+      }
+
+      .experience-title-card::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: conic-gradient(from 0deg,
+            transparent 0deg,
+            rgba(250, 193, 35, 0.2) 90deg,
+            transparent 180deg,
+            rgba(250, 193, 35, 0.2) 270deg,
+            transparent 360deg);
+        animation: rotate 8s linear infinite;
+        pointer-events: none;
+      }
+
+      /* Removed joystick emoji */
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes titlePulse {
+
+        0%,
+        100% {
+          box-shadow: 0 10px 40px rgba(0, 121, 107, 0.4),
+            0 0 0 3px rgba(250, 193, 35, 0.3),
+            inset 0 2px 10px rgba(255, 255, 255, 0.15);
+        }
+
+        50% {
+          box-shadow: 0 10px 50px rgba(0, 121, 107, 0.6),
+            0 0 0 4px rgba(250, 193, 35, 0.5),
+            inset 0 2px 15px rgba(255, 255, 255, 0.25),
+            0 0 30px rgba(250, 193, 35, 0.4);
+        }
+      }
+
+      @keyframes float {
+
+        0%,
+        100% {
+          transform: translateY(-50%) translateX(0);
+        }
+
+        50% {
+          transform: translateY(-50%) translateX(-5px);
+        }
+      }
+
+      .experience-title {
+        font-size: 1.75rem;
+        font-weight: 900;
+        color: #ffffff;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3),
+          0 0 20px rgba(250, 193, 35, 0.5);
+        margin: 0;
+        letter-spacing: 0.05em;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .experience-list-open {
+        display: flex;
+        flex-direction: column;
+        gap: 0.85rem;
+        position: relative;
+        z-index: 1;
+        width: 100%;
+      }
+
+      .experience-item {
+        display: flex;
+        gap: 1rem;
+        background: linear-gradient(135deg, #ffffff 0%, #f8fffe 100%);
+        border-radius: 1rem;
+        padding: 1.25rem 1.5rem;
+        border: 3px solid transparent;
+        background-clip: padding-box;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 3px 12px rgba(0, 121, 107, 0.12),
+          inset 0 1px 3px rgba(255, 255, 255, 0.8);
+        min-height: 110px;
+        cursor: pointer;
+      }
+
+      .experience-item::before {
+        content: '';
+        position: absolute;
+        inset: -3px;
+        border-radius: 1.2rem;
+        padding: 3px;
+        background: linear-gradient(135deg,
+            rgba(0, 121, 107, 0.3),
+            rgba(250, 193, 35, 0.4),
+            rgba(0, 191, 165, 0.3));
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: -1;
+      }
+
+      .experience-item::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, rgba(250, 193, 35, 0.15), transparent);
+        transform: translateX(-100%) skewX(-15deg);
+        transition: transform 0.7s ease;
+      }
+
+      .experience-item:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .experience-item:hover::before {
+        opacity: 1;
+      }
+
+      .experience-item:hover::after {
+        transform: translateX(100%) skewX(-15deg);
+      }
+
+      /* Logo styling */
+      .exp-logo {
+        flex-shrink: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 0.75rem;
+        background: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(0, 121, 107, 0.15);
+        padding: 0.5rem;
+        overflow: hidden;
+      }
+
+      .exp-logo img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .exp-logo.zoom-logo img {
+        transform: scale(1.5);
+      }
+
+      /* Level badge (top right) with gaming glow */
+      .level-badge {
+        flex-shrink: 0;
+        padding: 0.35rem 0.9rem;
+        background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
+        color: #ffffff;
+        font-size: 0.75rem;
+        font-weight: 800;
+        border-radius: 999px;
+        box-shadow: 0 3px 10px rgba(0, 121, 107, 0.4),
+          inset 0 1px 3px rgba(255, 255, 255, 0.2),
+          0 0 15px rgba(0, 191, 165, 0.3);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        border: 2px solid rgba(250, 193, 35, 0.4);
+        position: relative;
+        animation: badgeGlow 2s ease-in-out infinite;
+      }
+
+      @keyframes badgeGlow {
+
+        0%,
+        100% {
+          box-shadow: 0 3px 10px rgba(0, 121, 107, 0.4),
+            inset 0 1px 3px rgba(255, 255, 255, 0.2),
+            0 0 15px rgba(0, 191, 165, 0.3);
+        }
+
+        50% {
+          box-shadow: 0 3px 15px rgba(0, 121, 107, 0.6),
+            inset 0 1px 5px rgba(255, 255, 255, 0.3),
+            0 0 25px rgba(0, 191, 165, 0.5);
+        }
+      }
+
+      .exp-badge {
+        flex-shrink: 0;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #00796b 0%, #004d40 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0, 121, 107, 0.3),
+          inset 0 2px 5px rgba(255, 255, 255, 0.2);
+        border: 3px solid rgba(250, 193, 35, 0.5);
+        position: relative;
+      }
+
+      .exp-badge::after {
+        content: '';
+        position: absolute;
+        inset: -5px;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg,
+            transparent 0deg,
+            rgba(250, 193, 35, 0.3) 90deg,
+            transparent 180deg);
+        animation: badgeSpin 3s linear infinite;
+        z-index: -1;
+      }
+
+      @keyframes badgeSpin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .level-num {
+        font-size: 0.875rem;
+        font-weight: 900;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+
+      .exp-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-width: 0;
+      }
+
+      .exp-header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .exp-company {
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #1f2937;
+        margin: 0 0 0.25rem 0;
+        line-height: 1.2;
+      }
+
+      .exp-role {
+        font-size: 0.95rem;
+        color: #4b5563;
+        font-weight: 600;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .exp-date {
+        font-size: 0.875rem;
+        color: #6b7280;
+        margin: 0.25rem 0 0.75rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 500;
+      }
+
+      .xp-bar {
+        width: 100%;
+        height: 0.5rem;
+        background: rgba(0, 121, 107, 0.1);
+        border-radius: 999px;
+        overflow: hidden;
+        position: relative;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      .xp-fill {
+        height: 100%;
+        background: linear-gradient(90deg, #00796b 0%, #00bfa5 100%);
+        border-radius: 999px;
+        position: relative;
+        transition: width 1s ease-out;
+        box-shadow: 0 0 8px rgba(0, 121, 107, 0.4);
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .xp-fill::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+        animation: shimmer 2s linear infinite;
+      }
+
+      @keyframes pulse {
+
+        0%,
+        100% {
+          box-shadow: 0 0 8px rgba(0, 121, 107, 0.4);
+        }
+
+        50% {
+          box-shadow: 0 0 12px rgba(0, 121, 107, 0.6);
+        }
+      }
+
+      @keyframes shimmer {
+        0% {
+          transform: translateX(-100%);
+        }
+
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @keyframes spin-slow {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .animate-spin-slow {
+        animation: spin-slow 8s linear infinite;
+      }
+
+      .animate-pulse-slow {
+        animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      .animate-shimmer {
+        animation: shimmer 3s ease-in-out infinite;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 1024px) {
+        .experience-container {
+          max-width: 100%;
+        }
+
+        .experience-title-card {
+          padding: 0.85rem 1.5rem;
+        }
+
+        .experience-title {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .experience-container {
+          max-width: 100%;
+          margin-left: 0;
+          align-items: stretch;
+        }
+
+        .experience-title-card {
+          padding: 0.75rem 1.25rem;
+        }
+
+        .experience-title {
+          font-size: 1.35rem;
+        }
+
+        .experience-item {
+          flex-direction: column;
+          gap: 0.85rem;
+          padding: 1rem 1.25rem;
+        }
+
+        .exp-logo {
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+
+      .timeline {
+        --timeline-line-left: 50%;
+        --timeline-line-transform: translateX(-50%);
+        padding: calc(var(--timeline-dot-size) * 0.9) 0 calc(var(--timeline-dot-size) * 1.2);
+      }
+
+      .timeline-line {
+        width: 4px;
+        background: linear-gradient(180deg, var(--timeline-line-color-start), var(--timeline-line-color-end));
+        border-radius: 999px;
+        z-index: 0;
+        left: var(--timeline-line-left);
+        transform: var(--timeline-line-transform);
+        top: 0;
+        bottom: 0;
+      }
+
+      .timeline-entry {
+        padding-top: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .timeline-entry:first-of-type {
+        padding-top: 1rem;
+      }
+
+      .timeline-entry:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 1rem;
+      }
+
+      .timeline-entry::before {
+        content: '';
+        position: absolute;
+        left: var(--timeline-line-left);
+        top: 0;
+        transform: translate(-50%, -50%);
+        width: var(--timeline-dot-size);
+        height: var(--timeline-dot-size);
+        border-radius: 999px;
+        background: var(--timeline-dot-fill);
+        border: 3px solid var(--timeline-dot-border);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        z-index: 1;
+      }
+
+      .timeline-entry:last-of-type::before {
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 50%);
+      }
+
+      .resume-popover {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        z-index: 50;
+        transform: translateY(20px);
+        opacity: 0;
+        pointer-events: auto;
+        transition: opacity 300ms ease, transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .resume-popover.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .resume-popover__close {
+        position: absolute;
+        top: -8px;
+        right: -8px;
+        width: 22px;
+        height: 22px;
+        border: none;
+        background: #1f2937;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 200ms ease, transform 200ms ease;
+      }
+
+      .resume-popover:hover .resume-popover__close {
+        opacity: 1;
+      }
+
+      .resume-popover__close:hover {
+        transform: scale(1.1);
+        background: #ef4444;
+      }
+
+      .resume-pill {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 20px;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        border-radius: 50px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        text-decoration: none;
+        transition: all 250ms ease;
+      }
+
+      .resume-pill:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+        background: #0d9488;
+      }
+
+      .resume-pill__text {
+        font-size: 14px;
+        font-weight: 600;
+        color: #1f2937;
+        letter-spacing: -0.01em;
+        transition: color 200ms ease;
+      }
+
+      .resume-pill:hover .resume-pill__text {
+        color: white;
+      }
+
+      .resume-pill__arrow {
+        width: 28px;
+        height: 28px;
+        background: #0d9488;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 200ms ease;
+      }
+
+      .resume-pill:hover .resume-pill__arrow {
+        background: white;
+        color: #0d9488;
+        transform: translateY(2px);
+      }
+
+      .floating-chip {
+        position: absolute;
+        right: -32px;
+        bottom: -10px;
+        background: rgba(0, 121, 107, 0.1);
+        border-radius: 999px;
+        padding: 0.3rem 0.65rem;
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.65rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #0f172a;
+      }
+
+      .floating-chip img {
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+      }
+
+      .typewriter-text {
+        display: inline-block;
+        overflow: hidden;
+        border-right: 0.12em solid #1f2937;
+        white-space: nowrap;
+        letter-spacing: 0.08em;
+        padding-right: 0.2em;
+        animation: hero-typewriter 3s steps(40, end) 0.25s forwards, hero-caret 0.65s step-end infinite;
+      }
+
+      @keyframes hero-typewriter {
+        from {
+          width: 0;
+        }
+
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes hero-caret {
+
+        from,
+        to {
+          border-color: transparent;
+        }
+
+        50% {
+          border-color: #1f2937;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .typewriter-text {
+          white-space: normal;
+          animation: none;
+          border-right: none;
+        }
+      }
+
+      .skills-tabs {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .skills-tab {
+        padding: 0.45rem 1.25rem;
+        border-radius: 999px;
+        background: rgba(15, 23, 42, 0.05);
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #334155;
+        transition: all 200ms ease;
+      }
+
+      .skills-tab:hover {
+        background: rgba(0, 121, 107, 0.15);
+        color: #004d40;
+      }
+
+      .skills-tab.is-active {
+        background: #00796b;
+        color: #ffffff;
+        box-shadow: 0 8px 18px rgba(0, 121, 107, 0.25);
+      }
+
+      /* Skills Bento Box Grid Layout */
+      .skills-bento-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        grid-auto-rows: minmax(120px, auto);
+      }
+
+      .skills-bento-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-radius: 24px;
+        padding: 2rem;
+        cursor: pointer;
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        border: 2px solid #e5e7eb;
+        position: relative;
+        overflow: hidden;
+        box-shadow:
+          0 4px 15px rgba(0, 0, 0, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      }
+
+      .skills-bento-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+          radial-gradient(circle at 20% 80%, rgba(0, 191, 165, 0.03) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(250, 193, 35, 0.03) 0%, transparent 50%),
+          repeating-linear-gradient(45deg, transparent, transparent 20px, rgba(0, 191, 165, 0.02) 20px, rgba(0, 191, 165, 0.02) 21px);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .skills-bento-card::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        width: 40px;
+        height: 40px;
+        border-top: 3px solid rgba(0, 191, 165, 0.1);
+        border-right: 3px solid rgba(0, 191, 165, 0.1);
+        border-radius: 0 8px 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      /* Dot grid pattern */
+      .skills-bento-card {
+        background-image:
+          radial-gradient(circle, rgba(0, 191, 165, 0.08) 1px, transparent 1px);
+        background-size: 24px 24px;
+        background-position: 0 0, 12px 12px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Particles.js background container */
+      .particles-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 70% 100%, 0 100%);
+      }
+
+      .particles-bg canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Geometric shapes in background */
+      .skills-bento-header::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(0, 191, 165, 0.05) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .skills-bento-header::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(250, 193, 35, 0.04) 0%, transparent 70%);
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .skills-bento-card:hover::before {
+        opacity: 1;
+      }
+
+      .skills-bento-card:hover::after {
+        opacity: 1;
+      }
+
+      /* Skills Preview in Background */
+      .skills-bento-preview {
+        position: absolute;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        display: flex;
+        gap: 0.75rem;
+        opacity: 0.45;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      .skills-preview-icon {
+        width: 36px;
+        height: 36px;
+        object-fit: contain;
+        filter: grayscale(0%) drop-shadow(0 2px 8px rgba(0, 191, 165, 0.15));
+        animation: floatIcon 3s ease-in-out infinite;
+        transition: all 0.3s ease;
+      }
+
+      @keyframes floatIcon {
+
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .skills-bento-card:hover .skills-bento-preview {
+        opacity: 0.75;
+      }
+
+      .skills-bento-card:hover .skills-preview-icon {
+        filter: grayscale(0%) drop-shadow(0 4px 12px rgba(0, 191, 165, 0.4));
+        transform: scale(1.1);
+      }
+
+      .skills-bento-card.expanded .skills-bento-preview {
+        opacity: 0;
+      }
+
+      .skills-bento-card.large {
+        grid-column: span 4;
+        grid-row: span 2;
+      }
+
+      .skills-bento-card.medium {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .skills-bento-card.small {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .skills-bento-card:hover {
+        transform: translateY(-8px) scale(1.02);
+        border-color: #00bfa5;
+        box-shadow:
+          0 20px 40px rgba(0, 191, 165, 0.2),
+          0 8px 20px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+      }
+
+      .skills-bento-card.expanded {
+        grid-column: 1 / -1;
+        grid-row: span 3;
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border-color: #00bfa5;
+        border-width: 3px;
+        box-shadow:
+          0 0 0 1px #00bfa5,
+          0 20px 40px rgba(0, 191, 165, 0.15),
+          0 8px 20px rgba(0, 0, 0, 0.1),
+          inset 0 1px 0 rgba(255, 255, 255, 1);
+      }
+
+      .skills-bento-card.expanded .skills-bento-title,
+      .skills-bento-card.expanded .skills-bento-icon {
+        color: #00796b;
+      }
+
+      .skills-bento-card.expanded .skills-bento-content {
+        max-height: 1000px;
+        opacity: 1;
+        margin-top: 2rem;
+      }
+
+      .skills-bento-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        position: relative;
+        z-index: 1;
+      }
+
+      .skills-bento-icon {
+        font-size: 2.5rem;
+        line-height: 1;
+        transition: transform 0.3s ease;
+      }
+
+      .skills-bento-card:hover .skills-bento-icon {
+        transform: scale(1.2) rotate(10deg);
+      }
+
+      .skills-bento-title {
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: #1f2937;
+        flex: 1;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: color 0.3s ease;
+        position: relative;
+      }
+
+      .skills-bento-card:not(.expanded) .skills-bento-title::after {
+        content: '';
+        position: absolute;
+        top: -2rem;
+        right: -1.5rem;
+        width: 40px;
+        height: 40px;
+        border-top: 3px solid rgba(0, 191, 165, 0.1);
+        border-right: 3px solid rgba(0, 191, 165, 0.1);
+        border-radius: 0 8px 0 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .skills-bento-card:hover:not(.expanded) .skills-bento-title::after {
+        opacity: 1;
+      }
+
+      .skills-bento-content {
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .skills-bento-card.expanded .skills-bento-content {
+        max-height: 2000px;
+        opacity: 1;
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 2px solid rgba(0, 191, 165, 0.2);
+      }
+
+      /* Responsive */
+      @media (max-width: 1024px) {
+        .skills-bento-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .skills-bento-card.large {
+          grid-column: span 4;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .skills-bento-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 1rem;
+        }
+
+        .skills-bento-card.large,
+        .skills-bento-card.medium,
+        .skills-bento-card.small {
+          grid-column: span 2;
+          grid-row: span 1;
+        }
+
+        .skills-bento-card {
+          padding: 1.5rem;
+        }
+
+        .skills-bento-icon {
+          font-size: 2rem;
+        }
+
+        .skills-bento-title {
+          font-size: 1.125rem;
+        }
+      }
+
+      .skills-pager-btn {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 999px;
+        border: 2px solid rgba(0, 121, 107, 0.45);
+        background: #ffffff;
+        color: #004d40;
+        font-size: 1.4rem;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: transform 200ms ease, border-color 200ms ease, color 200ms ease;
+      }
+
+      .skills-pager-btn:hover {
+        transform: translateY(-2px);
+        border-color: #00796b;
+        color: #00796b;
+      }
+
+      .skills-active-label {
+        min-width: 11rem;
+      }
+
+      .award-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .award-card {
+        position: relative;
+        padding: 1.75rem;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        background: #fdfdfd;
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+        overflow: hidden;
+        transition: transform 250ms ease, box-shadow 250ms ease;
+      }
+
+      .award-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(120deg, rgba(0, 121, 107, 0.08), rgba(250, 193, 35, 0.15));
+        opacity: 0;
+        transition: opacity 250ms ease;
+      }
+
+      .award-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 35px 60px rgba(15, 23, 42, 0.18);
+      }
+
+      .award-card:hover::after {
+        opacity: 1;
+      }
+
+      .award-ribbon {
+        position: relative;
+        display: inline-flex;
+        padding: 0.2rem 0.9rem;
+        border-radius: 999px;
+        background: rgba(0, 77, 64, 0.08);
+        margin-bottom: 1.25rem;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #004d40;
+        z-index: 1;
+      }
+
+      .award-body {
+        position: relative;
+        display: flex;
+        gap: 1.1rem;
+        align-items: center;
+        z-index: 1;
+      }
+
+      .award-body img {
+        width: 90px;
+        height: 90px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .award-title {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.5rem;
+        color: #0f172a;
+      }
+
+      .award-copy {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .award-link {
+        display: inline-flex;
+        gap: 0.35rem;
+        align-items: center;
+        margin-top: 0.65rem;
+        font-weight: 600;
+        color: #00796b;
+      }
+
+      .award-link:hover {
+        color: #004d40;
+      }
+
+      .affiliation-panel {
+        display: grid;
+        grid-template-columns: minmax(0, 400px) minmax(0, 1fr);
+        gap: 2rem;
+        align-items: center;
+      }
+
+      @media (max-width: 1024px) {
+        .affiliation-panel {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .affiliation-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .affiliation-card {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1.25rem 1.5rem;
+        border-radius: 1.5rem;
+        background: #ffffff;
+        border: 1px solid rgba(15, 23, 42, 0.1);
+        box-shadow: 0 15px 25px rgba(15, 23, 42, 0.12);
+        text-decoration: none;
+        color: inherit;
+        transition: transform 250ms ease, border-color 250ms ease;
+      }
+
+      .affiliation-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+      }
+
+      .affiliation-card p {
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.16em;
+        margin-bottom: 0.15rem;
+        color: #0f172a;
+      }
+
+      .affiliation-card small {
+        color: #475569;
+        letter-spacing: 0.08em;
+      }
+
+      .affiliation-card:hover {
+        transform: translateY(-8px) rotate(-1deg);
+        border-color: rgba(0, 121, 107, 0.6);
+      }
+
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .project-card {
+        position: relative;
+        border-radius: 1.5rem;
+        border: 1px solid rgba(15, 23, 42, 0.08);
+        overflow: hidden;
+        background: #fefefe;
+        display: flex;
+        flex-direction: column;
+        transition: transform 260ms ease, box-shadow 260ms ease;
+      }
+
+      .project-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at top, rgba(0, 121, 107, 0.18), transparent 60%);
+        opacity: 0;
+        transition: opacity 260ms ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.18);
+      }
+
+      .project-card:hover::after {
+        opacity: 1;
+      }
+
+      .project-media {
+        position: relative;
+        overflow: hidden;
+        height: 220px;
+      }
+
+      .project-media img,
+      .project-media video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 320ms ease, filter 320ms ease;
+        display: block;
+      }
+
+      .project-card:hover .project-media img,
+      .project-card:hover .project-media video {
+        transform: scale(1.07);
+        filter: saturate(1.1);
+      }
+
+      .project-content {
+        position: relative;
+        z-index: 1;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex-grow: 1;
+      }
+
+      .project-content h3 {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #0f172a;
+      }
+
+      .project-content p {
+        color: #475569;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .project-links {
+        margin-top: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .project-links a {
+        font-weight: 600;
+        color: #00796b;
+        padding: 0.35rem 0.75rem;
+        border-radius: 999px;
+        background: rgba(0, 121, 107, 0.12);
+      }
+
+      .project-links a:hover {
+        color: #ffffff;
+        background: #00796b;
+      }
+
+      .project-tech {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .tech-label {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #9ca3af;
+        margin-bottom: 0.75rem;
+      }
+
+      .tech-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      .tech-badge {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: #374151;
+        background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        border: 1px solid #d1d5db;
+        border-radius: 6px;
+        letter-spacing: 0.02em;
+        transition: all 0.2s ease;
+      }
+
+      .tech-badge:hover {
+        background: linear-gradient(135deg, #00bfa5 0%, #00796b 100%);
+        color: white;
+        border-color: #00796b;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 121, 107, 0.3);
+      }
+
+      .contact-video {
+        border-radius: 1.5rem;
+        border: 4px solid rgba(0, 77, 64, 0.15);
+        box-shadow: 0 25px 55px rgba(15, 23, 42, 0.25);
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        max-height: 420px;
+      }
+
+      .contact-card {
+        background: #ffffff;
+        border-radius: 1.75rem;
+        padding: 2.5rem;
+        border: 1px solid rgba(0, 77, 64, 0.06);
+        box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+      }
+
+      .contact-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .contact-link {
+        position: relative;
+        display: block;
+        transform: rotate(-4deg) skew(4deg);
+        transition: transform 300ms ease, box-shadow 300ms ease;
+        text-decoration: none;
+      }
+
+      .contact-link-inner {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1rem 1.25rem;
+        border-radius: 1.25rem;
+        background: #fdfdfd;
+        box-shadow: -18px 18px 18px rgba(15, 23, 42, 0.15);
+        border: 1px solid rgba(0, 77, 64, 0.08);
+      }
+
+      .contact-link img {
+        width: 52px;
+        height: 52px;
+        object-fit: contain;
+      }
+
+      .contact-link span {
+        font-weight: 700;
+        color: #0f172a;
+        display: flex;
+        flex-direction: column;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .contact-link span small {
+        font-size: 0.7rem;
+        color: #475569;
+        letter-spacing: 0.1em;
+      }
+
+      .contact-link:hover {
+        transform: rotate(-2deg) skew(1deg) translate(10px, -8px);
+      }
+
+      .contact-link:nth-child(1):hover .contact-link-inner {
+        background: linear-gradient(120deg, #0a66c2, #14b8a6);
+        color: #ffffff;
+      }
+
+      .contact-link:nth-child(2):hover .contact-link-inner {
+        background: linear-gradient(120deg, #10b981, #34d399);
+        color: #ffffff;
+      }
+
+      .contact-link:nth-child(3):hover .contact-link-inner {
+        background: linear-gradient(120deg, #f97316, #facc15);
+        color: #ffffff;
+      }
+
+      .contact-link:nth-child(4):hover .contact-link-inner {
+        background: linear-gradient(120deg, #d946ef, #f43f5e);
+        color: #ffffff;
+      }
+
+      /* Mini Contact Component for Tab Pages */
+      .contact-card-mini {
+        background: #ffffff;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        border: 1px solid rgba(0, 77, 64, 0.06);
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.1);
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .contact-links-mini {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .contact-link-mini {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.25rem;
+        border-radius: 1rem;
+        background: #f9fafb;
+        border: 1px solid rgba(0, 77, 64, 0.08);
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+
+      .contact-link-mini img {
+        width: 32px;
+        height: 32px;
+        object-fit: contain;
+      }
+
+      .contact-link-mini span {
+        font-weight: 600;
+        color: #0f172a;
+        font-size: 0.875rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+
+      .contact-link-mini:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 191, 165, 0.2);
+        border-color: #00bfa5;
+      }
+
+      .contact-link-mini:nth-child(1):hover {
+        background: linear-gradient(120deg, #0a66c2, #14b8a6);
+      }
+
+      .contact-link-mini:nth-child(1):hover span {
+        color: #ffffff;
+      }
+
+      .contact-link-mini:nth-child(2):hover {
+        background: linear-gradient(120deg, #10b981, #34d399);
+      }
+
+      .contact-link-mini:nth-child(2):hover span {
+        color: #ffffff;
+      }
+
+      .contact-link-mini:nth-child(3):hover {
+        background: linear-gradient(120deg, #f97316, #facc15);
+      }
+
+      .contact-link-mini:nth-child(3):hover span {
+        color: #ffffff;
+      }
+
+      .contact-link-mini:nth-child(4):hover {
+        background: linear-gradient(120deg, #d946ef, #f43f5e);
+      }
+
+      .contact-link-mini:nth-child(4):hover span {
+        color: #ffffff;
+      }
+
+      @media (max-width: 640px) {
+        .contact-links-mini {
+          flex-direction: column;
+        }
+
+        .contact-link-mini {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
+
+      .skills-grid {
+        perspective: 1300px;
+        perspective-origin: 50% 25%;
+        gap: 1.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+        justify-items: center;
+        align-items: center;
+        transition: opacity 260ms ease, transform 260ms ease;
+      }
+
+      .skills-grid.skills-grid--exit {
+        opacity: 0;
+        transform: translateY(22px);
+        pointer-events: none;
+      }
+
+      .skills-grid.skills-grid--enter {
+        animation: skills-grid-enter 350ms ease forwards;
+      }
+
+      .skill-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        gap: 0.5rem;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .skill-link:focus-visible {
+        outline: 2px solid #00796b;
+        outline-offset: 6px;
+      }
+
+      .skill-cube {
+        --skill-size: clamp(4.75rem, 6vw, 6.75rem);
+        --skill-half: calc(var(--skill-size) / 2);
+        width: var(--skill-size);
+        height: var(--skill-size);
+        position: relative;
+        transform-style: preserve-3d;
+        transition: transform 0.8s ease;
+        animation: skill-breathe 8s ease-in-out infinite;
+      }
+
+      .skill-link:hover .skill-cube,
+      .skill-link:focus-visible .skill-cube {
+        animation: skill-rotate 6s linear infinite;
+      }
+
+      .skill-face {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        border: 2px solid rgba(0, 77, 64, 0.25);
+        background: #ffffff;
+        backface-visibility: hidden;
+        overflow: hidden;
+      }
+
+      .skill-face img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        padding: 0.45rem;
+      }
+
+      .skill-face::before {
+        content: '';
+        position: absolute;
+        inset: -120%;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+        transform: translateZ(20px);
+        transition: transform 0.6s ease;
+      }
+
+      .skill-face::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .skill-link:hover .skill-face::before,
+      .skill-link:focus-visible .skill-face::before {
+        transform: translate(120%, 120%) translateZ(20px);
+      }
+
+      .skill-link:hover .skill-face::after,
+      .skill-link:focus-visible .skill-face::after {
+        opacity: 1;
+      }
+
+      .skill-face.front {
+        transform: translateZ(var(--skill-half));
+      }
+
+      .skill-face.back {
+        transform: rotateY(180deg) translateZ(var(--skill-half));
+      }
+
+      .skill-face.right {
+        transform: rotateY(90deg) translateZ(var(--skill-half));
+      }
+
+      .skill-face.left {
+        transform: rotateY(-90deg) translateZ(var(--skill-half));
+      }
+
+      .skill-face.top {
+        transform: rotateX(90deg) translateZ(var(--skill-half));
+      }
+
+      .skill-face.bottom {
+        transform: rotateX(-90deg) translateZ(var(--skill-half));
+      }
+
+      .skill-label {
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: #1f2937;
+      }
+
+      .skill-link:hover .skill-label,
+      .skill-link:focus-visible .skill-label {
+        color: #004d40;
+      }
+
+      @keyframes skill-rotate {
+        0% {
+          transform: scale(1.08) rotateX(0deg) rotateY(0deg);
+        }
+
+        25% {
+          transform: scale(1.08) rotateX(90deg) rotateY(90deg);
+        }
+
+        50% {
+          transform: scale(1.08) rotateX(180deg) rotateY(180deg);
+        }
+
+        75% {
+          transform: scale(1.08) rotateX(270deg) rotateY(270deg);
+        }
+
+        100% {
+          transform: scale(1.08) rotateX(360deg) rotateY(360deg);
+        }
+      }
+
+      @keyframes skill-breathe {
+
+        0%,
+        100% {
+          transform: rotateX(-6deg) rotateY(12deg) scale(0.96);
+        }
+
+        50% {
+          transform: rotateX(4deg) rotateY(-8deg) scale(1);
+        }
+      }
+
+      @keyframes skills-grid-enter {
+        0% {
+          opacity: 0;
+          transform: translateY(-18px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      body {
+        scroll-padding-top: 110px;
+        zoom: 0.8;
+      }
+
+      @media (max-width: 640px) {
+        body {
+          scroll-padding-top: 80px;
+        }
+      }
+
+      section[id] {
+        scroll-margin-top: 120px;
+      }
+
+      @media (max-width: 1024px) {
+        section[id] {
+          scroll-margin-top: 96px;
+        }
+      }
+
+      .hero-panel {
+        position: relative;
+        isolation: isolate;
+      }
+
+      .hero-panel::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 10% 20%, rgba(0, 77, 64, 0.15), transparent 45%), radial-gradient(circle at 80% 0%, rgba(250, 193, 35, 0.12), transparent 40%);
+        opacity: 0.8;
+        z-index: 0;
+      }
+
+      .hero-panel>* {
+        position: relative;
+        z-index: 1;
+      }
+
+      @media (max-width: 768px) {
+        .hero-panel {
+          padding-top: 6rem;
+        }
+
+        .hero-panel h2 {
+          font-size: 2.2rem;
+        }
+
+        .hero-panel p {
+          font-size: 1rem;
+        }
+
+        .pixel-portrait {
+          width: 8rem;
+        }
+      }
+
+      .mobile-menu-panel {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 1.5rem;
+        pointer-events: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 250ms ease, visibility 250ms ease;
+        z-index: 60;
+      }
+
+      .mobile-menu-panel.is-open {
+        pointer-events: auto;
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-menu-backdrop {
+        position: absolute;
+        inset: 0;
+        background: rgba(15, 23, 42, 0.4);
+        opacity: 0;
+        transition: opacity 250ms ease;
+      }
+
+      .mobile-menu-panel.is-open .mobile-menu-backdrop {
+        opacity: 1;
+        backdrop-filter: blur(8px);
+      }
+
+      .mobile-menu-card {
+        position: relative;
+        width: 100%;
+        max-width: 460px;
+        border-radius: 28px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 35px 65px rgba(15, 23, 42, 0.35);
+        padding: 1.75rem;
+        transform: translateY(20px) scale(0.96);
+        transition: transform 280ms ease;
+        overflow: hidden;
+      }
+
+      .mobile-menu-panel.is-open .mobile-menu-card {
+        transform: translateY(0) scale(1);
+      }
+
+      .mobile-menu-card::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 20% -20%, rgba(0, 121, 107, 0.08), transparent 55%);
+        pointer-events: none;
+      }
+
+      .mobile-menu-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+
+      .mobile-menu-kicker {
+        letter-spacing: 0.35em;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: #475569;
+        margin-bottom: 0.25rem;
+      }
+
+      .mobile-menu-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #0f172a;
+      }
+
+      .mobile-menu-subcopy {
+        color: #475569;
+        font-size: 0.9rem;
+        margin: 0.5rem 0 1.25rem;
+      }
+
+      .mobile-menu-close {
+        width: 42px;
+        height: 42px;
+        border: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      .mobile-menu-close::before,
+      .mobile-menu-close::after {
+        background-color: #0f172a;
+        width: 28px;
+      }
+
+      .mobile-menu-close:hover::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      .mobile-menu-close:hover::after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      .mobile-swipe-track {
+        display: flex;
+        gap: 0.75rem;
+        overflow-x: auto;
+        padding: 0.35rem 0 0.5rem;
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .mobile-swipe-track::-webkit-scrollbar {
+        display: none;
+      }
+
+      .mobile-swipe-chip {
+        flex: 0 0 auto;
+        padding: 0.65rem 1.35rem;
+        border-radius: 999px;
+        background: rgba(0, 77, 64, 0.09);
+        border: 1px solid transparent;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #0f172a;
+        cursor: pointer;
+        scroll-snap-align: center;
+        transition: background 220ms ease, color 220ms ease, transform 220ms ease;
+      }
+
+      .mobile-swipe-chip.is-active {
+        background: linear-gradient(120deg, #053b36, #0f766e);
+        color: #ffffff;
+        border-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 25px rgba(5, 59, 54, 0.25);
+        transform: translateY(-3px);
+      }
+
+      .mobile-menu-actions {
+        margin-top: 1.75rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 0.85rem;
+      }
+
+      .mobile-menu-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.9rem 1.25rem;
+        border-radius: 14px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 2px solid rgba(0, 0, 0, 0.05);
+        background: #f8fafc;
+        color: #0f172a;
+        transition: transform 200ms ease, box-shadow 200ms ease;
+      }
+
+      .mobile-menu-action--resume {
+        border-color: #053b36;
+        background: #053b36;
+        color: #fef5d8;
+        box-shadow: 0 18px 30px rgba(5, 59, 54, 0.25);
+      }
+
+      .mobile-menu-action--outline {
+        background: #ffffff;
+        color: #004d40;
+        border-color: rgba(0, 77, 64, 0.3);
+        box-shadow: inset 0 0 0 1px rgba(0, 77, 64, 0.08);
+      }
+
+      .mobile-menu-action:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 32px rgba(0, 121, 107, 0.2);
+      }
+
+      .game-btn {
+        transition: background-color 200ms ease, transform 200ms ease;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+      }
+
+      .game-btn-primary {
+        background-color: #00796b;
+        color: #ffffff;
+      }
+
+      .game-btn-primary:hover {
+        background-color: #005f52;
+        transform: translateY(-1px);
+      }
+
+      .game-btn-secondary {
+        background-color: #fac123;
+        color: #1f2937;
+      }
+
+      .game-btn-secondary:hover {
+        background-color: #e1a100;
+        transform: translateY(-1px);
+      }
+
+      body.mobile-nav-open {
+        overflow: hidden;
+      }
+
+      .mobile-menu-toggle span {
+        transition: transform 200ms ease, opacity 200ms ease;
+        display: block;
+      }
+
+      .mobile-menu-toggle.is-active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+      }
+
+      .mobile-menu-toggle.is-active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .mobile-menu-toggle.is-active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+      }
+
+      @media (max-width: 640px) {
+        .mobile-menu-card {
+          padding: 1.35rem;
+          border-radius: 22px;
+        }
+
+        .mobile-menu-title {
+          font-size: 1.3rem;
+        }
+
+        .mobile-menu-subcopy {
+          font-size: 0.85rem;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        .timeline {
+          --timeline-line-left: clamp(3.5rem, 11vw, 5rem);
+          --timeline-line-transform: none;
+        }
+
+        .timeline-entry {
+          padding-left: calc(var(--timeline-line-left) + 2.25rem);
+          margin-left: 0;
+        }
+
+        .timeline-entry>.flex,
+        .timeline-entry>.flex-row-reverse {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          gap: 1.25rem;
+        }
+
+        .timeline-entry .w-1/2 {
+          width: 100% !important;
+        }
+
+        .timeline-entry .pr-10,
+        .timeline-entry .pl-10 {
+          padding: 0 !important;
+        }
+
+        .timeline-entry .text-right {
+          text-align: left;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .project-media {
+          height: 180px;
+        }
+
+        .resume-popover {
+          width: min(92vw, 360px);
+          left: 50%;
+          right: auto;
+          transform: translate(-50%, 24px);
+        }
+
+        .resume-popover.is-visible {
+          transform: translate(-50%, 0);
+        }
+      }
+
+      .skill-link.is-preview .skill-cube {
+        animation: skill-rotate 6s linear infinite;
+        transform: scale(1.08) rotateX(-4deg) rotateY(12deg);
+      }
+
+      .skill-link.is-preview .skill-face::before {
+        transform: translate(120%, 120%) translateZ(20px);
+      }
+
+      .skill-link.is-preview .skill-face::after {
+        opacity: 1;
+      }
+
+      .skill-link.is-preview .skill-label {
+        color: #004d40;
+      }
+
+      .skills-tip--mobile {
+        display: none;
+      }
+
+      @media (pointer: coarse) {
+        .skills-tip--desktop {
+          display: none;
+        }
+
+        .skills-tip--mobile {
+          display: inline;
+        }
+      }
+
+      @keyframes wave-animation {
+        0% {
+          transform: rotate(0deg)
+        }
+
+        15% {
+          transform: rotate(14deg)
+        }
+
+        30% {
+          transform: rotate(-8deg)
+        }
+
+        40% {
+          transform: rotate(14deg)
+        }
+
+        50% {
+          transform: rotate(-4deg)
+        }
+
+        60% {
+          transform: rotate(10deg)
+        }
+
+        70% {
+          transform: rotate(0deg)
+        }
+
+        100% {
+          transform: rotate(0deg)
+        }
+      }
+
+      @keyframes resume-box-shake {
+        0% {
+          transform: translateX(-288px) rotate(-12deg);
+        }
+
+        10% {
+          transform: translateX(-291px) rotate(-12deg);
+        }
+
+        20% {
+          transform: translateX(-285px) rotate(-12deg);
+        }
+
+        30% {
+          transform: translateX(-291px) rotate(-12deg);
+        }
+
+        40% {
+          transform: translateX(-285px) rotate(-12deg);
+        }
+
+        50% {
+          transform: translateX(-289px) rotate(-12deg);
+        }
+
+        60% {
+          transform: translateX(-287px) rotate(-12deg);
+        }
+
+        70% {
+          transform: translateX(-289px) rotate(-12deg);
+        }
+
+        80% {
+          transform: translateX(-288px) rotate(-12deg);
+        }
+
+        100% {
+          transform: translateX(-288px) rotate(-12deg);
+        }
+      }
+
+      .shake-on-load {
+        animation: resume-box-shake 1s ease-in-out 1 forwards;
+      }
+
+      /* Adjust leaderboard font-size and layout are done in JS inline styles */
+    </style>
+    <!-- Vanta.js for animated backgrounds -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      // Initialize Vanta.js Net background (uses Three.js)
+      document.addEventListener('DOMContentLoaded', () => {
+        const vantaBg = document.getElementById('vanta-bg');
+        if (vantaBg && window.VANTA) {
+          window.VANTA.NET({
+            el: vantaBg,
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x5eead4,       // Lighter teal (Teal 300)
+            backgroundColor: 0xffffff,
+            points: 8.00,          // Fewer points (less frequent)
+            maxDistance: 22.00,
+            spacing: 25.00         // More spacing
+          });
+        }
+      });
+    </script>
+    <script defer="" src="script.js"></script>
+    <script defer="" src="assets/js/tabs.js"></script>
+</body>
+
+</html>
