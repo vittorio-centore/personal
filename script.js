@@ -174,7 +174,7 @@ const projectEntries = [
         image: 'assets/images/mapreduce_pixel.png',
         technologies: ['Python', 'TCP/UDP', 'Multi-threading', 'Distributed Systems'],
         links: [
-            { label: 'GitHub', href: 'https://github.com/vittorio-centore' }
+            { label: 'Code available upon request', href: null }
         ]
     },
     {
@@ -183,7 +183,16 @@ const projectEntries = [
         image: 'assets/images/habit_trader_logo_pixel.png',
         technologies: ['React', 'Python', 'FastAPI', 'OpenAI API', 'PostgreSQL', 'Docker'],
         links: [
-            { label: 'GitHub', href: 'https://github.com/vittorio-centore' }
+            { label: 'Code available upon request', href: null }
+        ]
+    },
+    {
+        title: 'Search Engine',
+        description: 'Developed a scalable distributed search engine using MapReduce to efficiently process large document collections into an optimized search index, then architected a Flask microservices layer with parallel query handling and intelligent result ranking that combines content relevance (TF-IDF) with page authority (PageRank) scoring. Essentially a simplified Google search implementation leveraging distributed systems, multi-threaded networking, and system-level process coordination.',
+        image: 'assets/images/search_engine_pixel.png',
+        technologies: ['Python', 'Flask', 'MapReduce', 'TF-IDF', 'PageRank', 'Multi-threading'],
+        links: [
+            { label: 'Code available upon request', href: null }
         ]
     }
 ];
@@ -702,7 +711,7 @@ function buildProjectsGrid() {
         },
         'Systems': {
             icon: 'icon-cpp',
-            projects: [projectEntries[2]] // MapReduce
+            projects: [projectEntries[2], projectEntries[4]] // MapReduce, Search Engine
         },
         'Web': {
             icon: 'icon-react',
@@ -803,7 +812,7 @@ function updateProjectMonitor(project) {
                     <p>${project.description}</p>
                     ${techBadges ? `<div class="project-tech"><span class="tech-label">Technologies:</span><div class="tech-badges">${techBadges}</div></div>` : ''}
                     <div class="project-links">
-                        ${project.links.map(link => `<a href="${link.href}" target="_blank" class="monitor-link">[ ${link.label} ]</a>`).join('')}
+                        ${project.links.map(link => link.href ? `<a href="${link.href}" target="_blank" class="monitor-link">[ ${link.label} ]</a>` : `<span class="monitor-link" style="cursor: default; opacity: 0.8;">[ ${link.label} ]</span>`).join('')}
                     </div>
                 </div>
             </div>
