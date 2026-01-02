@@ -194,6 +194,15 @@ const projectEntries = [
         links: [
             { label: 'Code available upon request', href: null }
         ]
+    },
+    {
+        title: 'Transaction Risk Engine',
+        description: 'Built a real-time fraud detection system for credit card transactions using machine learning. Engineered risk signals including spending velocity, merchant history analysis, and geographic anomaly detection. Trained a PyTorch neural network on historical data and deployed it as a FastAPI service with PostgreSQL backend. Achieved 77% recall, catching 77 out of every 100 fraudulent transactions.',
+        image: 'assets/images/fraud_detection_pixel.png',
+        technologies: ['Python', 'PyTorch', 'FastAPI', 'PostgreSQL', 'Docker', 'SQLAlchemy', 'scikit-learn'],
+        links: [
+            { label: 'GitHub', href: 'https://github.com/vittorio-centore' }
+        ]
     }
 ];
 const skillCategories = [
@@ -707,7 +716,7 @@ function buildProjectsGrid() {
     const categories = {
         'AI & ML': {
             icon: 'icon-python',
-            projects: [projectEntries[0], projectEntries[3]] // Stock Predictor, Habit Trader
+            projects: [projectEntries[0], projectEntries[3], projectEntries[5]] // Stock Predictor, Habit Trader, Transaction Risk Engine
         },
         'Systems': {
             icon: 'icon-cpp',
