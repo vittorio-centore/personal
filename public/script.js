@@ -131,18 +131,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', updateNavIndicator);
 window.addEventListener('load', updateNavIndicator);
 
-const resumePopover = document.getElementById('resumePopover');
-const resumePopoverClose = document.getElementById('resumePopoverClose');
 const projectsGrid = document.getElementById('projectsGrid');
-const RESUME_STORAGE_KEY = null;
-
-function initResumePopover() {
-    if (!resumePopover) return;
-    setTimeout(() => resumePopover.classList.add('is-visible'), 1200);
-    resumePopoverClose?.addEventListener('click', () => {
-        resumePopover.classList.remove('is-visible');
-    });
-}
 
 // ====================
 //  Skills Grid (3D cubes)
@@ -499,16 +488,11 @@ function initSkillsSection() {
 }
 
 function initializeCardParticles() {
-    console.log('Initializing particles.js...');
-    console.log('particlesJS available:', typeof window.particlesJS !== 'undefined');
-
     skillCategories.forEach((category) => {
         const particlesId = `particles-${category.id}`;
         const element = document.getElementById(particlesId);
-        console.log(`Looking for: ${particlesId}, found: `, element);
 
         if (window.particlesJS && element) {
-            console.log(`Initializing particles for ${particlesId}`);
             particlesJS(particlesId, {
                 particles: {
                     number: {
@@ -852,7 +836,6 @@ function updateProjectMonitor(project) {
 document.addEventListener('DOMContentLoaded', () => {
     initSkillsSection();
     buildProjectsGrid();
-    initResumePopover();
 
     // Handle navigation links with data-goto-tab attribute
     document.addEventListener('click', (e) => {

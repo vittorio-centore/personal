@@ -78,7 +78,7 @@
             Tap to go to a section
           </h3>
         </div>
-        <button aria-label="Close navigation" class="mobile-menu-close resume-popover__close" id="mobileMenuClose"
+        <button aria-label="Close navigation" class="mobile-menu-close" id="mobileMenuClose"
           type="button">
         </button>
       </div>
@@ -2370,19 +2370,6 @@
         transform: scaleX(1);
       }
 
-      /* Resume Nav Link - Special styling */
-      .resume-nav-link {
-        color: #0d9488 !important;
-        font-weight: 600;
-        text-decoration: none;
-        transition: all 200ms ease;
-      }
-
-      .resume-nav-link:hover {
-        color: #0f766e !important;
-        transform: translateY(-1px);
-      }
-
       /* Experience Container - Aligns to right */
       .experience-container {
         display: flex;
@@ -2865,51 +2852,6 @@
         top: auto;
         bottom: 0;
         transform: translate(-50%, 50%);
-      }
-
-      .resume-popover {
-        position: fixed;
-        bottom: 28px;
-        right: 28px;
-        z-index: 50;
-        transform: translateY(20px);
-        opacity: 0;
-        pointer-events: auto;
-        transition: opacity 300ms ease, transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
-      }
-
-      .resume-popover.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
-
-      .resume-popover__close {
-        position: absolute;
-        top: -8px;
-        right: -8px;
-        width: 22px;
-        height: 22px;
-        border: none;
-        background: #1f2937;
-        color: white;
-        border-radius: 50%;
-        cursor: pointer;
-        font-size: 14px;
-        line-height: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 200ms ease, transform 200ms ease;
-      }
-
-      .resume-popover:hover .resume-popover__close {
-        opacity: 1;
-      }
-
-      .resume-popover__close:hover {
-        transform: scale(1.1);
-        background: #ef4444;
       }
 
       .resume-pill {
@@ -4266,13 +4208,6 @@
         transition: transform 200ms ease, box-shadow 200ms ease;
       }
 
-      .mobile-menu-action--resume {
-        border-color: #053b36;
-        background: #053b36;
-        color: #fef5d8;
-        box-shadow: 0 18px 30px rgba(5, 59, 54, 0.25);
-      }
-
       .mobile-menu-action--outline {
         background: #ffffff;
         color: #004d40;
@@ -4388,16 +4323,6 @@
           height: 180px;
         }
 
-        .resume-popover {
-          width: min(92vw, 360px);
-          left: 50%;
-          right: auto;
-          transform: translate(-50%, 24px);
-        }
-
-        .resume-popover.is-visible {
-          transform: translate(-50%, 0);
-        }
       }
 
       .skill-link.is-preview .skill-cube {

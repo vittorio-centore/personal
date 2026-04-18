@@ -22,9 +22,9 @@ npm-debug.log*
 
 # Dependencies (if any get added later)
 node_modules/
-package-lock.json
 
 # Build output
+.next/
 dist/
 build/
 .cache/
