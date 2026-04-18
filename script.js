@@ -203,6 +203,24 @@ const projectEntries = [
         links: [
             { label: 'GitHub', href: 'https://github.com/vittorio-centore' }
         ]
+    },
+    {
+        title: 'Limit Order Book Engine',
+        description: 'Implemented a multithreaded C++ limit order book over TCP with lock-free SPSC ring buffers, sustaining 80K+ orders/sec at sub-2us median latency across 10+ concurrent clients. Added a Python replay harness that streams 5M+ market events to benchmark p50, p99, and p999 latency across symbols and surface tail-latency spikes under thread contention.',
+        image: 'assets/images/limit_order_book_pixel.png',
+        technologies: ['C++', 'TCP Networking', 'Multithreading', 'Thread-Safe Queues', 'Benchmarking', 'Python'],
+        links: [
+            { label: 'Code available upon request', href: null }
+        ]
+    },
+    {
+        title: 'Rush - Student Org Platform',
+        description: 'Built a campus recruiting platform centralizing 1,800+ UMich clubs so students can discover organizations through a personalized feed and track application statuses, while club recruiters manage applicant pipelines. Engineered a recommendation stack using pgvector ANN retrieval, LightGBM reranking, and rule-based ranking for deadline urgency and feed diversity.',
+        image: 'assets/images/rush_pixel.png',
+        technologies: ['FastAPI', 'Next.js', 'TypeScript', 'Firebase Firestore', 'Tailwind CSS', 'pgvector', 'LightGBM'],
+        links: [
+            { label: 'Code available upon request', href: null }
+        ]
     }
 ];
 const skillCategories = [
@@ -696,6 +714,7 @@ function restartSkillsAutoCycle() {
 function buildProjectsGrid() {
     if (!projectsGrid) return;
     projectsGrid.innerHTML = '';
+    const defaultProject = projectEntries[7];
 
     const container = document.createElement('div');
     container.className = 'projects-showcase';
@@ -720,11 +739,11 @@ function buildProjectsGrid() {
         },
         'Systems': {
             icon: 'icon-cpp',
-            projects: [projectEntries[2], projectEntries[4]] // MapReduce, Search Engine
+            projects: [projectEntries[2], projectEntries[4], projectEntries[6]] // MapReduce, Search Engine, Limit Order Book
         },
         'Web': {
             icon: 'icon-react',
-            projects: [projectEntries[1]] // LeetCode Tracker
+            projects: [projectEntries[1], projectEntries[7]] // LeetCode Tracker, Rush
         }
     };
 
@@ -754,8 +773,8 @@ function buildProjectsGrid() {
                 updateProjectMonitor(project);
             });
 
-            // Set first project as active
-            if (project === projectEntries[0]) {
+            // Set page-specific default project as active
+            if (project === defaultProject) {
                 item.classList.add('active');
             }
 
@@ -789,7 +808,7 @@ function buildProjectsGrid() {
 
     // Initial Load
     if (projectEntries.length > 0) {
-        updateProjectMonitor(projectEntries[0]);
+        updateProjectMonitor(defaultProject);
     }
 }
 
@@ -1451,10 +1470,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('typed-output')) {
         new Typed('#typed-output', {
             strings: [
-                'Full-Stack Development',
-                'Backend Systems',
-                'System Optimization',
-                'Distributed Systems'
+                'Low Latency Systems',
+                'AI',
+                'Fullstack'
             ],
             typeSpeed: 50,
             backSpeed: 30,

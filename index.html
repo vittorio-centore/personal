@@ -51,10 +51,6 @@
           <button class="py-2 px-3 sm:px-4 top-nav-link tab-trigger" data-tab="contact">
             CONTACT
           </button>
-          <a class="py-2 px-3 sm:px-4 top-nav-link resume-nav-link" href="assets/files/vittorio_centore_resume.pdf"
-            download="vittorio_centore_resume.pdf">
-            RESUME ↓
-          </a>
         </nav>
         <button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation"
           class="mobile-menu-toggle lg:hidden flex flex-col" id="menuToggle" type="button">
@@ -107,10 +103,6 @@
         </button>
       </div>
       <div class="mobile-menu-actions">
-        <a class="mobile-menu-action mobile-menu-action--resume" download="vittorio_centore_resume.pdf"
-          href="assets/files/vittorio_centore_resume.pdf">
-          Download Resume
-        </a>
         <button class="mobile-menu-action mobile-menu-action--outline" data-mobile-contact-action="" type="button">
           Say hello
         </button>
@@ -175,29 +167,29 @@
                   </svg>
 
                   <!-- Nodes (Positioned % based on path approximation) -->
-                  <!-- Level 1: Rover -->
-                  <div class="level-node" style="bottom: 5%; left: 50%; transform: translateX(-50%);" data-id="rover"
-                    onclick="selectLevel('rover')">
-                    <img src="assets/images/rover_logo_new.png" class="node-logo" alt="Rover">
-                  </div>
-
-                  <!-- Level 2: UMSI -->
-                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);" data-id="umsi"
+                  <!-- Level 1: UMSI -->
+                  <div class="level-node" style="bottom: 5%; left: 50%; transform: translateX(-50%);" data-id="umsi"
                     onclick="selectLevel('umsi')">
                     <img src="assets/images/umsi_logo_new.png" class="node-logo" alt="UMSI"
                       style="padding: 0; transform: scale(1.1);">
                   </div>
 
-                  <!-- Level 3: Sup -->
-                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);" data-id="sup"
+                  <!-- Level 2: Sup -->
+                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);" data-id="sup"
                     onclick="selectLevel('sup')">
                     <img src="assets/images/sup_logo_v3.png" class="node-logo" alt="Sup">
                   </div>
 
-                  <!-- Level 4: AgentMail -->
-                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                  <!-- Level 3: AgentMail -->
+                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);"
                     data-id="agentmail" onclick="selectLevel('agentmail')">
                     <img src="assets/images/agentmail_logo_new.png" class="node-logo" alt="AgentMail">
+                  </div>
+
+                  <!-- Level 4: Clear Estimates -->
+                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                    data-id="clearestimates" onclick="selectLevel('clearestimates')">
+                    <img src="assets/images/clear_estimates_logo_tile.png" class="node-logo" alt="Clear Estimates">
                   </div>
 
                   <!-- Player Avatar (Starts at top) -->
@@ -208,17 +200,17 @@
                 <div class="map-details-column" id="levelDetails">
 
                   <div class="level-header">
-                    <img src="assets/images/agentmail_logo_new.png" class="level-logo" id="detailLogo">
+                    <img src="assets/images/clear_estimates_logo_tile.png" class="level-logo" id="detailLogo">
                     <div class="level-title">
-                      <h3 id="detailCompany">AgentMail (YC S25)</h3>
-                      <span id="detailRole">Software Eng. Analyst</span>
+                      <h3 id="detailCompany">Clear Estimates</h3>
+                      <span id="detailRole">Software Developer</span>
                     </div>
                   </div>
 
                   <div class="level-stats">
                     <div class="stat-box">
                       <span class="stat-label">Timeline</span>
-                      <span class="stat-value" id="detailDate">Sep 2025 - Present</span>
+                      <span class="stat-value" id="detailDate">Jan 2026 - Present</span>
                     </div>
                     <div class="stat-box">
                       <span class="stat-label">Location</span>
@@ -227,9 +219,9 @@
                   </div>
 
                   <div class="level-desc" id="detailDesc">
-                    Engineered an AI sales agent using OpenAI’s SDK to automate client outreach, reducing manual
-                    workload by 70%. Architected an interactive full-stack demo visualizing real API calls, boosting
-                    developer engagement by 35%.
+                    Trained a PyTorch autoencoder on 903k+ historical construction plan estimates to predict missing
+                    line items from partial project inputs, then deployed the model into Clear Estimates' React
+                    platform via Docker and ASP.NET microservices to power real-time recommendations.
                   </div>
 
                 </div>
@@ -239,14 +231,23 @@
             <script>
               // Inline script for Map Logic
               const levels = {
+                clearestimates: {
+                  company: "Clear Estimates",
+                  role: "Software Developer",
+                  date: "Jan 2026 - Present",
+                  location: "Ann Arbor, MI",
+                  logo: "assets/images/clear_estimates_logo_tile.png",
+                  desc: "Trained a PyTorch autoencoder on 903k+ historical construction plan estimates to predict missing line items from partial inputs, then deployed it into the React web platform through Docker and ASP.NET microservices to deliver real-time estimate recommendations.",
+                  pos: { top: '15%', left: '50%' }
+                },
                 agentmail: {
                   company: "AgentMail (YC S25)",
                   role: "Software Engineering Analyst",
-                  date: "Sep 2025 - Present",
+                  date: "Sep 2025 - Dec 2025",
                   location: "Ann Arbor, MI",
                   logo: "assets/images/agentmail_logo_new.png",
-                  desc: "Engineered an AI sales agent using OpenAI’s SDK to automate client outreach, reducing manual workload by 70%. Architected an interactive full-stack demo visualizing real API calls, boosting developer engagement by 35%.",
-                  pos: { top: '15%', left: '50%' }
+                  desc: "Developed a full-stack interactive demo that visualized real API calls through a storytelling experience, architected a concurrent FastAPI background-task pipeline with the OpenAI Async SDK, and built an AI sales agent that reduced manual workload by 64%.",
+                  pos: { top: '40%', left: '80%' }
                 },
                 sup: {
                   company: "'Sup",
@@ -254,8 +255,8 @@
                   date: "June 2025 - Sep 2025",
                   location: "Miami, FL",
                   logo: "assets/images/sup_logo_v3.png",
-                  desc: "Built an AI mock interview tool with Gemini’s multimodal models for real-time feedback. Deployed facial tracking to boost LLM accuracy by 60% and optimized media storage by 80% using FFmpeg.",
-                  pos: { top: '40%', left: '80%' }
+                  desc: "Developed a mock interview tool with Next.js and FastAPI using Gemini to analyze user responses, added facial-tracking confidence signals with MediaPipe and face-api.js, and built an FFmpeg compression pipeline that reduced audio and video storage by 83%.",
+                  pos: { top: '65%', left: '20%' }
                 },
                 umsi: {
                   company: "U-M School of Information",
@@ -263,16 +264,7 @@
                   date: "Feb 2025 - May 2025",
                   location: "Ann Arbor, MI",
                   logo: "assets/images/umsi_logo_new.png",
-                  desc: "Developed a React & TinyLlama LLM assistant to match faculty awards, processing 8,000 profiles in ~13s. Optimized performance with PyTorch float16 and asynchronous loading, cutting processing time by 30%.",
-                  pos: { top: '65%', left: '20%' }
-                },
-                rover: {
-                  company: "Michigan Rover Team",
-                  role: "Fullstack Developer",
-                  date: "Sep 2024 - May 2025",
-                  location: "Ann Arbor, MI",
-                  logo: "assets/images/rover_logo_new.png",
-                  desc: "Refactored camera dashboard with Vue.js & TypeScript, aiding a top 10% national finish. Implemented inverse kinematics for the robotic arm, speeding up mission completion by 20%.",
+                  desc: "Designed a scalable recommendation pipeline that matched faculty profiles to award requirements and ranked top candidates across 8,000 profiles in about 13 seconds. Optimized the system with Pandas and PyTorch CUDA, then shipped updates through CI/CD with unit and integration tests.",
                   pos: { top: '95%', left: '50%' }
                 }
               };
@@ -340,33 +332,33 @@
               <div
                 class="relative overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center p-8">
                 <div class="absolute inset-0 bg-gradient-to-br from-teal-500/5 to-yellow-400/5"></div>
-                <img src="assets/images/stock_chart_pixel.png" alt="Stock Predictor"
+                <img src="assets/images/limit_order_book_pixel.png" alt="Limit Order Book Engine"
                   class="relative z-10 rounded-2xl w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500 shadow-lg" />
               </div>
 
               <!-- Right: Content -->
               <div class="p-8 md:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
                 <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  Stock Predictor Model
+                  Limit Order Book Engine
                 </h3>
                 <p class="text-gray-700 text-sm md:text-base leading-relaxed mb-6">
-                  Advanced ML model leveraging <span class="text-teal-600 font-semibold">PyTorch Transformer
-                    architecture</span> to forecast stock market prices.
+                  Multithreaded <span class="text-teal-600 font-semibold">C++ matching engine</span> built for
+                  high-throughput order processing with replay-based latency benchmarking.
                 </p>
 
                 <!-- Stats Grid -->
                 <div class="grid grid-cols-3 gap-4 mb-6">
                   <div class="bg-white rounded-xl p-4 border-2 border-teal-500/30 text-center shadow-sm">
-                    <div class="text-2xl font-bold text-teal-600">62%</div>
-                    <div class="text-xs text-gray-500 mt-1">Accuracy</div>
+                    <div class="text-2xl font-bold text-teal-600">80K+</div>
+                    <div class="text-xs text-gray-500 mt-1">Orders/Sec</div>
                   </div>
                   <div class="bg-white rounded-xl p-4 border-2 border-yellow-400/30 text-center shadow-sm">
-                    <div class="text-2xl font-bold text-yellow-600">25.2</div>
-                    <div class="text-xs text-gray-500 mt-1">Years Data</div>
+                    <div class="text-2xl font-bold text-yellow-600">&lt;2us</div>
+                    <div class="text-xs text-gray-500 mt-1">Median Latency</div>
                   </div>
                   <div class="bg-white rounded-xl p-4 border-2 border-gray-300 text-center shadow-sm">
-                    <div class="text-2xl font-bold text-gray-900">21</div>
-                    <div class="text-xs text-gray-500 mt-1">Indicators</div>
+                    <div class="text-2xl font-bold text-gray-900">5M+</div>
+                    <div class="text-xs text-gray-500 mt-1">Replay Events</div>
                   </div>
                 </div>
 
@@ -375,13 +367,13 @@
                   <p class="text-xs text-gray-500 uppercase tracking-wider mb-3">Tech Stack</p>
                   <div class="flex flex-wrap gap-2">
                     <span
-                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">PyTorch</span>
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">C++</span>
                     <span
-                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Python</span>
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">TCP Networking</span>
                     <span
-                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">scikit-learn</span>
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Multithreading</span>
                     <span
-                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Transformers</span>
+                      class="bg-teal-500/10 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold border border-teal-500/30">Benchmarking</span>
                   </div>
                 </div>
 
@@ -1015,19 +1007,6 @@
                   <p class="text-gray-400 text-xs font-mono text-left">Student-led technology consulting club providing
                     real-world experiences</p>
                 </a>
-                <!-- Rover -->
-                <a href="https://mrover.org/" target="_blank"
-                  class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
-                  <div class="flex items-center gap-4 mb-4">
-                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center p-2"><img
-                        src="assets/images/rover_logo_new.png" class="w-full h-full object-contain"></div>
-                    <div class="text-left">
-                      <h3 class="text-xl font-bold text-white font-mono">MI Rover</h3>
-                      <span class="text-xs font-bold text-orange-400 uppercase">Engineer</span>
-                    </div>
-                  </div>
-                  <p class="text-gray-400 text-xs font-mono text-left">Building Mars rovers for URC.</p>
-                </a>
                 <!-- ISA -->
                 <a href="#" target="_blank" class="block bg-[#0B1120] rounded-2xl p-6 border border-gray-800">
                   <div class="flex items-center gap-4 mb-4">
@@ -1153,33 +1132,6 @@
                 <p class="text-gray-500 text-xs font-mono leading-relaxed">
                   Student-led technology consulting providing real-world client experiences.
                 </p>
-              </div>
-            </a>
-
-            <!-- MI Rover (Bottom Right - Top) -->
-            <a href="https://mrover.org/" target="_blank"
-              class="col-span-3 relative group cursor-pointer overflow-hidden bg-white rounded-sm shadow-[0_1px_3px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)] transition-shadow duration-300">
-              <div
-                class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600">
-              </div>
-
-              <div class="relative z-10 p-6 h-full flex flex-col justify-between min-h-[250px]">
-                <div>
-                  <span class="text-[10px] uppercase tracking-[0.3em] text-gray-400 font-mono mb-2 block">03</span>
-                  <h3
-                    class="text-2xl font-black text-gray-900 tracking-tight group-hover:text-orange-500 transition-colors duration-300"
-                    style="font-family: 'Inter', system-ui, sans-serif;">
-                    MROVER
-                  </h3>
-                </div>
-
-                <div class="space-y-3">
-                  <p class="text-orange-500 text-[10px] font-bold uppercase tracking-wider">Engineer</p>
-                  <div
-                    class="w-20 h-20 bg-gray-50 rounded-lg flex items-center justify-center p-3 border border-gray-100">
-                    <img src="assets/images/rover_logo_new.png" class="w-full h-full object-contain">
-                  </div>
-                </div>
               </div>
             </a>
 
@@ -1335,13 +1287,13 @@
                 </p>
                 <p class="text-lg">
                   What I love about coding is that it turns ideas into tools people can actually use. I'm
-                  especially interested in <span class="font-semibold text-teal-600">full-stack development, AI, and
-                    machine learning</span>, particularly when it comes to optimizing backend systems.
+                  especially interested in <span class="font-semibold text-teal-600">low latency systems, AI, and
+                    fullstack</span>.
                 </p>
                 <p class="text-lg">
-                  Right now, I'm working at <span class="font-semibold text-teal-600">AgentMail</span>, a YC-backed
-                  startup, where I help build user-facing demos that clearly explain what's happening behind the scenes
-                  while heavy backend processes are running.
+                  Right now, I'm working at <span class="font-semibold text-teal-600">Clear Estimates</span>, where I'm
+                  building ML tools that help turn partial construction project inputs into useful estimate
+                  recommendations.
                 </p>
                 <p class="text-lg text-gray-500 italic">
                   If I'm not coding, I'm probably watching soccer or out and about with friends, but I'm always happy to
@@ -2161,9 +2113,8 @@
               [VITTORIO CENTORE]
             </h2>
             <p class="text-gray-400 text-xs leading-relaxed">
-              Computer Science Student at University of Michigan. Building innovative software solutions and
-              exploring AI,
-              web development, and distributed systems.
+              Computer Science Student at University of Michigan. Interested in low latency systems, AI, and
+              fullstack.
             </p>
           </div>
           <!-- Quick Links -->
