@@ -167,29 +167,29 @@
                   </svg>
 
                   <!-- Nodes (Positioned % based on path approximation) -->
-                  <!-- Level 1: UMSI -->
-                  <div class="level-node" style="bottom: 5%; left: 50%; transform: translateX(-50%);" data-id="umsi"
-                    onclick="selectLevel('umsi')">
-                    <img src="assets/images/umsi_logo_new.png" class="node-logo" alt="UMSI"
-                      style="padding: 0; transform: scale(1.1);">
-                  </div>
-
-                  <!-- Level 2: Sup -->
-                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);" data-id="sup"
+                  <!-- Level 1: Sup -->
+                  <div class="level-node" style="bottom: 5%; left: 50%; transform: translateX(-50%);" data-id="sup"
                     onclick="selectLevel('sup')">
                     <img src="assets/images/sup_logo_v3.png" class="node-logo" alt="Sup">
                   </div>
 
-                  <!-- Level 3: AgentMail -->
-                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);"
+                  <!-- Level 2: AgentMail -->
+                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);"
                     data-id="agentmail" onclick="selectLevel('agentmail')">
                     <img src="assets/images/agentmail_logo_new.png" class="node-logo" alt="AgentMail">
                   </div>
 
-                  <!-- Level 4: Clear Estimates -->
-                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                  <!-- Level 3: Clear Estimates -->
+                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);"
                     data-id="clearestimates" onclick="selectLevel('clearestimates')">
-                    <img src="assets/images/clear_estimates_logo_tile.png" class="node-logo" alt="Clear Estimates">
+                    <img src="assets/images/clear_estimates_logo_orange.svg" class="node-logo node-logo-clear-estimates"
+                      alt="Clear Estimates">
+                  </div>
+
+                  <!-- Level 4: Capital One -->
+                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                    data-id="capitalone" onclick="selectLevel('capitalone')">
+                    <img src="assets/images/capital_one_logo.svg" class="node-logo node-logo-tight" alt="Capital One">
                   </div>
 
                   <!-- Player Avatar (Starts at top) -->
@@ -200,28 +200,26 @@
                 <div class="map-details-column" id="levelDetails">
 
                   <div class="level-header">
-                    <img src="assets/images/clear_estimates_logo_tile.png" class="level-logo" id="detailLogo">
+                    <img src="assets/images/capital_one_logo.svg" class="level-logo" id="detailLogo">
                     <div class="level-title">
-                      <h3 id="detailCompany">Clear Estimates</h3>
-                      <span id="detailRole">Software Developer</span>
+                      <h3 id="detailCompany">Capital One</h3>
+                      <span id="detailRole">Incoming Software Engineering Intern</span>
                     </div>
                   </div>
 
                   <div class="level-stats">
                     <div class="stat-box">
                       <span class="stat-label">Timeline</span>
-                      <span class="stat-value" id="detailDate">Jan 2026 - Present</span>
+                      <span class="stat-value" id="detailDate">Jun 2026 - Aug 2026</span>
                     </div>
                     <div class="stat-box">
                       <span class="stat-label">Location</span>
-                      <span class="stat-value" id="detailLoc">Ann Arbor, MI</span>
+                      <span class="stat-value" id="detailLoc">Chicago, IL</span>
                     </div>
                   </div>
 
                   <div class="level-desc" id="detailDesc">
-                    Trained a PyTorch autoencoder on 903k+ historical construction plan estimates to predict missing
-                    line items from partial project inputs, then deployed the model into Clear Estimates' React
-                    platform via Docker and ASP.NET microservices to power real-time recommendations.
+                    Joining Capital One as an incoming software engineering intern in Chicago for Summer 2026.
                   </div>
 
                 </div>
@@ -231,14 +229,25 @@
             <script>
               // Inline script for Map Logic
               const levels = {
+                capitalone: {
+                  company: "Capital One",
+                  role: "Incoming Software Engineering Intern",
+                  date: "Jun 2026 - Aug 2026",
+                  location: "Chicago, IL",
+                  logo: "assets/images/capital_one_logo.svg",
+                  logoClass: "level-logo-tight",
+                  desc: "Joining Capital One as an incoming software engineering intern in Chicago for Summer 2026.",
+                  pos: { top: '15%', left: '50%' }
+                },
                 clearestimates: {
                   company: "Clear Estimates",
                   role: "Software Developer",
                   date: "Jan 2026 - Present",
                   location: "Ann Arbor, MI",
-                  logo: "assets/images/clear_estimates_logo_tile.png",
+                  logo: "assets/images/clear_estimates_logo_orange.svg",
+                  logoClass: "level-logo-tight",
                   desc: "Trained a PyTorch autoencoder on 903k+ historical construction plan estimates to predict missing line items from partial inputs, then deployed it into the React web platform through Docker and ASP.NET microservices to deliver real-time estimate recommendations.",
-                  pos: { top: '15%', left: '50%' }
+                  pos: { top: '40%', left: '80%' }
                 },
                 agentmail: {
                   company: "AgentMail (YC S25)",
@@ -247,7 +256,7 @@
                   location: "Ann Arbor, MI",
                   logo: "assets/images/agentmail_logo_new.png",
                   desc: "Developed a full-stack interactive demo that visualized real API calls through a storytelling experience, architected a concurrent FastAPI background-task pipeline with the OpenAI Async SDK, and built an AI sales agent that reduced manual workload by 64%.",
-                  pos: { top: '40%', left: '80%' }
+                  pos: { top: '65%', left: '20%' }
                 },
                 sup: {
                   company: "'Sup",
@@ -256,15 +265,6 @@
                   location: "Miami, FL",
                   logo: "assets/images/sup_logo_v3.png",
                   desc: "Developed a mock interview tool with Next.js and FastAPI using Gemini to analyze user responses, added facial-tracking confidence signals with MediaPipe and face-api.js, and built an FFmpeg compression pipeline that reduced audio and video storage by 83%.",
-                  pos: { top: '65%', left: '20%' }
-                },
-                umsi: {
-                  company: "U-M School of Information",
-                  role: "Software Engineer",
-                  date: "Feb 2025 - May 2025",
-                  location: "Ann Arbor, MI",
-                  logo: "assets/images/umsi_logo_new.png",
-                  desc: "Designed a scalable recommendation pipeline that matched faculty profiles to award requirements and ranked top candidates across 8,000 profiles in about 13 seconds. Optimized the system with Pandas and PyTorch CUDA, then shipped updates through CI/CD with unit and integration tests.",
                   pos: { top: '95%', left: '50%' }
                 }
               };
@@ -279,7 +279,9 @@
                 document.getElementById('detailDate').textContent = data.date;
                 document.getElementById('detailLoc').textContent = data.location;
                 document.getElementById('detailDesc').textContent = data.desc;
-                document.getElementById('detailLogo').src = data.logo;
+                const detailLogo = document.getElementById('detailLogo');
+                detailLogo.src = data.logo;
+                detailLogo.className = `level-logo ${data.logoClass || ''}`.trim();
 
                 // Move Avatar
                 const avatar = document.getElementById('playerAvatar');

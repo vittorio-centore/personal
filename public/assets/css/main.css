@@ -72,6 +72,19 @@
   padding: 4px;
 }
 
+.node-logo-tight {
+  padding: 0;
+}
+
+.node-logo-clear-estimates {
+  padding: 5px;
+}
+
+.level-logo-tight {
+  width: 72px;
+  height: 72px;
+}
+
 .level-node:hover,
 .level-node.active {
   transform: scale(1.2);
