@@ -27,6 +27,7 @@ node_modules/
 .next/
 dist/
 build/
+out/
 .cache/
 
 # Environment files

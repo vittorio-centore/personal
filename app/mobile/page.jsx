@@ -1,3 +1,7 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+
 const PAGE_OPTIONS = [
   { key: 'home', label: 'Home', path: '/' },
   { key: 'projects', label: 'Projects', path: '/projects' },
@@ -6,13 +10,16 @@ const PAGE_OPTIONS = [
   { key: 'contact', label: 'Contact', path: '/contact' }
 ];
 
-export const metadata = {
-  title: 'Mobile Preview - Vittorio\'s Website'
-};
+export default function MobilePreviewPage() {
+  const [selectedKey, setSelectedKey] = useState('home');
 
-export default async function MobilePreviewPage({ searchParams }) {
-  const params = await searchParams;
-  const selectedKey = PAGE_OPTIONS.some((page) => page.key === params?.page) ? params.page : 'home';
+  useEffect(() => {
+    const page = new URLSearchParams(window.location.search).get('page');
+    if (PAGE_OPTIONS.some((option) => option.key === page)) {
+      setSelectedKey(page);
+    }
+  }, []);
+
   const selectedPage = PAGE_OPTIONS.find((page) => page.key === selectedKey) ?? PAGE_OPTIONS[0];
 
   return (
