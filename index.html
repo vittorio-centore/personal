@@ -163,7 +163,7 @@
                   <svg class="map-svg" viewBox="0 0 100 400" preserveAspectRatio="none">
                     <!-- Winding Path -->
                     <path class="path-line"
-                      d="M50,400 L50,380 C50,330 20,310 20,260 C20,210 80,210 80,160 C80,110 50,110 50,60" />
+                      d="M50,380 C50,344 20,344 20,308 C20,272 80,272 80,236 C80,200 20,200 20,164 C20,128 50,128 50,92" />
                   </svg>
 
                   <!-- Nodes (Positioned % based on path approximation) -->
@@ -174,52 +174,58 @@
                   </div>
 
                   <!-- Level 2: AgentMail -->
-                  <div class="level-node" style="bottom: 35%; left: 20%; transform: translateX(-50%);"
+                  <div class="level-node" style="bottom: 23%; left: 20%; transform: translateX(-50%);"
                     data-id="agentmail" onclick="selectLevel('agentmail')">
                     <img src="assets/images/agentmail_logo_new.png" class="node-logo" alt="AgentMail">
                   </div>
 
                   <!-- Level 3: Clear Estimates -->
-                  <div class="level-node" style="bottom: 60%; left: 80%; transform: translateX(-50%);"
+                  <div class="level-node" style="bottom: 41%; left: 80%; transform: translateX(-50%);"
                     data-id="clearestimates" onclick="selectLevel('clearestimates')">
                     <img src="assets/images/clear_estimates_logo_orange.svg" class="node-logo node-logo-clear-estimates"
                       alt="Clear Estimates">
                   </div>
 
                   <!-- Level 4: Capital One -->
-                  <div class="level-node active" style="bottom: 85%; left: 50%; transform: translateX(-50%);"
+                  <div class="level-node" style="bottom: 59%; left: 20%; transform: translateX(-50%);"
                     data-id="capitalone" onclick="selectLevel('capitalone')">
                     <img src="assets/images/capital_one_logo.svg" class="node-logo node-logo-tight" alt="Capital One">
                   </div>
 
+                  <!-- Level 5: University of Michigan -->
+                  <div class="level-node active" style="bottom: 77%; left: 50%; transform: translateX(-50%);"
+                    data-id="umich" onclick="selectLevel('umich')">
+                    <img src="assets/images/michigan_logo.svg" class="node-logo" alt="University of Michigan">
+                  </div>
+
                   <!-- Player Avatar (Starts at top) -->
-                  <div class="player-marker" id="playerAvatar" style="top: 15%; left: 50%;"></div>
+                  <div class="player-marker" id="playerAvatar" style="top: 23%; left: 50%;"></div>
                 </div>
 
                 <!-- Right: Details Panel -->
                 <div class="map-details-column" id="levelDetails">
 
                   <div class="level-header">
-                    <img src="assets/images/capital_one_logo.svg" class="level-logo" id="detailLogo">
+                    <img src="assets/images/michigan_logo.svg" class="level-logo" id="detailLogo" alt="University of Michigan">
                     <div class="level-title">
-                      <h3 id="detailCompany">Capital One</h3>
-                      <span id="detailRole">Incoming Software Engineering Intern</span>
+                      <h3 id="detailCompany">University of Michigan</h3>
+                      <span id="detailRole">Instructional Aide, SI 201: Data Programming</span>
                     </div>
                   </div>
 
                   <div class="level-stats">
                     <div class="stat-box">
                       <span class="stat-label">Timeline</span>
-                      <span class="stat-value" id="detailDate">Jun 2026 - Aug 2026</span>
+                      <span class="stat-value" id="detailDate">Aug 2026 - Present</span>
                     </div>
                     <div class="stat-box">
                       <span class="stat-label">Location</span>
-                      <span class="stat-value" id="detailLoc">Chicago, IL</span>
+                      <span class="stat-value" id="detailLoc">Ann Arbor, MI</span>
                     </div>
                   </div>
 
                   <div class="level-desc" id="detailDesc">
-                    Joining Capital One as an incoming software engineering intern in Chicago for Summer 2026.
+                    Teach weekly backend programming discussions for 25+ students, covering data structures, REST APIs, JSON parsing, regular expressions, debugging, and object-oriented design. Create exam and homework questions supporting 250+ students.
                   </div>
 
                 </div>
@@ -229,15 +235,24 @@
             <script>
               // Inline script for Map Logic
               const levels = {
+                umich: {
+                  company: "University of Michigan",
+                  role: "Instructional Aide, SI 201: Data Programming",
+                  date: "Aug 2026 - Present",
+                  location: "Ann Arbor, MI",
+                  logo: "assets/images/michigan_logo.svg",
+                  desc: "Teach weekly backend programming discussions for 25+ students, covering data structures, REST APIs, JSON parsing, regular expressions, debugging, and object-oriented design. Create exam and homework questions supporting 250+ students.",
+                  pos: { top: '23%', left: '50%' }
+                },
                 capitalone: {
                   company: "Capital One",
-                  role: "Incoming Software Engineering Intern",
+                  role: "Software Engineering Intern, Trade Credit",
                   date: "Jun 2026 - Aug 2026",
                   location: "Chicago, IL",
                   logo: "assets/images/capital_one_logo.svg",
                   logoClass: "level-logo-tight",
-                  desc: "Joining Capital One as an incoming software engineering intern in Chicago for Summer 2026.",
-                  pos: { top: '15%', left: '50%' }
+                  desc: "Built a Java Spring Boot API service migrating 24+ legacy endpoints to Trade Credit's platform and added caching to cut p99 latency by 21%, supporting 25k+ businesses daily. Built a Python testing framework comparing responses across 60+ routes, catching 23 correctness regressions, and integrated it into CI/CD.",
+                  pos: { top: '41%', left: '20%' }
                 },
                 clearestimates: {
                   company: "Clear Estimates",
@@ -247,7 +262,7 @@
                   logo: "assets/images/clear_estimates_logo_orange.svg",
                   logoClass: "level-logo-tight",
                   desc: "Trained a PyTorch autoencoder on 903k+ historical construction plan estimates to predict missing line items from partial inputs, then deployed it into the React web platform through Docker and ASP.NET microservices to deliver real-time estimate recommendations.",
-                  pos: { top: '40%', left: '80%' }
+                  pos: { top: '59%', left: '80%' }
                 },
                 agentmail: {
                   company: "AgentMail (YC S25)",
@@ -256,7 +271,7 @@
                   location: "Ann Arbor, MI",
                   logo: "assets/images/agentmail_logo_new.png",
                   desc: "Developed a full-stack interactive demo that visualized real API calls through a storytelling experience, architected a concurrent FastAPI background-task pipeline with the OpenAI Async SDK, and built an AI sales agent that reduced manual workload by 64%.",
-                  pos: { top: '65%', left: '20%' }
+                  pos: { top: '77%', left: '20%' }
                 },
                 sup: {
                   company: "'Sup",
@@ -281,6 +296,7 @@
                 document.getElementById('detailDesc').textContent = data.desc;
                 const detailLogo = document.getElementById('detailLogo');
                 detailLogo.src = data.logo;
+                detailLogo.alt = data.company;
                 detailLogo.className = `level-logo ${data.logoClass || ''}`.trim();
 
                 // Move Avatar
